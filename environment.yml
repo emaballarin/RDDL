@@ -355,7 +355,7 @@ dependencies:
       - git+https://github.com/rasbt/mlxtend.git
       - jupyter-lsp
       - onnxconverter-common
-      - sklearn-onnx
+      - git+https://github.com/onnx/sklearn-onnx.git
       - sklearn-pandas
       - git+https://github.com/williamFalcon/pytorch-complex-tensor.git
       - ase
