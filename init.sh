@@ -24,7 +24,7 @@ rm -R -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/"
 # Create new environment
 export PRE_PYTHONUSERBASE="$PYTHONUSERBASE"
 export PYTHONUSERBASE="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME"
-conda env create -f environment.yml --clobber
+conda env create -f environment.yml
 export PYTHONUSERBASE="$PRE_PYTHONUSERBASE"
 unset PRE_PYTHONUSERBASE
 cp -f ./dot_condarc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/"
