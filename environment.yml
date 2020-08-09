@@ -286,6 +286,9 @@ dependencies:
 
   - cython
 
+  - xeus-python
+  - pyspark
+
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)

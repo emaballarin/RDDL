@@ -59,20 +59,23 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 pip install --upgrade --no-deps --pre fastai
 CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
 pip install --upgrade --no-deps --pre cupy-cuda102
+pip install --upgrade jupyter_http_over_ws
 
 
 # Install / enable Jupyter(Lab) extensions
+
 jupyter nbextension enable varInspector/main
+
+jupyter labextension install @jupyterlab/debugger
+jupyter labextension install @krassowski/jupyterlab-lsp
+
 jupyter labextension install @jupyterlab/toc --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
-jupyter labextension install plotlywidget --no-build
 jupyter labextension install jupyterlab-plotly --no-build
-jupyter labextension install @lckr/jupyterlab_variableinspector
-jupyter labextension install @krassowski/jupyterlab-lsp
-jupyter labextension install @jupyterlab/debugger
-jupyter labextension install @pyviz/jupyterlab_pyviz
+jupyter labextension install plotlywidget --no-build
 
-pip install --upgrade jupyter_http_over_ws
+jupyter labextension install @lckr/jupyterlab_variableinspector
+
 jupyter serverextension enable --py jupyter_http_over_ws
 
 jupyter lab build
