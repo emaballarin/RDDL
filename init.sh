@@ -24,7 +24,7 @@ rm -R -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/"
 # Create new environment
 export PRE_PYTHONUSERBASE="$PYTHONUSERBASE"
 export PYTHONUSERBASE="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME"
-conda env create -f environment.yml
+conda env create -f environment.yml --clobber
 export PYTHONUSERBASE="$PRE_PYTHONUSERBASE"
 unset PRE_PYTHONUSERBASE
 cp -f ./dot_condarc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/"
@@ -35,11 +35,13 @@ cp -f ./dot_condarc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/"
 # Install and overwrite (if any) libjpeg-turbo
 # MUST BE SYSTEM-INSTALLED: CMake, cURL, Kerberos 5 (if needed), MPI libraries & compilers.
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-conda remove -y cmake curl krb5 mpi cudatoolkit cudnn nccl nccl2 --force
-conda install -y libjpeg-turbo --force --no-deps
+conda remove -y cmake curl krb5 mpi cudatoolkit cudnn nccl nccl2 jpeg --force
+conda install -y libjpeg-turbo --force --force-reinstall --no-deps --clobber
 
+mkdir -p "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/"
 rm -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/ld"
 ln -s "$(which ld)" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/"
+ln -s "$(which ld)" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/"
 
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
