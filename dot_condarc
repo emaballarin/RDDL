@@ -1,0 +1,20 @@
+ssl_verify: true
+changeps1: true
+channels:
+- pytorch
+- fastai
+- defaults
+- conda-forge
+- gpytorch
+- dglteam
+- pyviz
+- plotly
+- bokeh
+- gurobi
+- mosek
+- oxfordcontrol
+- albumentations
+- comet_ml
+- cvxgrp
+- intel
+- nlesc

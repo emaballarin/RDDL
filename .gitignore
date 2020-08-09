@@ -1,0 +1,37 @@
+#
+# .GITIGNORE
+#
+
+# IDEs/editors configuration directories
+**/.vscode/
+.vscode/*
+.vscode/
+.ionide/
+**/.idea/
+.idea/
+.idea
+*.idea
+**/.clion/
+**/.pycharm/
+**/.atom/
+**/.clangd/
+qtcreator/
+**/qtcreator/
+
+# File manager configuration files
+.directory
+
+# Temporary/backup files
+*~
+*#
+*.swp
+
+# MacOS self-generated files
+.DS_Store
+.DS_Store?
+*.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

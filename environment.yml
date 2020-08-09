@@ -1,0 +1,361 @@
+name: RDDL
+
+channels:
+  # Keep sorted | Add at the bottom!
+  - pytorch
+  - fastai
+  - defaults
+  - conda-forge
+  - gpytorch
+  - dglteam
+  - pyviz
+  - plotly
+  - bokeh
+  - gurobi
+  - mosek
+  - oxfordcontrol
+  - albumentations
+  - comet_ml
+  - cvxgrp
+  - intel
+  - nlesc
+
+dependencies:
+  # CONDA PINNED #
+  - python=3.8.5
+  - cudatoolkit=10.2
+  - blas=*=mkl
+  - opt_einsum=3.3
+  - tqdm>=4.45 # PyTorch Lightning
+  - pillow=7.0 # Pillow-SIMD
+  - graphviz=2.42 # TorchViz
+
+  - cython-blis=0.4.1 # ThinC & friends <- start
+  - cymem=2.0.3
+  - murmurhash=1.0.2
+  - preshed=3.0.2
+  - pydantic=1.6.1
+  - wasabi=0.7.1
+  - srsly=2.2
+  - catalogue=2
+  - immutables=0.14 # <- end
+
+  - pytorch=1.6 # PyTorch & friends <- start
+  - torchvision=0.7
+  - torchaudio=0.6
+  - torchtext=0.7
+  - torchserve=0.1.1
+  - torch-model-archiver=0.1.1
+  - gpytorch=1.1.1
+  - botorch=0.3
+  - ignite=0.4.1
+  - captum=0.2
+  - onnx=1.7
+  - tensorboard=2.3
+  - tensorboardx=2.1
+  - tensorly=0.4.5
+  - dgl-cuda10.2=0.4.3 # <- end
+
+  - fastcore=0.1.25 # <- Fast.ai & friends
+  - fastprogress=0.2.5
+  - nbdev=0.2.27
+  - fastscript=0.1.13 # <- end
+
+  - jupyterlab>=2.2 # Jupyter(Lab) & friends <- start
+  - notebook>=6 # <- end
+
+  - vaex=3 # Vaex & friends <- start
+  - vaex-core=2.0.3
+  - vaex-astro=0.7
+  - vaex-hdf5=0.6
+  - vaex-viz=0.4
+  - vaex-jupyter=0.5.2
+  - vaex-arrow=0.5.1
+  - vaex-server=0.3.1
+  - vaex-ml # <- end
+
+  # CONDA FLOATING #
+  - conda
+  - absl-py
+  - mkl-service
+  - mkl
+  - mkl_fft
+  - mkl_random
+  - intel-openmp
+
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - scikit-learn
+  - scikit-image
+  - scikit-learn
+  - scikit-optimize
+  - skorch
+  - seaborn
+  - statsmodels
+  - sympy
+  - h5py
+  - hdf5
+  - sqlalchemy
+  - pandas-summary
+  - imbalanced-learn
+  - scikit-plot
+
+  - pip # Install easers <- start
+  - importlib_metadata
+  - setuptools
+  - wheel
+  - pep517 # <- stop
+
+  - requests
+  - regex
+  - future
+  - psutil
+  - sentencepiece
+  - libjpeg-turbo
+  - libpng
+  - imageio
+
+  - opencv
+  - libopencv
+  - py-opencv
+  - librosa
+
+  - ipykernel # Jupyter & friends <- start
+  - ipython
+  - ipython_genutils
+  - ipywidgets
+  - jupyter
+  - jupyter_client
+  - jupyter_console
+  - jupyter_core
+  - jupyterlab_launcher
+  - jupyterlab_server
+  - nb_conda_kernels
+  - nbclient
+  - nbconvert
+  - nbformat
+  - widgetsnbextension
+  - ipyparallel
+  - jupyter_nbextensions_configurator # <- end
+
+  - ipdb # Development aids / typing <- start
+  - ptvsd
+  - jedi
+  - python-language-server
+  - pylint
+  - mypy
+  - mypy_extensions
+  - typed-ast
+  - typing
+  - typing_extensions # <- end
+
+  - cffi
+  - pybind11
+  - swig
+
+  - joblib
+  - multiprocess
+
+  - prompt_toolkit
+  - wcwidth
+
+  - pyyaml>=5.1
+
+  - click
+  - gitpython
+  - gql
+  - nvidia-ml-py3
+  - python-dateutil
+  - shortuuid
+  - six
+  - watchdog
+  - configparser
+  - sentry-sdk
+  - docker-pycreds
+  - google-cloud-storage
+  - boto3
+  - azure-storage-blob
+
+  - attrs
+  - funcsigs
+  - furl
+  - humanfriendly
+  - jsonschema
+  - pathlib2
+  - plotly
+  - jinja2
+  - pyparsing
+  - pyjwt
+  - requests-file
+  - urllib3
+
+  - cloudpickle
+  - pyglet
+  - shapely
+
+  - nbval
+  - multipledispatch
+
+  - threadpoolctl
+  - pluggy
+  - more-itertools
+  - iniconfig
+  - pyparsing
+  - packaging
+  - toml
+  - attrs
+  - pytest
+  - patsy
+  - pytz
+  - category_encoders
+  - kiwisolver
+  - cycler
+  - pydot
+
+  - alembic
+  - cliff
+  - colorlog
+  - cmaes
+  - bayesian-optimization
+
+  - redis
+  - redis-py
+  - filelock
+  - prometheus_client
+  - pytz
+  - googleapis-common-protos
+  - pyasn1
+  - pyasn1-modules
+  - rsa
+  - cachetools
+  - google-auth
+  - chardet
+  - idna
+  - certifi
+  - google-api-core
+  - opencensus-context
+  - opencensus
+  - async-timeout
+  - multidict
+  - yarl
+  - attrs
+  - aiohttp
+  - blessings
+  - gpustat
+  - pyyaml
+  - pyrsistent
+  - jsonschema
+  - colorama
+  - hiredis
+  - aioredis
+  - msgpack-python
+  - msgpack-numpy
+  - soupsieve
+  - beautifulsoup4
+  - grpcio
+
+  - oauthlib
+  - pyzmq
+
+  - virtualenv
+  - frozendict
+
+  - networkx
+
+  - toolz
+  - pyarrow
+  - retrying
+  - fasteners
+  - attrdict
+  - pyhocon
+  - atomicwrites
+  - olefile
+  - pycparser
+
+  - numba
+  - rdflib
+  - googledrivedownloader
+
+  - cxxfilt
+
+  - bottleneck
+  - numexpr
+  - pytest-runner
+
+  # PIP #
+  - pip:
+      # Sort by dependency (~ toposort)
+      - git+https://github.com/benfred/py-spy.git
+      - colorful
+      - git+https://github.com/fastai/fastai.git
+      - git+https://github.com/pytorch/contrib.git
+      - git+https://github.com/szagoruyko/pytorchviz.git
+      - git+https://github.com/explosion/ml-datasets.git
+      - https://storage.googleapis.com/jax-releases/cuda102/jaxlib-0.1.52-cp38-none-manylinux2010_x86_64.whl
+      - jax==0.1.73
+      - git+https://github.com/explosion/thinc.git
+      - omegaconf
+      - git+https://github.com/williamFalcon/test-tube.git
+      - git+https://github.com/wandb/client.git
+      - protobuf
+      - onnxruntime-gpu
+      - git+https://github.com/PyTorchLightning/pytorch-lightning.git
+      - git+https://github.com/allegroai/trains.git
+      - git+https://github.com/allegroai/trains-agent.git
+      - git+https://github.com/openai/gym.git
+      - git+https://github.com/PyTorchLightning/pytorch-lightning-bolts.git
+      - wget
+      - git+https://github.com/pyro-ppl/pyro-api.git
+      - git+https://github.com/pyro-ppl/pyro.git
+      - makefun
+      - git+https://github.com/pyro-ppl/numpyro.git
+      - git+https://github.com/pyro-ppl/funsor.git
+      - git+https://github.com/emaballarin/pyro-models.git
+      - py
+      - sklearn
+      - sklearn2
+      - git+https://github.com/optuna/optuna.git
+      - cma
+      - git+https://github.com/facebookresearch/nevergrad.git
+      - git+https://github.com/facebook/Ax.git
+      - redis
+      - google
+      - https://s3-us-west-2.amazonaws.com/ray-wheels/latest/ray-0.9.0.dev0-cp38-cp38-manylinux1_x86_64.whl
+      - git+https://github.com/bamos/block.git
+      - git+https://github.com/WolframResearch/WolframClientForPython.git
+      - git+https://github.com/sksq96/pytorch-summary.git
+      - git+https://github.com/facebookresearch/higher.git
+      - git+https://github.com/facebookresearch/FDR_scheduler.git
+      - git+https://github.com/google/neural-tangents.git
+      - git+https://github.com/pgmpy/pgmpy.git
+      - git+https://github.com/deepmind/tree.git
+      - git+https://github.com/deepmind/dm_env.git
+      - git+https://github.com/deepmind/chex.git
+      - git+https://github.com/deepmind/dm-haiku.git
+      - git+https://github.com/deepmind/rlax.git
+      - git+https://github.com/arogozhnikov/einops.git
+      - git+https://github.com/google/TensorNetwork.git
+      - git+https://github.com/jonasrauber/eagerpy.git
+      - git+https://github.com/szymonmaszke/torchlayers.git
+      - git+https://github.com/szymonmaszke/torchfunc.git
+      - git+https://github.com/szymonmaszke/torchdata.git
+      - git+https://github.com/bkkaggle/pytorch_zoo.git
+      - git+https://github.com/emaballarin/pyromaniac.git
+      - krbticket
+      - git+https://github.com/pfnet/pfio.git
+      - git+https://github.com/pfnet/pytorch-pfn-extras.git
+      - git+https://github.com/cybertronai/autograd-lib.git
+      - git+https://github.com/rasbt/watermark.git
+      - git+https://github.com/rasbt/mlxtend.git
+      - git+https://github.com/krassowski/jupyterlab-lsp.git
+      - git+https://github.com/microsoft/onnxconverter-common.git
+      - git+https://github.com/onnx/sklearn-onnx.git
+      - git+https://github.com/scikit-learn-contrib/sklearn-pandas.git
+      - git+https://github.com/williamFalcon/pytorch-complex-tensor.git
+      - ase
+      - git+https://github.com/google/flax.git
+      - antlr4-python3-runtime
+      - importlib-resources
+      - git+https://github.com/facebookresearch/hydra.git
