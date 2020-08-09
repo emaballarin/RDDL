@@ -289,7 +289,7 @@ dependencies:
       # Sort by dependency (~ toposort)
       - git+https://github.com/benfred/py-spy.git
       - colorful
-      - git+https://github.com/fastai/fastai.git
+      #- git+https://github.com/fastai/fastai.git
       - git+https://github.com/pytorch/contrib.git
       - git+https://github.com/szagoruyko/pytorchviz.git
       - git+https://github.com/explosion/ml-datasets.git
