@@ -284,6 +284,8 @@ dependencies:
   - numexpr
   - pytest-runner
 
+  - cython
+
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)

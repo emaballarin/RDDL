@@ -25,6 +25,7 @@ qtcreator/
 *~
 *#
 *.swp
+condaenv.*.requirements.txt
 
 # MacOS self-generated files
 .DS_Store
