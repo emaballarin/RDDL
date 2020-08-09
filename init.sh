@@ -61,7 +61,7 @@ CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall
 pip install --upgrade --no-deps --pre cupy-cuda102
 
 
-# Install Jupyter(Lab) extensions
+# Install / enable Jupyter(Lab) extensions
 jupyter nbextension enable varInspector/main
 jupyter labextension install @jupyterlab/toc --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build

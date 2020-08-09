@@ -289,11 +289,10 @@ dependencies:
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
-      - git+https://github.com/benfred/py-spy.git
+      - py-spy
       - colorful
-      #- git+https://github.com/fastai/fastai.git
       - git+https://github.com/pytorch/contrib.git
-      - git+https://github.com/szagoruyko/pytorchviz.git
+      - graphviz
       - git+https://github.com/explosion/ml-datasets.git
       - https://storage.googleapis.com/jax-releases/cuda102/jaxlib-0.1.52-cp38-none-manylinux2010_x86_64.whl
       - jax==0.1.73
@@ -351,10 +350,10 @@ dependencies:
       - git+https://github.com/cybertronai/autograd-lib.git
       - git+https://github.com/rasbt/watermark.git
       - git+https://github.com/rasbt/mlxtend.git
-      - git+https://github.com/krassowski/jupyterlab-lsp.git
-      - git+https://github.com/microsoft/onnxconverter-common.git
-      - git+https://github.com/onnx/sklearn-onnx.git
-      - git+https://github.com/scikit-learn-contrib/sklearn-pandas.git
+      - jupyter-lsp
+      - onnxconverter-common
+      - sklearn-onnx
+      - sklearn-pandas
       - git+https://github.com/williamFalcon/pytorch-complex-tensor.git
       - ase
       - git+https://github.com/google/flax.git
