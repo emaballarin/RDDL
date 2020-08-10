@@ -67,8 +67,6 @@ pip install --upgrade --no-deps --force --force-reinstall pynvml
 
 jupyter nbextension enable varInspector/main
 
-jupyter labextension install @krassowski/jupyterlab-lsp
-
 jupyter labextension install @jupyterlab/toc --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
 jupyter labextension install jupyterlab-plotly --no-build
