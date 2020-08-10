@@ -45,9 +45,7 @@ export PYTHONUSERBASE="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME"
 #
 # This works around a known bug in PyTorch >= 1.5
 
-#export MKL_THREADING_LAYER="INTEL"
-export MKL_THREADING_LAYER="GNU"
-#export MKL_SERVICE_FORCE_INTEL="1"
-export MKL_SERVICE_FORCE_INTEL="0"
-
-# Change, if needed, ONLY AFTER install!
+export MKL_THREADING_LAYER="INTEL"
+#export MKL_THREADING_LAYER="GNU"
+export MKL_SERVICE_FORCE_INTEL="1"
+#export MKL_SERVICE_FORCE_INTEL="0"
