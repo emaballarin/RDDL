@@ -130,11 +130,15 @@ ln -s $(which gfortran-5) ./gfortran
 
 cd ..
 
-pip install https://pytorch-geometric.com/whl/torch-1.6.0/torch_scatter-latest%2Bcu102-cp38-cp38m-linux_x86_64.whl
-pip install https://pytorch-geometric.com/whl/torch-1.6.0/torch_sparse-latest%2Bcu102-cp38-cp38m-linux_x86_64.whl
-pip install https://pytorch-geometric.com/whl/torch-1.6.0/torch_cluster-latest%2Bcu102-cp38-cp38m-linux_x86_64.whl
-pip install https://pytorch-geometric.com/whl/torch-1.6.0/torch_spline_conv-latest%2Bcu102-cp38-cp38m-linux_x86_64.whl
+export PRE_CUDA="$CUDA"
+export CUDA="cu102"
+pip install torch-scatter==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
+pip install torch-sparse==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
+pip install torch-cluster==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
+pip install torch-spline-conv==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
 pip install git+https://github.com/rusty1s/pytorch_geometric.git
+export CUDA="$PRE_CUDA"
+unset PRE_CUDA
 
 export PATH="$PTG_PREPATH"
 unset PTG_PREPATH
