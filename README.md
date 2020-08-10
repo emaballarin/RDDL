@@ -19,14 +19,14 @@ Some relevant specifications:
    called `RDDL` (or, for our purposes, whichever name you want to call the
    environment to-be-created). Otherwise, it will be overwritten without
    further notice!
-   
+
 2. Ensure that you are running `bash` or `zsh` as shell, since they are the
    only supported (no `fish`, sorry... although I use it as my default shell in
    most of the cases!), and verify that the `conda` (or `mamba`, if you want to
    use it instead) command is available and working correctly.
-   
+
 3. Clone the *GitHub* repository via `git clone
-   https://github.com/emaballarin/RDDL.git `.
+   https://github.com/emaballarin/RDDL.git`.
 
 4. Open the `init.sh` and `portablecuda.sh` script files, and check if the
    **environmental variables**, **paths** and **versions** are OK for your
