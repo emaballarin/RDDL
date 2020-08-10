@@ -66,7 +66,6 @@ pip install --upgrade jupyter_http_over_ws
 
 jupyter nbextension enable varInspector/main
 
-jupyter labextension install @jupyterlab/debugger
 jupyter labextension install @krassowski/jupyterlab-lsp
 
 jupyter labextension install @jupyterlab/toc --no-build
