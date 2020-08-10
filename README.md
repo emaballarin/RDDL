@@ -22,8 +22,8 @@ Some relevant specifications:
    
 2. Ensure that you are running `bash` or `zsh` as shell, since they are the
    only supported (no `fish`, sorry... although I use it as my default shell in
-   most of the cases!), and verify that the `conda` command is available and
-   working correctly.
+   most of the cases!), and verify that the `conda` (or `mamba`, if you want to
+   use it instead) command is available and working correctly.
    
 3. Clone the *GitHub* repository via `git clone
    https://github.com/emaballarin/RDDL.git `.
@@ -39,4 +39,3 @@ Some relevant specifications:
 5. Let the script prepare and install everything, via `./init.sh` . Note that
    an active Internet connection is still required for everything to work as
    expected.
-
