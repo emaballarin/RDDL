@@ -24,7 +24,7 @@ dependencies:
   # CONDA PINNED #
   - python=3.8.5
   - cudatoolkit=10.2
-  - blas=*=mkl
+  - blas=*.*=mkl
   - opt_einsum=3.3
   - tqdm>=4.45 # PyTorch Lightning
   - pillow=7.0 # Pillow-SIMD
