@@ -285,6 +285,8 @@ dependencies:
 
   - cython
 
+  - scikit-geometry
+
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)

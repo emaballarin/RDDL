@@ -21,7 +21,7 @@ export SELF_STORED_CALLDIR="$(pwd)"
 ####################################################################################################
 
 # Remove already-existing environment with the same name
-"$WHICH_SNAKE" env remove -n $ANACONDA_ENV_NAME
+conda env remove -n $ANACONDA_ENV_NAME      # Conda required here!
 rm -R -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/"
 
 # Create new environment
@@ -38,7 +38,7 @@ cp -f ./dot_condarc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/"
 # Install and overwrite (if any) libjpeg-turbo
 # MUST BE SYSTEM-INSTALLED: CMake, cURL, Kerberos 5 (if needed), MPI libraries & compilers.
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-"$WHICH_SNAKE" remove -y cmake curl krb5 mpi cudatoolkit cudnn nccl nccl2 jpeg --force
+conda remove -y cmake curl krb5 mpi cudatoolkit cudnn nccl nccl2 jpeg --force --force-remove    # Conda required here!
 "$WHICH_SNAKE" install -y libjpeg-turbo --force --force-reinstall --no-deps --clobber
 
 mkdir -p "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/"
