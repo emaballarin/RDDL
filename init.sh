@@ -30,7 +30,8 @@ export PYTHONUSERBASE="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME"
 "$WHICH_SNAKE" env create -f environment.yml
 export PYTHONUSERBASE="$PRE_PYTHONUSERBASE"
 unset PRE_PYTHONUSERBASE
-cp -f ./dot_condarc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/"
+cp -f ./dot_condarc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/.condarc"
+cp -f ./start.py "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/start.py"
 
 ####################################################################################################
 

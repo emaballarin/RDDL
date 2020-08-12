@@ -39,3 +39,29 @@ Some relevant specifications:
 5. Let the script prepare and install everything, via `./init.sh` . Note that
    an active Internet connection is still required for everything to work as
    expected.
+
+---
+
+#### Experimental `fish` shell support
+
+After having followed the *Essential how-to* right above, in order to properly use this
+specific `conda` setup from the `fish` shell, without sacrificing otherwise-working `conda`
+integration, you need to:
+
+1. Ensure that you are starting from a *clean* (i.e. non-`conda`-integrated `fish` setup),
+undoing any step previously followed in this direction (**note:** any functionality will
+be restored by following such procedure!).
+
+2. Add the line `source "$HOME/anaconda3/etc/fish/conf.d/conda.fish"` to one (any valid)
+`fish` script sourced on shell startup.
+
+3. Install the [`bass`](https://github.com/edc/bass) plugin for `fish`.
+
+4. Add the aliases `alias conda_activate="bass source activate"` and
+`alias conda_deactivate="bass source deactivate"` to one (any valid)
+`fish` script sourced on shell startup.
+
+5. Use such aliases to activate (at least) the `RDDL` environment. Note that
+the usual `conda` command (from `fish`) currently fails to properly source `bash`-compatible
+scripts located in `$CONDA_PREFIX/etc/conda/activate.d/` and `$CONDA_PREFIX/etc/conda/deactivate.d/`
+which `RDDL` needs!
