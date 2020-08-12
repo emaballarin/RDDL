@@ -45,8 +45,8 @@ dependencies:
   - torchvision=0.7
   - torchaudio=0.6
   - torchtext=0.7
-  - torchserve=0.1.1
-  - torch-model-archiver=0.1.1
+  - torchserve=0.2
+  - torch-model-archiver=0.2
   - gpytorch=1.1.1
   - botorch=0.3
   - ignite=0.4.1
@@ -57,9 +57,9 @@ dependencies:
   - tensorly=0.4.5
   - dgl-cuda10.2=0.4.3 # <- end
 
-  - fastcore=0.1.25 # <- Fast.ai & friends
-  - fastprogress=0.2.5
-  - nbdev=0.2.27
+  - fastcore=0.1.30 # <- Fast.ai & friends
+  - fastprogress=0.2.6
+  - nbdev=0.2.36
   - fastscript=0.1.13 # <- end
 
   - jupyterlab>=2.2 # Jupyter(Lab) & friends <- start
@@ -74,6 +74,8 @@ dependencies:
   - vaex-arrow=0.5.1
   - vaex-server=0.3.1
   - vaex-ml # <- end
+
+  - pyyaml>=5.1
 
   # CONDA FLOATING #
   - conda
@@ -159,8 +161,6 @@ dependencies:
 
   - prompt_toolkit
   - wcwidth
-
-  - pyyaml>=5.1
 
   - click
   - gitpython
@@ -304,8 +304,8 @@ dependencies:
       - protobuf
       - onnxruntime-gpu
       - git+https://github.com/PyTorchLightning/pytorch-lightning.git
-      - git+https://github.com/allegroai/trains.git
-      - git+https://github.com/allegroai/trains-agent.git
+      - trains
+      - trains-agent
       - git+https://github.com/openai/gym.git
       - git+https://github.com/PyTorchLightning/pytorch-lightning-bolts.git
       - wget
@@ -326,31 +326,31 @@ dependencies:
       - google
       - https://s3-us-west-2.amazonaws.com/ray-wheels/latest/ray-0.9.0.dev0-cp38-cp38-manylinux1_x86_64.whl
       - git+https://github.com/bamos/block.git
-      - git+https://github.com/WolframResearch/WolframClientForPython.git
+      - wolframclient
       - git+https://github.com/sksq96/pytorch-summary.git
       - git+https://github.com/facebookresearch/higher.git
       - git+https://github.com/facebookresearch/FDR_scheduler.git
       - git+https://github.com/google/neural-tangents.git
-      - git+https://github.com/pgmpy/pgmpy.git
+      - pgmpy
       - git+https://github.com/deepmind/tree.git
-      - git+https://github.com/deepmind/dm_env.git
+      - dm-env
       - git+https://github.com/deepmind/chex.git
       - git+https://github.com/deepmind/dm-haiku.git
       - git+https://github.com/deepmind/rlax.git
       - git+https://github.com/arogozhnikov/einops.git
       - git+https://github.com/google/TensorNetwork.git
-      - git+https://github.com/jonasrauber/eagerpy.git
-      - git+https://github.com/szymonmaszke/torchlayers.git
+      - eagerpy
+      - torchlayers
       - git+https://github.com/szymonmaszke/torchfunc.git
-      - git+https://github.com/szymonmaszke/torchdata.git
-      - git+https://github.com/bkkaggle/pytorch_zoo.git
+      - torchdata
+      - pytorch-zoo
       - git+https://github.com/emaballarin/pyromaniac.git
       - krbticket
       - git+https://github.com/pfnet/pfio.git
       - git+https://github.com/pfnet/pytorch-pfn-extras.git
       - git+https://github.com/cybertronai/autograd-lib.git
-      - git+https://github.com/rasbt/watermark.git
-      - git+https://github.com/rasbt/mlxtend.git
+      - watermark
+      - mlxtend
       - onnxconverter-common
       - git+https://github.com/onnx/sklearn-onnx.git
       - sklearn-pandas
@@ -359,4 +359,3 @@ dependencies:
       - git+https://github.com/google/flax.git
       - antlr4-python3-runtime
       - importlib-resources
-      - git+https://github.com/facebookresearch/hydra.git

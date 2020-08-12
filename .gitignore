@@ -26,6 +26,7 @@ qtcreator/
 *#
 *.swp
 condaenv.*.requirements.txt
+**/faketop/
 
 # MacOS self-generated files
 .DS_Store
