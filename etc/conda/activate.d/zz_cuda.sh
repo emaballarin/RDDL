@@ -49,3 +49,8 @@ export MKL_THREADING_LAYER="INTEL"
 #export MKL_THREADING_LAYER="GNU"
 export MKL_SERVICE_FORCE_INTEL="1"
 #export MKL_SERVICE_FORCE_INTEL="0"
+
+# Fix such bug in a non-interactive way...
+export PRE_PYTHONSTARTUP="$PYTHONSTARTUP"
+export PYTHONSTARTUP="$CONDA_PREFIX/start.py"
+
