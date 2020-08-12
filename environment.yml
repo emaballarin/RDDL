@@ -287,6 +287,8 @@ dependencies:
 
   - scikit-geometry
 
+  - MOSEK
+
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
