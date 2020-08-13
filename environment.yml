@@ -292,6 +292,14 @@ dependencies:
 
   - MOSEK
 
+  - bravado-core # Neptune.ai & friends <- start
+  - bravado
+  - py3nvml
+  - requests-oauthlib
+  - websocket-client
+  - hiplot
+  - path.py # <- end
+
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
@@ -364,3 +372,6 @@ dependencies:
       - git+https://github.com/google/flax.git
       - antlr4-python3-runtime
       - importlib-resources
+      - git+https://github.com/neptune-ai/neptune-client.git
+      - git+https://github.com/neptune-ai/neptune-contrib.git
+      - git+https://github.com/neptune-ai/neptune-notebooks.git
