@@ -75,6 +75,9 @@ dependencies:
   - vaex-server=0.3.1
   - vaex-ml # <- end
 
+  - dvc=1.5 # DVC & friends <- start
+  - networkx>=2.4 # <- end
+
   - pyyaml>=5.1
 
   # CONDA FLOATING #
