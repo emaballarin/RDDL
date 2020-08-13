@@ -57,9 +57,9 @@ dependencies:
   - tensorly=0.4.5
   - dgl-cuda10.2=0.4.3 # <- end
 
-  - fastcore=0.1.30 # <- Fast.ai & friends
+  - fastcore=0.1.31 # <- Fast.ai & friends
   - fastprogress=0.2.6
-  - nbdev=0.2.36
+  - nbdev=0.2.38
   - fastscript=0.1.13 # <- end
 
   - jupyterlab>=2.2 # Jupyter(Lab) & friends <- start
@@ -301,7 +301,7 @@ dependencies:
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
       - https://storage.googleapis.com/jax-releases/cuda102/jaxlib-0.1.52-cp38-none-manylinux2010_x86_64.whl
-      - jax==0.1.73
+      - jax==0.1.75
       - git+https://github.com/explosion/thinc.git
       - omegaconf
       - git+https://github.com/williamFalcon/test-tube.git
