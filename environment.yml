@@ -80,6 +80,8 @@ dependencies:
 
   - pyyaml>=5.1
 
+  - comet_ml=3.1.16
+
   # CONDA FLOATING #
   - conda
   - absl-py
