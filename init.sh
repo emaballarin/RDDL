@@ -141,6 +141,7 @@ pip install torch-sparse==latest+${CUDA} -f https://pytorch-geometric.com/whl/to
 pip install torch-cluster==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
 pip install torch-spline-conv==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
 pip install git+https://github.com/rusty1s/pytorch_geometric.git
+pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git
 export CUDA="$PRE_CUDA"
 unset PRE_CUDA
 
