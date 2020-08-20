@@ -3,15 +3,15 @@
 # Scientific stack
 import numpy
 import numpy as np
-import scipy
-import scipy as sp
-import pandas
-import pandas as pd
-import vaex
-import vaex as vx
+#import scipy
+#import scipy as sp
+#import pandas
+#import pandas as pd
+#import vaex
+#import vaex as vx
 
 # Deep Learning stack
-import jax
+#import jax
 import torch
 import torch as th
 import pytorch_lightning
