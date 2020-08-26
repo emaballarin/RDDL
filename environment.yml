@@ -55,12 +55,13 @@ dependencies:
   - tensorboard=2.3
   - tensorboardx=2.1
   - tensorly=0.4.5
-  - dgl-cuda10.2=0.4.3 # <- end
+  - dgl-cuda10.2=0.5 # <- end
 
-  - fastcore=0.1.38 # <- Fast.ai & friends
-  - fastprogress=0.2.6
-  - nbdev=0.2.40
-  - fastscript=0.1.13 # <- end
+  - fastcore=1 # <- Fast.ai & friends
+  - fastprogress=1
+  - nbdev=1.0.1
+  - fastgpu=1.0.1
+  - fastscript=1 # <- end
 
   - jupyterlab>=2.2 # Jupyter(Lab) & friends <- start
   - notebook>=6 # <- end
@@ -75,12 +76,12 @@ dependencies:
   - vaex-server=0.3.1
   - vaex-ml # <- end
 
-  - dvc=1.6 # DVC & friends <- start
+  - dvc=1.6.1 # DVC & friends <- start
   - networkx>=2.4 # <- end
 
   - pyyaml>=5.1
 
-  - comet_ml=3.1.16
+  - comet_ml=3.1.17
 
   # CONDA FLOATING #
   - conda
