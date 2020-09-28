@@ -77,7 +77,7 @@ dependencies:
   - vaex-ml # <- end
 
   - dvc=1.7.9 # DVC & friends <- start
-  - networkx>=2.5 # <- end
+  - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
   - pyyaml>=5.1
 
