@@ -313,6 +313,8 @@ dependencies:
   - aio-pika>=6 # <- end
 
   - gputil
+  - llvmlite
+  - python-louvain
 
   # PIP #
   - pip:
@@ -322,7 +324,7 @@ dependencies:
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
-      - https://storage.googleapis.com/jax-releases/cuda102/jaxlib-0.1.56-cp38-none-manylinux2010_x86_64.whl
+      - https://storage.googleapis.com/jax-releases/cuda102/jaxlib-0.1.56+cuda102-cp38-none-manylinux2010_x86_64.whl
       - jax==0.2.3
       - git+https://github.com/explosion/thinc.git
       - omegaconf
