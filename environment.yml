@@ -31,6 +31,8 @@ dependencies:
   - graphviz=2.42 # TorchViz
   - jedi=0.17.2 # Jupyter(Lab)
 
+  - visdom=0.1.8.9
+
   - cython-blis=0.7.1 # ThinC & friends <- start
   - cymem=2.0.3
   - murmurhash=1.0.2
@@ -115,7 +117,7 @@ dependencies:
   - importlib_metadata
   - setuptools
   - wheel
-  - pep517 # <- stop
+  - pep517 # <- end
 
   - requests
   - regex
@@ -303,6 +305,15 @@ dependencies:
   - hiplot
   - path.py # <- end
 
+  # Catalyst & friends (extras) <- start
+  - deprecation
+  - nmslib=2.0.5
+  - python-daemon
+  - fastapi
+  - aio-pika>=6 # <- end
+
+  - gputil
+
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
@@ -379,3 +390,9 @@ dependencies:
       - git+https://github.com/neptune-ai/neptune-client.git
       - git+https://github.com/neptune-ai/neptune-contrib.git
       - git+https://github.com/neptune-ai/neptune-notebooks.git
+      - git+https://github.com/catalyst-team/alchemy.git
+      - git+https://github.com/catalyst-team/reaction.git
+      - git+https://github.com/catalyst-team/catalyst.git
+      - git+https://github.com/TezRomacH/safitty.git
+      - git+https://github.com/getkeops/keops.git
+      - git+https://github.com/jeanfeydy/geomloss.git
