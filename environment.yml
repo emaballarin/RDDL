@@ -56,12 +56,12 @@ dependencies:
   - onnx=1.7
   - tensorboard=2.3
   - tensorboardx=2.1
-  - tensorly=0.4.5
+  - tensorly=0.5.0
   - dgl-cuda10.2=0.5.2 # <- end
 
-  - fastcore=1.1.0 # <- Fast.ai & friends
+  - fastcore=1.2.2 # <- Fast.ai & friends
   - fastprogress=1
-  - nbdev=1.1.2
+  - nbdev=1.1.4
   - fastgpu=1.0.1
   - fastscript=1 # <- end
 
@@ -78,7 +78,7 @@ dependencies:
   - vaex-server=0.3.1
   - vaex-ml # <- end
 
-  - dvc=1.8.4 # DVC & friends <- start
+  - dvc=1.9 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
   - pyyaml>=5.1
@@ -325,7 +325,7 @@ dependencies:
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
       - https://storage.googleapis.com/jax-releases/cuda102/jaxlib-0.1.56+cuda102-cp38-none-manylinux2010_x86_64.whl
-      - jax==0.2.3
+      - jax==0.2.4
       - git+https://github.com/explosion/thinc.git
       - omegaconf
       - git+https://github.com/williamFalcon/test-tube.git
