@@ -85,9 +85,12 @@ dependencies:
 
   - comet_ml=3.2.4
 
-  # STL tools
+  # Metric/Signal Temporal Logic tools (prerequisites)
   - funcy>=1.15
   - sortedcontainers>=2.2.2
+  - parsimonious>=0.8.1
+  - singledispatch>=3.4
+  - lenses>=1
 
   # CONDA FLOATING #
   - conda
@@ -253,6 +256,7 @@ dependencies:
   - yarl
   - attrs
   - aiohttp
+  - aiohttp-cors>=0.7
   - blessings
   - gpustat
   - pyyaml
@@ -354,6 +358,7 @@ dependencies:
       - git+https://github.com/optuna/optuna.git
       - cma
       - git+https://github.com/facebookresearch/nevergrad.git
+      - typeguard
       - git+https://github.com/facebook/Ax.git
       - redis
       - google
@@ -392,6 +397,16 @@ dependencies:
       - ase
       - git+https://github.com/google/flax.git
       - antlr4-python3-runtime
+      - async_exit_stack
+      - orjson
+      - uvicorn
+      - ujson
+      - aiormq
+      - dnspython
+      - h11
+      - websockets
+      - httptools
+      - uvloop
       - importlib-resources
       - git+https://github.com/neptune-ai/neptune-client.git
       - git+https://github.com/neptune-ai/neptune-contrib.git
@@ -403,7 +418,4 @@ dependencies:
       - git+https://github.com/getkeops/keops.git
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/mvcisback/DiscreteSignals.git
-      - parsimonious
-      - singledispatch
-      - lenses
       - git+https://github.com/mvcisback/py-metric-temporal-logic.git
