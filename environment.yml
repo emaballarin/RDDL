@@ -51,21 +51,21 @@ dependencies:
   - torch-model-archiver=0.2.1
   - gpytorch=1.2
   - botorch=0.3.1
-  - ignite=0.4.2
+  - ignite>=0.4.2
   - captum=0.2
   - onnx=1.7
   - tensorboard=2.3
   - tensorboardx=2.1
-  - tensorly=0.5.0
+  - tensorly=0.5
   - dgl-cuda10.2=0.5.2 # <- end
 
-  - fastcore=1.2.2 # <- Fast.ai & friends
+  - fastcore=1.2.3 # <- Fast.ai & friends
   - fastprogress=1
   - nbdev=1.1.4
   - fastgpu=1.0.1
   - fastscript=1 # <- end
 
-  - jupyterlab>=2.2.8 # Jupyter(Lab) & friends <- start
+  - jupyterlab>=2.2.9 # Jupyter(Lab) & friends <- start
   - notebook>=6.1 # <- end
 
   - vaex=3 # Vaex & friends <- start
@@ -91,6 +91,7 @@ dependencies:
   - parsimonious>=0.8.1
   - singledispatch>=3.4
   - lenses>=1
+  - aiohttp-cors>=0.7
 
   # CONDA FLOATING #
   - conda
@@ -256,7 +257,6 @@ dependencies:
   - yarl
   - attrs
   - aiohttp
-  - aiohttp-cors>=0.7
   - blessings
   - gpustat
   - pyyaml
