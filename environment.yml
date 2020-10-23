@@ -85,6 +85,10 @@ dependencies:
 
   - comet_ml=3.2.4
 
+  # STL tools
+  - funcy>=1.15
+  - sortedcontainers>=2.2.2
+
   # CONDA FLOATING #
   - conda
   - absl-py
@@ -398,3 +402,8 @@ dependencies:
       - git+https://github.com/TezRomacH/safitty.git
       - git+https://github.com/getkeops/keops.git
       - git+https://github.com/jeanfeydy/geomloss.git
+      - git+https://github.com/mvcisback/DiscreteSignals.git
+      - parsimonious
+      - singledispatch
+      - lenses
+      - git+https://github.com/mvcisback/py-metric-temporal-logic.git
