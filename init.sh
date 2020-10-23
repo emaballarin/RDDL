@@ -64,7 +64,7 @@ pip install --upgrade --no-deps --pre hydra-core
 pip install --upgrade --no-deps --pre fastai
 CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
 pip install --upgrade --no-deps --pre cupy-cuda102
-pip install --pre lightning-grid
+# pip install --pre lightning-grid
 pip install --upgrade jupyter_http_over_ws
 pip install --upgrade --no-deps --force --force-reinstall pynvml
 

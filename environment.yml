@@ -321,30 +321,30 @@ dependencies:
   - aio-pika>=6 # <- end
 
   # Lightning Grid (early access) <- start
-  - deprecated
-  - pygithub
-  - pygments
-  - analytics-python
-  - async-timeout
-  - backcall
-  - botocore
-  - commonmark
-  - coverage
-  - docutils
-  - gitdb
-  - graphql-core
-  - parso
-  - pexpect
-  - pickleshare
-  - ptyprocess
-  - rich
-  - s3transfer
-  - smmap
-  - termcolor
-  - tornado
-  - traitlets
-  - tzlocal
-  - wrapt
+#  - deprecated
+#  - pygithub
+#  - pygments
+#  - analytics-python
+#  - async-timeout
+#  - backcall
+#  - botocore
+#  - commonmark
+#  - coverage
+#  - docutils
+#  - gitdb
+#  - graphql-core
+#  - parso
+#  - pexpect
+#  - pickleshare
+#  - ptyprocess
+#  - rich
+#  - s3transfer
+#  - smmap
+#  - termcolor
+#  - tornado
+#  - traitlets
+#  - tzlocal
+#  - wrapt
   # <- end
 
   - gputil
@@ -446,12 +446,12 @@ dependencies:
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/mvcisback/DiscreteSignals.git
       - git+https://github.com/mvcisback/py-metric-temporal-logic.git
-      - appnope
-      - coolname
-      - decorator
-      - google-cloud
-      - google-cloud-core
-      - google-resumable-media
-      - pprintpp
-      - yaspin
-      - zipp
+#      - appnope
+#      - coolname
+#      - decorator
+#      - google-cloud
+#      - google-cloud-core
+#      - google-resumable-media
+#      - pprintpp
+#      - yaspin
+#      - zipp
