@@ -22,8 +22,8 @@ channels:
 
 dependencies:
   # CONDA PINNED #
-  - python=3.8.5
-  - cudatoolkit=10.2
+  - python=3.8.6
+  - cudatoolkit=11.0
   - blas=*.*=mkl
   - opt_einsum=3.3
   - tqdm>=4.45 # PyTorch Lightning
@@ -34,34 +34,34 @@ dependencies:
   - visdom=0.1.8.9
 
   - cython-blis=0.7.1 # ThinC & friends <- start
-  - cymem=2.0.3
-  - murmurhash=1.0.2
-  - preshed=3.0.2
-  - pydantic=1.6.1
+  - cymem=2.0.4
+  - murmurhash=1.0.4
+  - preshed=3.0.3
+  - pydantic=1.7.2
   - wasabi=0.8
-  - srsly=2.3
+  - srsly=2.3.1
   - catalogue=2.0.1
   - immutables=0.14 # <- end
 
-  - pytorch=1.6 # PyTorch & friends <- start
-  - torchvision=0.7
-  - torchaudio=0.6
-  - torchtext=0.7
+  - pytorch=1.7 # PyTorch & friends <- start
+  - torchvision=0.8.1
+  - torchaudio=0.7
+  - torchtext=0.8
   - torchserve=0.2.1
   - torch-model-archiver=0.2.1
-  - gpytorch=1.2
-  - botorch=0.3.1
+  - gpytorch=1.2.1
+  - botorch=0.3.2
   - ignite>=0.4.2
   - captum=0.2
   - onnx=1.7
   - tensorboard=2.3
   - tensorboardx=2.1
-  - tensorly=0.5
-  - dgl-cuda10.2=0.5.2 # <- end
+  - tensorly=0.5 # <- end
+  #  - dgl-cuda11.0=0.5.2 # <- end |> !! Binaries not yet available for CUDA >=11
 
-  - fastcore=1.2.3 # <- Fast.ai & friends
+  - fastcore=1.3.1 # <- Fast.ai & friends
   - fastprogress=1
-  - nbdev=1.1.4
+  - nbdev=1.1.5
   - fastgpu=1.0.1
   - fastscript=1 # <- end
 
@@ -78,12 +78,12 @@ dependencies:
   - vaex-server=0.3.1
   - vaex-ml # <- end
 
-  - dvc=1.9 # DVC & friends <- start
+  - dvc=1.9.1 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
   - pyyaml>=5.1
 
-  - comet_ml=3.2.4
+  - comet_ml=3.2.5
 
   # Metric/Signal Temporal Logic tools (prerequisites)
   - funcy>=1.15
@@ -320,36 +320,37 @@ dependencies:
   - fastapi
   - aio-pika>=6 # <- end
 
-  # Lightning Grid (early access) <- start
-#  - deprecated
-#  - pygithub
-#  - pygments
-#  - analytics-python
-#  - async-timeout
-#  - backcall
-#  - botocore
-#  - commonmark
-#  - coverage
-#  - docutils
-#  - gitdb
-#  - graphql-core
-#  - parso
-#  - pexpect
-#  - pickleshare
-#  - ptyprocess
-#  - rich
-#  - s3transfer
-#  - smmap
-#  - termcolor
-#  - tornado
-#  - traitlets
-#  - tzlocal
-#  - wrapt
-  # <- end
-
+  # Misc: <- start
   - gputil
   - llvmlite
-  - python-louvain
+  - python-louvain # <- end
+
+  # Lightning Grid (early access) <- start
+  #  - deprecated
+  #  - pygithub
+  #  - pygments
+  #  - analytics-python
+  #  - async-timeout
+  #  - backcall
+  #  - botocore
+  #  - commonmark
+  #  - coverage
+  #  - docutils
+  #  - gitdb
+  #  - graphql-core
+  #  - parso
+  #  - pexpect
+  #  - pickleshare
+  #  - ptyprocess
+  #  - rich
+  #  - s3transfer
+  #  - smmap
+  #  - termcolor
+  #  - tornado
+  #  - traitlets
+  #  - tzlocal
+  #  - wrapt
+  # <- end
 
   # PIP #
   - pip:
@@ -359,8 +360,8 @@ dependencies:
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
-      - https://storage.googleapis.com/jax-releases/cuda102/jaxlib-0.1.56+cuda102-cp38-none-manylinux2010_x86_64.whl
-      - jax==0.2.4
+      - https://storage.googleapis.com/jax-releases/cuda110/jaxlib-0.1.56+cuda110-cp38-none-manylinux2010_x86_64.whl
+      - jax==0.2.5
       - git+https://github.com/explosion/thinc.git
       - omegaconf
       - git+https://github.com/williamFalcon/test-tube.git
@@ -446,6 +447,10 @@ dependencies:
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/mvcisback/DiscreteSignals.git
       - git+https://github.com/mvcisback/py-metric-temporal-logic.git
+      - git+https://github.com/fmfn/BayesianOptimization.git
+#
+#      Lightning Grid (early access) <- start
+#
 #      - appnope
 #      - coolname
 #      - decorator
@@ -454,4 +459,4 @@ dependencies:
 #      - google-resumable-media
 #      - pprintpp
 #      - yaspin
-#      - zipp
+#      - zipp # <- end

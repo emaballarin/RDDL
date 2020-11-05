@@ -7,7 +7,7 @@ export ANACONDA_ENV_NAME="RDDL"
 # A directory with CUDA / CUDNN / NCCL installed inside, and ./lib64/ folder removed
 # after having it merged with ./lib/
 # A ./lib64/ folder may alternatively be present, but as a soft symlink to 'lib'
-export PORTABLECUDA_ROOT="/opt/portablecuda/10.2.89/"
+export PORTABLECUDA_ROOT="/opt/portablecuda/11.0.3/"
 
 # The name of the (in-home, i.e. ~/) directory in which [Ana|Mini]conda is installed.
 export ANACONDA_BASEDIR_NAME="anaconda3"

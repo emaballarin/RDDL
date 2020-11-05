@@ -63,7 +63,7 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 pip install --upgrade --no-deps --pre hydra-core
 pip install --upgrade --no-deps --pre fastai
 CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
-pip install --upgrade --no-deps --pre cupy-cuda102
+pip install --upgrade --no-deps --pre cupy-cuda110
 # pip install --pre lightning-grid
 pip install --upgrade jupyter_http_over_ws
 pip install --upgrade --no-deps --force --force-reinstall pynvml
@@ -135,11 +135,11 @@ ln -s $(which gfortran-5) ./gfortran
 cd ..
 
 export PRE_CUDA="$CUDA"
-export CUDA="cu102"
-pip install torch-scatter==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
-pip install torch-sparse==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
-pip install torch-cluster==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
-pip install torch-spline-conv==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.6.0.html
+export CUDA="cu110"
+pip install torch-scatter==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.7.0.html
+pip install torch-sparse==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.7.0.html
+pip install torch-cluster==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.7.0.html
+pip install torch-spline-conv==latest+${CUDA} -f https://pytorch-geometric.com/whl/torch-1.7.0.html
 pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
 pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git
 export CUDA="$PRE_CUDA"
