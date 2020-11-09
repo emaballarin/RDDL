@@ -59,7 +59,7 @@ dependencies:
   - tensorly=0.5 # <- end
   #  - dgl-cuda11.0=0.5.2 # <- end |> !! Binaries not yet available for CUDA >=11
 
-  - fastcore=1.3.1 # <- Fast.ai & friends
+  - fastcore=1.3.2 # <- Fast.ai & friends
   - fastprogress=1
   - nbdev=1.1.5
   - fastgpu=1.0.1
@@ -92,6 +92,14 @@ dependencies:
   - singledispatch>=3.4
   - lenses>=1
   - aiohttp-cors>=0.7
+
+    # Mathematical otimization
+  - gurobi=9.1.0
+  - MOSEK=9.2.29
+
+  # Catalyst & friends (versioned)
+  - nmslib=2.0.5
+  - aio-pika>=6
 
   # CONDA FLOATING #
   - conda
@@ -303,8 +311,6 @@ dependencies:
 
   - scikit-geometry
 
-  - MOSEK
-
   - bravado-core # Neptune.ai & friends <- start
   - bravado
   - py3nvml
@@ -315,10 +321,8 @@ dependencies:
 
   # Catalyst & friends (extras) <- start
   - deprecation
-  - nmslib=2.0.5
   - python-daemon
-  - fastapi
-  - aio-pika>=6 # <- end
+  - fastapi # <- end
 
   # Misc: <- start
   - gputil
@@ -390,7 +394,7 @@ dependencies:
       - git+https://github.com/facebook/Ax.git
       - redis
       - google
-      - https://s3-us-west-2.amazonaws.com/ray-wheels/latest/ray-1.1.0.dev0-cp38-cp38-manylinux1_x86_64.whl
+      - https://s3-us-west-2.amazonaws.com/ray-wheels/latest/ray-1.1.0.dev0-cp38-cp38-manylinux2014_x86_64.whl
       - git+https://github.com/bamos/block.git
       - wolframclient
       - git+https://github.com/sksq96/pytorch-summary.git
