@@ -40,7 +40,9 @@ cp -f ./start.py "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/start.py"
 # MUST BE SYSTEM-INSTALLED: CMake, cURL, Kerberos 5 (if needed), MPI libraries & compilers.
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 conda remove -y cmake curl krb5 mpi cudatoolkit cudnn nccl nccl2 --force --force-remove    # Conda required here!
-"$WHICH_SNAKE" install -y libjpeg-turbo --force --force-reinstall --no-deps --clobber
+
+# May not be picked correctly otherwise...
+"$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/$WHICH_SNAKE" install -y libjpeg-turbo --force --force-reinstall --no-deps --clobber
 
 mkdir -p "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/"
 rm -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/ld"

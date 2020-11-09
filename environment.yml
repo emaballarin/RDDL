@@ -101,6 +101,10 @@ dependencies:
   - nmslib=2.0.5
   - aio-pika>=6
 
+  # Mamba trick
+  - mamba=0.6.4
+
+
   # CONDA FLOATING #
   - conda
   - absl-py
