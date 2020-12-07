@@ -37,7 +37,7 @@ dependencies:
   - cymem=2.0.5
   - murmurhash=1.0.5
   - preshed=3.0.5
-  - pydantic=1.7.3
+  - pydantic=1.6.1 # ThinC explicit requirement!
   - wasabi=0.8
   - srsly=2.3.2
   - catalogue=2.0.1
@@ -91,7 +91,14 @@ dependencies:
 
   # Catalyst & friends (versioned)
   - nmslib=2.0.5
-  - aio-pika>=6
+  - aio-pika=6.1.1
+
+  # Dependency fixups (1)
+  - idna=2.8
+  - requests=2.22.0
+  - yarl=1.4.2
+  - pyglet=1.5
+  - virtualenv=16.7
 
 
   # CONDA FLOATING #
@@ -128,7 +135,6 @@ dependencies:
   - wheel
   - pep517 # <- end
 
-  - requests
   - regex
   - future
   - psutil
@@ -208,7 +214,6 @@ dependencies:
   - urllib3
 
   - cloudpickle
-  - pyglet
   - shapely
 
   - nbval
@@ -248,14 +253,12 @@ dependencies:
   - cachetools
   - google-auth
   - chardet
-  - idna
   - certifi
   - google-api-core
   - opencensus-context
   - opencensus
   - async-timeout
   - multidict
-  - yarl
   - attrs
   - aiohttp
   - blessings
@@ -275,7 +278,6 @@ dependencies:
   - oauthlib
   - pyzmq
 
-  - virtualenv
   - frozendict
 
   - networkx
@@ -336,7 +338,7 @@ dependencies:
       - omegaconf
       - git+https://github.com/williamFalcon/test-tube.git
       - git+https://github.com/wandb/client.git
-      - protobuf
+      - protobuf==3.14
       - onnxruntime-gpu
       - git+https://github.com/PyTorchLightning/pytorch-lightning.git
       - trains
@@ -399,7 +401,7 @@ dependencies:
       - orjson
       - uvicorn
       - ujson
-      - aiormq
+      - aiormq==2.4
       - dnspython
       - git+https://github.com/python-hyper/h11.git
       - websockets

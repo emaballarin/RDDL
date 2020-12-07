@@ -33,6 +33,11 @@ unset PRE_PYTHONUSERBASE
 cp -f ./dot_condarc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/.condarc"
 cp -f ./start.py "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/start.py"
 
+# Dependency fixups (2)
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+pip install -U fastapi starlette bayesian-optimization
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+
 ####################################################################################################
 
 # Remove Anaconda-installed CUDA & other nasty stuff (that must be system-installed, though);
