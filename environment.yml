@@ -85,14 +85,6 @@ dependencies:
 
   - comet_ml=3.2.7
 
-#  # Metric/Signal Temporal Logic tools (prerequisites)
-#  - funcy>=1.15
-#  - sortedcontainers>=2.3
-#  - parsimonious>=0.8.1
-#  - singledispatch>=3.4
-#  - lenses>=1
-#  - aiohttp-cors>=0.7
-
     # Mathematical otimization
   - gurobi=9.1
   - MOSEK=9.2.29
@@ -100,9 +92,6 @@ dependencies:
   # Catalyst & friends (versioned)
   - nmslib=2.0.5
   - aio-pika>=6
-
-  # Mamba trick
-  - mamba=0.7.4
 
 
   # CONDA FLOATING #
