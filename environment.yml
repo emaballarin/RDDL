@@ -85,13 +85,13 @@ dependencies:
 
   - comet_ml=3.2.7
 
-  # Metric/Signal Temporal Logic tools (prerequisites)
-  - funcy>=1.15
-  - sortedcontainers>=2.3
-  - parsimonious>=0.8.1
-  - singledispatch>=3.4
-  - lenses>=1
-  - aiohttp-cors>=0.7
+#  # Metric/Signal Temporal Logic tools (prerequisites)
+#  - funcy>=1.15
+#  - sortedcontainers>=2.3
+#  - parsimonious>=0.8.1
+#  - singledispatch>=3.4
+#  - lenses>=1
+#  - aiohttp-cors>=0.7
 
     # Mathematical otimization
   - gurobi=9.1
@@ -333,33 +333,6 @@ dependencies:
   - llvmlite
   - python-louvain # <- end
 
-  # Lightning Grid (early access) <- start
-  #  - deprecated
-  #  - pygithub
-  #  - pygments
-  #  - analytics-python
-  #  - async-timeout
-  #  - backcall
-  #  - botocore
-  #  - commonmark
-  #  - coverage
-  #  - docutils
-  #  - gitdb
-  #  - graphql-core
-  #  - parso
-  #  - pexpect
-  #  - pickleshare
-  #  - ptyprocess
-  #  - rich
-  #  - s3transfer
-  #  - smmap
-  #  - termcolor
-  #  - tornado
-  #  - traitlets
-  #  - tzlocal
-  #  - wrapt
-  # <- end
-
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
@@ -439,7 +412,7 @@ dependencies:
       - ujson
       - aiormq
       - dnspython
-      - h11
+      - git+https://github.com/python-hyper/h11.git
       - websockets
       - httptools
       - uvloop
@@ -453,18 +426,4 @@ dependencies:
       - git+https://github.com/TezRomacH/safitty.git
       - git+https://github.com/getkeops/keops.git
       - git+https://github.com/jeanfeydy/geomloss.git
-      - git+https://github.com/mvcisback/DiscreteSignals.git
-      - git+https://github.com/mvcisback/py-metric-temporal-logic.git
       - git+https://github.com/fmfn/BayesianOptimization.git
-#
-#      Lightning Grid (early access) <- start
-#
-#      - appnope
-#      - coolname
-#      - decorator
-#      - google-cloud
-#      - google-cloud-core
-#      - google-resumable-media
-#      - pprintpp
-#      - yaspin
-#      - zipp # <- end
