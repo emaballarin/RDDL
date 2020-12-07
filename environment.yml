@@ -33,10 +33,10 @@ dependencies:
 
   - visdom=0.1.8.9
 
-  - cython-blis=0.7.3 # ThinC & friends <- start
-  - cymem=2.0.4
-  - murmurhash=1.0.4
-  - preshed=3.0.4
+  - cython-blis=0.7.4 # ThinC & friends <- start
+  - cymem=2.0.5
+  - murmurhash=1.0.5
+  - preshed=3.0.5
   - pydantic=1.7.3
   - wasabi=0.8
   - srsly=2.3.2
@@ -87,7 +87,7 @@ dependencies:
 
     # Mathematical otimization
   - gurobi=9.1
-  - MOSEK=9.2.29
+  - MOSEK=9.2.31
 
   # Catalyst & friends (versioned)
   - nmslib=2.0.5
