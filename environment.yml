@@ -28,7 +28,7 @@ dependencies:
   - opt_einsum=3.3
   - tqdm>=4.45 # PyTorch Lightning
   - pillow=7.0 # Pillow-SIMD
-  - graphviz=2.42 # TorchViz
+#  - graphviz=2.42 # TorchViz
   - jedi=0.17.2 # Jupyter(Lab)
 
   - visdom=0.1.8.9
@@ -44,6 +44,7 @@ dependencies:
   - immutables=0.14 # <- end
 
   - pytorch=1.7.1 # PyTorch & friends <- start
+  - jpeg=9b
   - torchvision=0.8.2
   - torchaudio=0.7.2
   - torchtext=0.8.1
@@ -143,9 +144,9 @@ dependencies:
   - libpng
   - imageio
 
-  - opencv
-  - libopencv
-  - py-opencv
+#  - opencv
+#  - libopencv
+#  - py-opencv
   - librosa
 
   - ipykernel # Jupyter & friends <- start
@@ -329,6 +330,7 @@ dependencies:
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
+      - opencv-python
       - py-spy
       - colorful
       - git+https://github.com/pytorch/contrib.git
