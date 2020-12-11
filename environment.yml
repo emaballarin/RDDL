@@ -43,23 +43,23 @@ dependencies:
   - catalogue=2.0.1
   - immutables=0.14 # <- end
 
-  - pytorch=1.7 # PyTorch & friends <- start
-  - torchvision=0.8.1
-  - torchaudio=0.7
-  - torchtext=0.8
+  - pytorch=1.7.1 # PyTorch & friends <- start
+  - torchvision=0.8.2
+  - torchaudio=0.7.2
+  - torchtext=0.8.1
   - torchserve=0.2.1
   - torch-model-archiver=0.2.1
   - gpytorch=1.3
-  - botorch=0.3.2
+  - botorch=0.3.3
   - ignite>=0.4.2
   - captum=0.3
   - onnx=1.8
   - tensorboard=2.4
   - tensorboardx=2.1
-  - tensorly=0.5
+  - tensorly=0.5.1
   - dgl-cuda11.0=0.5.3 # <- end
 
-  - fastcore=1.3.10 # <- Fast.ai & friends
+  - fastcore=1.3.11 # <- Fast.ai & friends
   - fastprogress=1
   - nbdev=1.1.5
   - fastgpu=1.0.1
@@ -78,20 +78,20 @@ dependencies:
   - vaex-server=0.3.1
   - vaex-ml # <- end
 
-  - dvc=1.11.2 # DVC & friends <- start
+  - dvc=1.11.3 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
   - pyyaml>=5.1
 
-  - comet_ml=3.2.7
+  - comet_ml=3.2.8
 
     # Mathematical otimization
   - gurobi=9.1
-  - MOSEK=9.2.31
+  - MOSEK=9.2.32
 
   # Catalyst & friends (versioned)
   - nmslib=2.0.5
-  - aio-pika=6.1.1
+  - aio-pika>=6 # It will be over-downgraded! (expected)
 
   # Dependency fixups (1)
   - idna=2.8
@@ -323,6 +323,8 @@ dependencies:
   - gputil
   - llvmlite
   - python-louvain # <- end
+
+  - ipygany
 
   # PIP #
   - pip:

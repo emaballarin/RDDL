@@ -3,6 +3,7 @@
 
 # The Conda-compatible package manager you want to use (currently: conda | mamba)
 WHICH_SNAKE="mamba"
+#WHICH_SNAKE="conda"
 
 # The name of the Conda environment you want the script to operate on.
 export ANACONDA_ENV_NAME="RDDL"
@@ -78,11 +79,13 @@ pip install --upgrade --no-deps --force --force-reinstall pynvml
 # Install / enable Jupyter(Lab) extensions
 
 jupyter nbextension enable varInspector/main
+jupyter nbextension enable --py ipygany
 
 jupyter labextension install @jupyterlab/toc --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
 jupyter labextension install jupyterlab-plotly --no-build
 jupyter labextension install plotlywidget --no-build
+jupyter labextension install @jupyter-widgets/jupyterlab-manager ipygany --no-build
 
 jupyter labextension install @lckr/jupyterlab_variableinspector
 
@@ -142,12 +145,13 @@ cd ..
 
 export PRE_CUDA="$CUDA"
 export CUDA="cu110"
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
-pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
-pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git
+# Still incompatible with PyTorch 1.7.1
+#pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
+#pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
+#pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
+#pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
+#pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
+#pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git
 export CUDA="$PRE_CUDA"
 unset PRE_CUDA
 
