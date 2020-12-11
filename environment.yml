@@ -67,7 +67,7 @@ dependencies:
   - fastscript=1 # <- end
 
   - jupyterlab>=2.2.9 # Jupyter(Lab) & friends <- start
-  - notebook>=6.1 # <- end
+  - notebook>=6.1.5 # <- end
 
   - vaex=3 # Vaex & friends <- start
   - vaex-core=2.0.3
@@ -92,7 +92,7 @@ dependencies:
 
   # Catalyst & friends (versioned)
   - nmslib=2.0.5
-  - aio-pika>=6 # It will be over-downgraded! (expected)
+  - aio-pika>=6 # It will be downgraded! (expected)
 
   # Dependency fixups (1)
   - idna=2.8
@@ -320,6 +320,9 @@ dependencies:
   - python-daemon
   - fastapi # <- end
 
+  # ObJAX
+  - parameterized
+
   # Misc: <- start
   - gputil
   - llvmlite
@@ -422,3 +425,4 @@ dependencies:
       - git+https://github.com/getkeops/keops.git
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/fmfn/BayesianOptimization.git
+      - git+https://github.com/google/objax.git
