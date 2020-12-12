@@ -94,6 +94,16 @@ dependencies:
   - nmslib=2.0.5
   - aio-pika>=6 # It will be downgraded! (expected)
 
+  # TensorAnnotations
+  - pytype=2020.10.8
+
+  # JAX Verify + CVXPY
+  - cvxpy=1.1.7
+  - cvxpy-base=1.1.7
+  - ecos=2.0.7.post1
+  - osqp=0.6.1
+  - scs=2.1.2
+
   # Dependency fixups (1)
   - idna=2.8
   - requests=2.22.0
@@ -426,3 +436,6 @@ dependencies:
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/fmfn/BayesianOptimization.git
       - git+https://github.com/google/objax.git
+      - git+https://github.com/deepmind/jraph.git
+      - git+https://github.com/deepmind/jax_verify.git
+      - git+https://github.com/locuslab/qpth.git

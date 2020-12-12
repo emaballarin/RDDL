@@ -66,6 +66,11 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 
 
+# Install TensorAnnotations
+pip install git+https://github.com/deepmind/tensor_annotations
+pip install 'git+https://github.com/deepmind/tensor_annotations#egg=jax-stubs&subdirectory=jax-stubs'
+
+
 # Install deferred extra packages
 pip install --upgrade --no-deps --pre hydra-core
 pip install --upgrade --no-deps --pre fastai
