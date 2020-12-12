@@ -168,3 +168,7 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 cd "$SELF_STORED_CALLDIR"
 echo ' '
 echo 'DONE!'
+echo  ' '
+echo ' '
+echo 'NOTE: You may need to rebuild JupyterLab upon first start!'
+echo ' '
