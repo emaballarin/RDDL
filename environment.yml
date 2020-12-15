@@ -60,7 +60,7 @@ dependencies:
   - tensorly=0.5.1
   - dgl-cuda11.0=0.5.3 # <- end
 
-  - fastcore=1.3.11 # <- Fast.ai & friends
+  - fastcore=1.3.12 # <- Fast.ai & friends
   - fastprogress=1
   - nbdev=1.1.5
   - fastgpu=1.0.1
@@ -79,7 +79,7 @@ dependencies:
   - vaex-server=0.3.1
   - vaex-ml # <- end
 
-  - dvc=1.11.3 # DVC & friends <- start
+  - dvc=1.11.6 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
   - pyyaml>=5.1
