@@ -2,6 +2,7 @@ ssl_verify: true
 changeps1: true
 channels:
 - pytorch
+- pytorch-test
 - fastai
 - defaults
 - conda-forge
