@@ -22,3 +22,6 @@ ln -s "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/libcudnn.so" "$H
 
 # Copy Anaconda environment setup for CUDA / OpenMP
 cp -R -f ./etc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME"
+
+# Fix a new Anaconda-CUDA quirk
+sed -i 's@__SUB__THIS__@'"$PORTABLECUDA_ROOT"'@' "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/etc/conda/activate.d/zz_cuda.sh"

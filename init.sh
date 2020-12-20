@@ -11,6 +11,10 @@ export ANACONDA_ENV_NAME="RDDL"
 # The name of the (in-home, i.e. ~/) directory in which [Ana|Mini]conda is installed.
 export ANACONDA_BASEDIR_NAME="anaconda3"
 
+# A directory with CUDA / CUDNN / NCCL installed inside, and ./lib64/ folder removed
+# after having it merged with ./lib/
+export PORTABLECUDA_ROOT="/opt/portablecuda/11.0.3/"
+
 # Package path (to manually install packages in, if needed)
 export PYPKG_DIR="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.8/site-packages/"
 
@@ -30,6 +34,7 @@ export PRE_PYTHONUSERBASE="$PYTHONUSERBASE"
 export PYTHONUSERBASE="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME"
 mkdir -p "$PYTHONUSERBASE/etc"
 cp -R -f ./etc "$PYTHONUSERBASE"
+sed -i 's@__SUB__THIS__@'"$PORTABLECUDA_ROOT"'@' "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/etc/conda/activate.d/zz_cuda.sh"
 cp -f ./dot_condarc "$PYTHONUSERBASE/.condarc"
 cp -f ./start.py "$PYTHONUSERBASE/start.py"
 "$WHICH_SNAKE" env create -f environment.yml
