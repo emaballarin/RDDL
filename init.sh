@@ -28,11 +28,13 @@ rm -R -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/"
 # Create new environment
 export PRE_PYTHONUSERBASE="$PYTHONUSERBASE"
 export PYTHONUSERBASE="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME"
+mkdir -p "$PYTHONUSERBASE/etc"
+cp -R -f ./etc "$PYTHONUSERBASE"
+cp -f ./dot_condarc "$PYTHONUSERBASE/.condarc"
+cp -f ./start.py "$PYTHONUSERBASE/start.py"
 "$WHICH_SNAKE" env create -f environment.yml
 export PYTHONUSERBASE="$PRE_PYTHONUSERBASE"
 unset PRE_PYTHONUSERBASE
-cp -f ./dot_condarc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/.condarc"
-cp -f ./start.py "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/start.py"
 
 # Dependency fixups (2)
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
