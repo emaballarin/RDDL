@@ -157,13 +157,12 @@ cd ..
 
 export PRE_CUDA="$CUDA"
 export CUDA="cu110"
-# Still incompatible with PyTorch 1.7.1
-#pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
-#pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
-#pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
-#pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html
-#pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
-#pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html --no-deps
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html --no-deps
+pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html --no-deps
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html --no-deps
+pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
+pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps
 export CUDA="$PRE_CUDA"
 unset PRE_CUDA
 

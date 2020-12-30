@@ -30,7 +30,7 @@ dependencies:
   - opt_einsum=3.3
   - tqdm>=4.45 # PyTorch Lightning
   - pillow=7.0 # Pillow-SIMD
-  - jedi=0.17.2 # Jupyter(Lab)
+  - jedi=0.18 # Jupyter(Lab)
 
   - visdom=0.1.8.9
 
@@ -62,14 +62,14 @@ dependencies:
   - tensorly=0.5.1
   - dgl-cuda11.0=0.5.3 # <- end
 
-  - fastcore=1.3.12 # <- Fast.ai & friends
+  - fastcore=1.3.13 # <- Fast.ai & friends
   - fastprogress=1
   - nbdev=1.1.5
   - fastgpu=1.0.1
   - fastscript=1 # <- end
 
-  - jupyterlab>=2.2.9 # Jupyter(Lab) & friends <- start
-  - notebook>=6.1.5 # <- end
+  - jupyterlab>=3 # Jupyter(Lab) & friends <- start
+  - notebook>=6.1.6 # <- end
 
   - vaex=3 # Vaex & friends <- start
   - vaex-core=2.0.3
@@ -81,7 +81,7 @@ dependencies:
   - vaex-server=0.3.1
   - vaex-ml # <- end
 
-  - dvc=1.11.8 # DVC & friends <- start
+  - dvc=1.11.9 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
   - pyyaml>=5.1
@@ -90,7 +90,7 @@ dependencies:
 
     # Mathematical otimization
   - gurobi=9.1.1
-  - MOSEK=9.2.32
+  - MOSEK=9.2.33
 
   # Catalyst & friends (versioned)
   - nmslib=2.0.5
