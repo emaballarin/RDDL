@@ -44,6 +44,8 @@ unset PRE_PYTHONUSERBASE
 # Dependency fixups (2)
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 pip install -U fastapi starlette bayesian-optimization
+pip install --upgrade --no-deps watchdog PyJWT
+pip install --upgrade --no-deps --force jedi==0.18.0
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 ####################################################################################################
@@ -83,8 +85,8 @@ pip install --upgrade --no-deps --pre hydra-core
 pip install --upgrade --no-deps --pre fastai
 CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
 pip install --upgrade --no-deps --pre cupy-cuda110
-# pip install --pre lightning-grid
 pip install --upgrade jupyter_http_over_ws
+pip install --upgrade --no-deps git+https://github.com/ElementAI/baal.git
 pip install --upgrade --no-deps --force --force-reinstall pynvml
 
 
@@ -103,6 +105,9 @@ jupyter labextension install @lckr/jupyterlab_variableinspector
 
 jupyter serverextension enable --py jupyter_http_over_ws
 
+
+# Jupyter Notebook/Lab upgrade and rebuild
+jupyter labextension update --all
 jupyter lab build
 
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"

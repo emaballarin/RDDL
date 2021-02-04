@@ -1,0 +1,69 @@
+From df59b58a1ee21160ee25df6722beed1a6069fd23 Mon Sep 17 00:00:00 2001
+From: deive <github@deive.co>
+Date: Tue, 26 Sep 2017 14:35:46 +0100
+Subject: [PATCH] Removes dependency on node.js util module (by copying the
+ only used inherits method to customUtils).
+
+---
+ lib/avltree.js     |  3 +--
+ lib/customUtils.js | 29 +++++++++++++++++++++++++++++
+ 2 files changed, 30 insertions(+), 2 deletions(-)
+
+diff --git a/lib/avltree.js b/lib/avltree.js
+index 10b2b82..c821c2f 100644
+--- a/lib/avltree.js
++++ b/lib/avltree.js
+@@ -3,7 +3,6 @@
+  */
+ var BinarySearchTree = require('./bst')
+   , customUtils = require('./customUtils')
+-  , util = require('util')
+   , _ = require('underscore')
+   ;
+ 
+@@ -46,7 +45,7 @@ function _AVLTree (options) {
+ /**
+  * Inherit basic functions from the basic binary search tree
+  */
+-util.inherits(_AVLTree, BinarySearchTree);
++customUtils.inherits(_AVLTree, BinarySearchTree);
+ 
+ /**
+  * Keep a pointer to the internal tree constructor for testing purposes
+diff --git a/lib/customUtils.js b/lib/customUtils.js
+index 611b52f..bc30496 100644
+--- a/lib/customUtils.js
++++ b/lib/customUtils.js
+@@ -39,3 +39,32 @@ function defaultCheckValueEquality (a, b) {
+   return a === b;
+ }
+ module.exports.defaultCheckValueEquality = defaultCheckValueEquality;
++
++/**
++ * Inherit the prototype methods from one constructor into another.
++ *
++ * The Function.prototype.inherits from lang.js rewritten as a standalone
++ * function (not on Function.prototype). NOTE: If this file is to be loaded
++ * during bootstrapping this function needs to be rewritten using some native
++ * functions as prototype setup using normal JavaScript does not work as
++ * expected during bootstrapping (see mirror.js in r114903).
++ *
++ * @param {function} ctor Constructor function which needs to inherit the
++ *     prototype.
++ * @param {function} superCtor Constructor function to inherit prototype from.
++ * @throws {TypeError} Will error if either constructor is null, or if
++ *     the super constructor lacks a prototype.
++ */
++function inherits(ctor, superCtor) {
++  if (ctor === undefined || ctor === null)
++    throw new errors.TypeError('ERR_INVALID_ARG_TYPE', 'ctor', 'function');
++  if (superCtor === undefined || superCtor === null)
++    throw new errors.TypeError('ERR_INVALID_ARG_TYPE', 'superCtor', 'function');
++  if (superCtor.prototype === undefined) {
++    throw new errors.TypeError('ERR_INVALID_ARG_TYPE', 'superCtor.prototype',
++                               'function');
++  }
++  ctor.super_ = superCtor;
++  Object.setPrototypeOf(ctor.prototype, superCtor.prototype);
++}
++module.exports.inherits = inherits;
