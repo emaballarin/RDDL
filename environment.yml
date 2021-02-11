@@ -96,7 +96,7 @@ dependencies:
 
   - comet_ml=3.3.1
 
-    # Mathematical otimization
+  # Mathematical otimization
   - gurobi=9.1.1
   - MOSEK=9.2.36
 
@@ -140,6 +140,10 @@ dependencies:
   # EXTRAS
   - boltons>=20.2.1
   - trampoline>=0.1.2
+  - python-libsbml>=5.19
+  - fastrlock>=0.5
+  - twine
+  - bottle
 
 
   # CONDA FLOATING #
@@ -454,6 +458,7 @@ dependencies:
       - git+https://github.com/neptune-ai/neptune-client.git
       - git+https://github.com/neptune-ai/neptune-contrib.git
       - git+https://github.com/neptune-ai/neptune-notebooks.git
+      - git+https://github.com/neptune-ai/neptune-mlflow.git
       - git+https://github.com/catalyst-team/alchemy.git
       - git+https://github.com/catalyst-team/reaction.git
       - git+https://github.com/catalyst-team/catalyst.git
@@ -490,3 +495,5 @@ dependencies:
       - git+https://github.com/patrick-kidger/torchcde.git
       - git+https://github.com/patrick-kidger/torchcubicspline.git
       - git+https://github.com/patrick-kidger/signatory.git
+      - git+https://github.com/SystemsBioinformatics/stochpy.git
+      - comet-for-mlflow

@@ -180,6 +180,9 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ######################################################################################
 # Phew! Done! :)
 
+# Post-fix Kerberos installation
+ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/"
+
 # End
 cd "$SELF_STORED_CALLDIR"
 echo ' '
