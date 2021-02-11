@@ -51,7 +51,7 @@ dependencies:
   - wasabi=0.8.2
   - srsly=2.4
   - catalogue=2.0.1
-  - immutables=0.14 # <- end
+  - immutables=0.15 # <- end
 
   - pytorch=1.7.1 # PyTorch & friends <- start
   - jpeg=9b
@@ -63,7 +63,7 @@ dependencies:
   - torch-model-archiver=0.3
   - gpytorch=1.3.1
   - botorch=0.3.3
-  - ignite>=0.4.2
+  - ignite>=0.4.3
   - captum=0.3.1
   - onnx=1.8.1
   - tensorboard=2.4.1
@@ -94,11 +94,11 @@ dependencies:
   - dvc=1.11.15 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
-  - comet_ml=3.3.1
+  - comet_ml=3.3.3
 
   # Mathematical otimization
   - gurobi=9.1.1
-  - MOSEK=9.2.36
+  - MOSEK=9.2.37
 
   # Catalyst & friends (versioned)
   - aio-pika>=6 # It will be downgraded! (expected)
@@ -107,8 +107,8 @@ dependencies:
   - pytype=2020.10.8
 
   # JAX Verify + CVXPY
-  - cvxpy=1.1.8
-  - cvxpy-base=1.1.8
+  - cvxpy=1.1.10
+  - cvxpy-base=1.1.10
   - ecos=2.0.7.post1
   - osqp=0.6.2
   - scs=2.1.2
@@ -137,6 +137,25 @@ dependencies:
   # BAAL
   - structlog>=20.2
 
+  # TensorFlow & co (pinned)
+  - grpcio=1.32
+  - wrapt=1.12.1
+  - h5py=2.10
+  - gast=0.3.3
+  - google-pasta>=0.2
+  - absl-py=0.10
+  - typeguard>=2.7
+  - gin-config>=0.4
+
+  # TensorFlow & co (unpinned)
+  - termcolor
+  - terminaltables
+  - decorator
+  - promise
+  - dataclasses
+  - portpicker
+  - python-annoy
+
   # EXTRAS
   - boltons>=20.2.1
   - trampoline>=0.1.2
@@ -145,10 +164,8 @@ dependencies:
   - twine
   - bottle
 
-
   # CONDA FLOATING #
   - conda
-  - absl-py
   - mkl-service
   - mkl
   - mkl_fft
@@ -165,7 +182,6 @@ dependencies:
   - seaborn
   - statsmodels
   - sympy
-  - h5py
   - hdf5
   - sqlalchemy
   - pandas-summary
@@ -311,7 +327,6 @@ dependencies:
   - msgpack-numpy
   - soupsieve
   - beautifulsoup4
-  - grpcio
 
   - oauthlib
   - pyzmq
@@ -379,7 +394,7 @@ dependencies:
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
-      - https://storage.googleapis.com/jax-releases/cuda110/jaxlib-0.1.60+cuda110-cp38-none-manylinux2010_x86_64.whl
+      - https://storage.googleapis.com/jax-releases/cuda110/jaxlib-0.1.61+cuda110-cp38-none-manylinux2010_x86_64.whl
       - jax==0.2.9
       - git+https://github.com/explosion/thinc.git
       - omegaconf
@@ -497,3 +512,9 @@ dependencies:
       - git+https://github.com/patrick-kidger/signatory.git
       - git+https://github.com/SystemsBioinformatics/stochpy.git
       - comet-for-mlflow
+      - git+https://github.com/pymc-devs/aesara.git
+      - flatbuffers
+      - fire
+      - git+https://github.com/onnx/keras-onnx.git
+      - git+https://github.com/onnx/onnxmltools.git
+      - git+https://github.com/onnx/optimizer.git

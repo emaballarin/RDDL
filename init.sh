@@ -71,6 +71,40 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 ./portablecuda.sh
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
+# TensorFlow (as self-contained as possible!)
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+###
+pip install --upgrade jupyter_http_over_ws
+pip install keras-preprocessing
+pip install tensorflow
+pip install tensorflow-estimator
+pip install keras-tuner
+pip install autokeras
+pip install tensorflow-metadata
+pip install tensorflow_probability
+pip install tensorflow-addons
+#pip install waymo-open-dataset-tf-2-3-0
+pip install model-pruning-google-research
+#pip install lingvo
+pip install dm-reverb
+pip install tf-agents
+pip install dm-sonnet
+pip install trfl
+pip install dm-acme
+pip install graph_nets
+pip install contextlib2
+pip install ml_collections
+pip install neural-structured-learning
+pip install tensorflow-io
+pip install tensorflow-lattice
+pip install tensorflow_hub
+pip install tensorflow-gan
+pip install git+https://github.com/deepmind/jaxline
+pip install git+https://github.com/onnx/onnx-tensorflow.git
+pip install git+https://github.com/onnx/tensorflow-onnx.git
+###
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+
 ####################################################################################################
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 
@@ -78,6 +112,7 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 # Install TensorAnnotations
 pip install git+https://github.com/deepmind/tensor_annotations
 pip install 'git+https://github.com/deepmind/tensor_annotations#egg=jax-stubs&subdirectory=jax-stubs'
+pip install 'git+https://github.com/deepmind/tensor_annotations#egg=tensorflow-stubs&subdirectory=tensorflow-stubs'
 
 
 # Install deferred extra packages
@@ -85,10 +120,8 @@ pip install --upgrade --no-deps --pre hydra-core
 pip install --upgrade --no-deps --pre fastai
 CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
 pip install --upgrade --no-deps --pre cupy-cuda110
-pip install --upgrade jupyter_http_over_ws
 pip install --upgrade --no-deps git+https://github.com/ElementAI/baal.git
 pip install --upgrade --no-deps --force --force-reinstall pynvml
-
 
 # Install / enable Jupyter(Lab) extensions
 
