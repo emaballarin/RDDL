@@ -398,16 +398,17 @@ dependencies:
       - jax==0.2.9
       - git+https://github.com/explosion/thinc.git
       - omegaconf
-      - git+https://github.com/williamFalcon/test-tube.git
-      - git+https://github.com/wandb/client.git
+      - test_tube
+      - wandb
       - protobuf==3.14
       - onnxruntime-gpu
       - onnxruntime-tools
-      - git+https://github.com/PyTorchLightning/pytorch-lightning.git
+      - fsspec
+      - pytorch-lightning
       - trains
       - trains-agent
       - git+https://github.com/openai/gym.git
-      - git+https://github.com/PyTorchLightning/pytorch-lightning-bolts.git
+      - pytorch-lightning-bolts
       - wget
       - git+https://github.com/pyro-ppl/pyro-api.git
       - git+https://github.com/pyro-ppl/pyro.git
@@ -471,10 +472,10 @@ dependencies:
       - httptools
       - uvloop
       - importlib-resources
-      - git+https://github.com/neptune-ai/neptune-client.git
-      - git+https://github.com/neptune-ai/neptune-contrib.git
+      - neptune-client
+      - neptune-contrib
       - git+https://github.com/neptune-ai/neptune-notebooks.git
-      - git+https://github.com/neptune-ai/neptune-mlflow.git
+      - neptune-mlflow
       - git+https://github.com/catalyst-team/alchemy.git
       - git+https://github.com/catalyst-team/reaction.git
       - git+https://github.com/catalyst-team/catalyst.git
