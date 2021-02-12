@@ -402,6 +402,7 @@ dependencies:
       - git+https://github.com/wandb/client.git
       - protobuf==3.14
       - onnxruntime-gpu
+      - onnxruntime-tools
       - git+https://github.com/PyTorchLightning/pytorch-lightning.git
       - trains
       - trains-agent
@@ -453,7 +454,7 @@ dependencies:
       - watermark
       - mlxtend
       - onnxconverter-common
-      - git+https://github.com/onnx/sklearn-onnx.git
+      - skl2onnx
       - sklearn-pandas
       - git+https://github.com/williamFalcon/pytorch-complex-tensor.git
       - ase
@@ -515,6 +516,6 @@ dependencies:
       - git+https://github.com/pymc-devs/aesara.git
       - flatbuffers
       - fire
-      - git+https://github.com/onnx/keras-onnx.git
-      - git+https://github.com/onnx/onnxmltools.git
+      - keras2onnx
+      - onnxmltools
       - git+https://github.com/onnx/optimizer.git
