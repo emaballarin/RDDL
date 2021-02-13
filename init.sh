@@ -46,6 +46,7 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 pip install -U fastapi starlette bayesian-optimization
 pip install --upgrade --no-deps watchdog PyJWT
 pip install --upgrade --no-deps --force jedi==0.18.0
+pip install --upgrade --no-deps --force git+https://github.com/maciejkula/spotlight.git
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 ####################################################################################################
@@ -85,6 +86,7 @@ pip install tensorflow_probability
 pip install tensorflow-addons
 #pip install waymo-open-dataset-tf-2-3-0
 pip install model-pruning-google-research
+pip install tensorflow-datasets
 #pip install lingvo
 pip install dm-reverb
 pip install tf-agents
