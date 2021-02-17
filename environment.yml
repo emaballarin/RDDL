@@ -175,7 +175,6 @@ dependencies:
 
   # Wessel Bruinsma's stuff
   - python-slugify
-  - netcdf4
   - xarray
 
   # CONDA FLOATING #
@@ -543,3 +542,5 @@ dependencies:
       - git+https://github.com/wesselb/neuralprocesses.git
       - git+https://github.com/wesselb/oilmm.git
       - git+https://github.com/chrsmrrs/k-gnn.git
+      - cftime
+      - netCDF4
