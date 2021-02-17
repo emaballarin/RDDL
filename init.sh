@@ -107,6 +107,21 @@ pip install git+https://github.com/onnx/tensorflow-onnx.git
 ###
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
+# WESSELB STUFF
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+# (cyclical deps)
+pip install \
+git+https://github.com/wesselb/matrix.git \
+git+https://github.com/wesselb/wbml.git \
+git+https://github.com/wesselb/stheno.git \
+git+https://github.com/wesselb/varz.git
+# (toposort deps)
+pip install git+https://github.com/wesselb/psa.git
+pip install git+https://github.com/wesselb/gpcm.git
+pip install git+https://github.com/wesselb/gpar.git
+#
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+
 ####################################################################################################
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 
