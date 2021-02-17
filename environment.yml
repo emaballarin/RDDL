@@ -239,9 +239,7 @@ dependencies:
   - ptvsd
   - pylint
   - mypy_extensions
-  - typed-ast
-  - typing
-  - typing_extensions # <- end
+  - typed-ast # <- end
 
   - cffi
   - pybind11
@@ -448,7 +446,7 @@ dependencies:
       - pgmpy
       - git+https://github.com/deepmind/tree.git
       - dm-env
-      - git+https://github.com/deepmind/chex.git
+      - chex
       - git+https://github.com/deepmind/dm-haiku.git
       - git+https://github.com/deepmind/rlax.git
       - git+https://github.com/deepmind/optax.git
@@ -533,8 +531,6 @@ dependencies:
       - onnxmltools
       - git+https://github.com/onnx/optimizer.git
       - click-didyoumean
-      - git+https://github.com/tensorwerk/hangar-py.git
-      - git+https://github.com/emaballarin/stockroom.git
       - git+https://github.com/wesselb/plum.git
       - git+https://github.com/wesselb/fdm.git
       - git+https://github.com/wesselb/lab.git

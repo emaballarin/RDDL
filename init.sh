@@ -109,6 +109,8 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 # WESSELB STUFF
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+# Fix typing deprecation
+pip uninstall -y typing
 # (cyclical deps)
 pip install \
 git+https://github.com/wesselb/matrix.git \
@@ -139,6 +141,8 @@ CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall
 pip install --upgrade --no-deps --pre cupy-cuda110
 pip install --upgrade --no-deps git+https://github.com/ElementAI/baal.git
 pip install --upgrade --no-deps --force --force-reinstall pynvml
+pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/tensorwerk/hangar-py.git
+pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/emaballarin/stockroom.git
 
 # Install / enable Jupyter(Lab) extensions
 
