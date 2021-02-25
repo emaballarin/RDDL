@@ -101,6 +101,8 @@ pip install tensorflow-io
 pip install tensorflow-lattice
 pip install tensorflow_hub
 pip install tensorflow-gan
+pip install tf_slim
+pip install git+https://github.com/google/dopamine.git
 pip install git+https://github.com/deepmind/jaxline
 pip install git+https://github.com/onnx/onnx-tensorflow.git
 pip install git+https://github.com/onnx/tensorflow-onnx.git
