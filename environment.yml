@@ -69,7 +69,7 @@ dependencies:
   - tensorboard=2.4.1
   - tensorboardx=2.1
   - tensorly=0.5.1
-  - dgl-cuda11.0=0.5.3
+  - dgl-cuda11.0=0.6
   - faiss-gpu>=1.7 # <- end
 
   - fastcore=1.3.19 # <- Fast.ai & friends
@@ -143,7 +143,7 @@ dependencies:
   - h5py=2.10
   - gast=0.3.3
   - google-pasta>=0.2
-  - absl-py=0.10
+  - absl-py
   - typeguard>=2.7
   - gin-config>=0.4
 
@@ -414,7 +414,7 @@ dependencies:
       - omegaconf
       - test_tube
       - wandb
-      - protobuf==3.14
+      - protobuf
       - onnxruntime-gpu
       - onnxruntime-tools
       - fsspec
@@ -555,7 +555,4 @@ dependencies:
       - git+https://github.com/cair/pyTsetlinMachine.git
       - git+https://github.com/facebookresearch/qhoptim.git
       - git+https://github.com/learnables/cherry.git
-      - git+https://github.com/learnables/learn2learn.git
       - git+https://github.com/emaballarin/RAdam.git
-      - hickle
-      - git+https://github.com/achaiah/pywick.git
