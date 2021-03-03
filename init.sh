@@ -106,6 +106,7 @@ pip install git+https://github.com/google/dopamine.git
 pip install git+https://github.com/deepmind/jaxline
 pip install git+https://github.com/onnx/onnx-tensorflow.git
 pip install git+https://github.com/onnx/tensorflow-onnx.git
+pip install neptune-tensorboard
 ###
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
@@ -149,12 +150,14 @@ pip install --upgrade --no-deps --force --force-reinstall git+https://github.com
 # Install / enable Jupyter(Lab) extensions
 
 jupyter nbextension enable varInspector/main
+jupyter nbextension enable --py neptune-notebooks
 jupyter nbextension enable --py ipygany
 
 jupyter labextension install @jupyterlab/toc --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
 jupyter labextension install jupyterlab-plotly --no-build
 jupyter labextension install plotlywidget --no-build
+jupyter labextension install neptune-notebooks
 jupyter labextension install @jupyter-widgets/jupyterlab-manager ipygany --no-build
 
 jupyter labextension install @lckr/jupyterlab_variableinspector

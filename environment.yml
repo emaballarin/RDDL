@@ -22,7 +22,7 @@ channels:
   - nlesc
 
 dependencies:
-  # CONDA PINNED #
+  # CONDA PINNED
   - python=3.8.8
   - cudatoolkit=11.0
   - magma-cuda110=2.5.2
@@ -31,7 +31,7 @@ dependencies:
   - pillow=7.0 # Pillow-SIMD
   - parso=0.8.1
 
-  # IMPORTANT PINS
+  # Important pins
   - numpy=1.19.5
   - scipy>=1.6
   - pyyaml=5.3.1
@@ -88,13 +88,12 @@ dependencies:
   - vaex-viz=0.4
   - vaex-jupyter=0.5.2
   - vaex-arrow=0.5.1
-  - vaex-server=0.3.1
-  - vaex-ml # <- end
+  - vaex-server=0.3.1 # <- end
 
   - dvc=1.11.16 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
-  - comet_ml=3.3.4
+  - comet_ml=3.3.5
 
   # Mathematical otimization
   - gurobi=9.1.1
@@ -123,7 +122,7 @@ dependencies:
   - pathos=0.2.7
   - black>=20.8b1
   - nb_black>=1.0.7
-  - mlflow=1.14
+  - mlflow=1.14.1
 
   # ATHENA
   - gpy=1.9.9
@@ -143,39 +142,26 @@ dependencies:
   - h5py=2.10
   - gast=0.3.3
   - google-pasta>=0.2
-  - absl-py
   - typeguard>=2.7
   - gin-config>=0.4
 
-  # TensorFlow & co (unpinned)
-  - termcolor
-  - terminaltables
-  - decorator
-  - promise
-  - dataclasses
-  - portpicker
-  - python-annoy
-
-  # EXTRAS
+  # Some extras
+  - streamlit>=0.77.0
+  - altair>=2.3.0
   - boltons>=20.2.1
   - trampoline>=0.1.2
   - python-libsbml>=5.19
   - fastrlock>=0.5
-  - twine
-  - bottle
+
+  # Aesara and PyMC3
+  - aesara>=2.0.1
+  - pymc3>=3.11.1
 
   # TensorWerk
   - cloudpickle>=1.4
   - hdf5plugin>=2
   - python-lmdb>=0.94
-  - lmdb
-  - xxhash
-  - python-xxhash
-  - rich
 
-  # Wessel Bruinsma's stuff
-  - python-slugify
-  - xarray
 
   # CONDA FLOATING #
   - conda
@@ -394,9 +380,36 @@ dependencies:
   - dill
   - tabulate
 
-  # EXTRA:
+  # Vaex
+  - vaex-ml
+
+  # TensorFlow & co (unpinned)
+  - termcolor
+  - terminaltables
+  - decorator
+  - promise
+  - dataclasses
+  - portpicker
+  - python-annoy
+
+  # Some extras
+  - twine
+  - bottle
   - pypeln
   - gsutil
+
+  # TensorFlow
+  - absl-py
+
+  # TensorWerk
+  - lmdb
+  - xxhash
+  - python-xxhash
+  - rich
+
+  # Wessel Bruinsma's stuff
+  - python-slugify
+  - xarray
 
 
   # PIP #
@@ -529,7 +542,6 @@ dependencies:
       - git+https://github.com/patrick-kidger/signatory.git
       - git+https://github.com/SystemsBioinformatics/stochpy.git
       - comet-for-mlflow
-      - git+https://github.com/pymc-devs/aesara.git
       - flatbuffers
       - fire
       - keras2onnx
@@ -555,4 +567,5 @@ dependencies:
       - git+https://github.com/cair/pyTsetlinMachine.git
       - git+https://github.com/facebookresearch/qhoptim.git
       - git+https://github.com/learnables/cherry.git
-      - git+https://github.com/emaballarin/RAdam.git
+      - git+https://github.com/vballoli/nfnets-pytorch.git
+      - git+https://github.com/ufoym/imbalanced-dataset-sampler.git
