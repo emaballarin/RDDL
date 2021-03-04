@@ -442,7 +442,7 @@ dependencies:
       - git+https://github.com/pyro-ppl/pyro-api.git
       - pyro-ppl
       - makefun
-      - git+https://github.com/emaballarin/numpyro.git
+      - git+https://github.com/pyro-ppl/numpyro.git
       - git+https://github.com/pyro-ppl/funsor.git
       - git+https://github.com/emaballarin/pyro-models.git
       - py
@@ -519,7 +519,6 @@ dependencies:
       - git+https://github.com/carefree0910/carefree-data.git
       - git+https://github.com/carefree0910/carefree-ml.git
       - git+https://github.com/carefree0910/carefree-learn.git
-      - git+https://github.com/emaballarin/pytorch_ranger_improved.git
       - git+https://github.com/jettify/pytorch-optimizer.git
       - git+https://github.com/jettify/ibreakdown.git
       - git+https://github.com/jettify/pytorch-inspect.git
