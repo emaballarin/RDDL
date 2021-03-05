@@ -24,15 +24,15 @@ channels:
 dependencies:
   # CONDA PINNED
   - python=3.8.8
-  - cudatoolkit=11.0
-  - magma-cuda110=2.5.2
+  - cudatoolkit=11.1
+  - magma-cuda111=2.5.2
   - blas=*.*=mkl
   - opt_einsum=3.3
   - pillow=7.0 # Pillow-SIMD
   - parso=0.8.1
 
   # Important pins
-  - numpy=1.19.5
+  - numpy=1.19.5 # tensorflow: ==1.19.5
   - scipy>=1.6
   - pyyaml=5.3.1
   - tqdm=4.54.1
@@ -47,29 +47,31 @@ dependencies:
   - cymem=2.0.5
   - murmurhash=1.0.5
   - preshed=3.0.5
-  - pydantic=1.7.3
+  - pydantic=1.8.1
   - wasabi=0.8.2
   - srsly=2.4
   - catalogue=2.0.1
   - immutables=0.15 # <- end
 
-  - pytorch=1.7.1 # PyTorch & friends <- start
-  - jpeg=9b
-  - torchvision=0.8.2
-  - torchaudio=0.7.2
-  - torchtext=0.8.1
-  - torchcsprng=0.1.4
+  #- pytorch=1.7.1 # PyTorch & friends <- start
+  #- jpeg=9b
+  - pytorch=1.8
+  - jpeg
+  - torchvision=0.9
+  - torchaudio=0.8
+  - torchtext=0.9
+  - torchcsprng=0.2
   - torchserve=0.3
   - torch-model-archiver=0.3
   - gpytorch=1.4
   - botorch=0.4
-  - ignite>=0.4.3
+  - ignite>=0.4.4
   - captum=0.3.1
   - onnx=1.8.1
   - tensorboard=2.4.1
   - tensorboardx=2.1
   - tensorly=0.5.1
-  - dgl-cuda11.0=0.6
+  #- dgl-cuda11.1=0.6 # version still not available!
   - faiss-gpu>=1.7 # <- end
 
   - fastcore=1.3.19 # <- Fast.ai & friends
@@ -90,10 +92,10 @@ dependencies:
   - vaex-arrow=0.5.1
   - vaex-server=0.3.1 # <- end
 
-  - dvc=1.11.16 # DVC & friends <- start
+  - dvc=2.0.1 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
-  - comet_ml=3.3.5
+  - comet_ml=3.4
 
   # Mathematical otimization
   - gurobi=9.1.1
@@ -113,10 +115,10 @@ dependencies:
   - scs=2.1.2
 
   # Dependency fixups (1)
-  - idna=2.8
-  - requests=2.22.0
-  - yarl=1.4.2
-  - virtualenv=16.7
+  - idna #=2.8
+  - requests #=2.22.0
+  - yarl #=1.4.2
+  - virtualenv #=16.7
 
   # Carefree Toolkits & co.
   - pathos=0.2.7
@@ -131,16 +133,16 @@ dependencies:
   # MackeLab
   - simpleeval>=0.9.10
   - blosc>=1.21
-  - astunparse>=1.6.3
+  - astunparse>=1.6.3 # tensorflow: ==1.6.3
 
   # BAAL
-  - structlog>=20.2
+  - structlog>=21.1
 
-  # TensorFlow & co (pinned)
-  - grpcio=1.32
+  # TensorFlow & co. (pinned)
+  - grpcio=1.34
   - wrapt=1.12.1
   - h5py=2.10
-  - gast=0.3.3
+  - gast=0.4
   - google-pasta>=0.2
   - typeguard>=2.7
   - gin-config>=0.4
@@ -399,7 +401,7 @@ dependencies:
   - gsutil
 
   # TensorFlow
-  - absl-py
+  - absl-py # tensorflow: ==0.10 (but whatever!)
 
   # TensorWerk
   - lmdb
@@ -411,6 +413,10 @@ dependencies:
   - python-slugify
   - xarray
 
+  # Avalanche (ContinualAI)
+  - typing_extensions
+  - quadprog
+
 
   # PIP #
   - pip:
@@ -421,7 +427,7 @@ dependencies:
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
-      - https://storage.googleapis.com/jax-releases/cuda110/jaxlib-0.1.61+cuda110-cp38-none-manylinux2010_x86_64.whl
+      - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.61+cuda111-cp38-none-manylinux2010_x86_64.whl
       - jax==0.2.9
       - git+https://github.com/explosion/thinc.git
       - omegaconf
@@ -440,7 +446,7 @@ dependencies:
       - pytorch-lightning-bolts
       - wget
       - git+https://github.com/pyro-ppl/pyro-api.git
-      - pyro-ppl
+      - git+https://github.com/pyro-ppl/pyro.git
       - makefun
       - git+https://github.com/pyro-ppl/numpyro.git
       - git+https://github.com/pyro-ppl/funsor.git
@@ -493,7 +499,7 @@ dependencies:
       - orjson
       - uvicorn
       - ujson
-      - aiormq==2.4.0
+      - aiormq
       - dnspython
       - git+https://github.com/python-hyper/h11.git
       - websockets
@@ -568,3 +574,5 @@ dependencies:
       - git+https://github.com/learnables/cherry.git
       - git+https://github.com/vballoli/nfnets-pytorch.git
       - git+https://github.com/ufoym/imbalanced-dataset-sampler.git
+      - pytorchcv
+      - git+https://github.com/ContinualAI/avalanche.git
