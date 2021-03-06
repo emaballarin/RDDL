@@ -221,10 +221,10 @@ cd ..
 
 export PRE_CUDA="$CUDA"
 export CUDA="cu111"
-#pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html --no-deps
-#pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html --no-deps
-#pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html --no-deps
-#pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.7.0+cu110.html --no-deps
+#pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
+#pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
+#pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
+#pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
 pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
 pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps
 export CUDA="$PRE_CUDA"
@@ -242,11 +242,19 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 # Post-fix Kerberos installation
 ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/"
 
+# Rich stacktraces
+cd "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.8/site-packages/"
+mkdir sitecustomize
+cd sitecustomize
+echo "from rich.traceback import install" >> __init__.py
+echo "install()" >> __init__.py
+
+
 # End
 cd "$SELF_STORED_CALLDIR"
 echo ' '
 echo 'DONE!'
-echo  ' '
+echo ' '
 echo ' '
 echo 'NOTE: You may need to rebuild JupyterLab upon first start!'
 echo ' '

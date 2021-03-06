@@ -53,8 +53,6 @@ dependencies:
   - catalogue=2.0.1
   - immutables=0.15 # <- end
 
-  #- pytorch=1.7.1 # PyTorch & friends <- start
-  #- jpeg=9b
   - pytorch=1.8
   - jpeg
   - torchvision=0.9
@@ -92,7 +90,7 @@ dependencies:
   - vaex-arrow=0.5.1
   - vaex-server=0.3.1 # <- end
 
-  - dvc=2.0.1 # DVC & friends <- start
+  - dvc=2.0.3 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
   - comet_ml=3.4
@@ -108,8 +106,8 @@ dependencies:
   - pytype=2020.10.8
 
   # JAX Verify + CVXPY
-  - cvxpy=1.1.10
-  - cvxpy-base=1.1.10
+  - cvxpy=1.1.11
+  - cvxpy-base=1.1.11
   - ecos=2.0.7.post1
   - osqp=0.6.2
   - scs=2.1.2
@@ -148,7 +146,7 @@ dependencies:
   - gin-config>=0.4
 
   # Some extras
-  - streamlit>=0.77.0
+  - streamlit>=0.78
   - altair>=2.3.0
   - boltons>=20.2.1
   - trampoline>=0.1.2
@@ -156,13 +154,16 @@ dependencies:
   - fastrlock>=0.5
 
   # Aesara and PyMC3
-  - aesara>=2.0.1
+  - aesara>=2.0.2
   - pymc3>=3.11.1
 
   # TensorWerk
   - cloudpickle>=1.4
   - hdf5plugin>=2
   - python-lmdb>=0.94
+
+  # Install easers
+  - pip=20.3.4
 
 
   # CONDA FLOATING #
@@ -189,8 +190,7 @@ dependencies:
   - imbalanced-learn
   - scikit-plot
 
-  - pip # Install easers <- start
-  - importlib_metadata
+  - importlib_metadata # Install easers <- start
   - setuptools
   - wheel
   - pep517 # <- end
@@ -428,7 +428,7 @@ dependencies:
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
       - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.61+cuda111-cp38-none-manylinux2010_x86_64.whl
-      - jax==0.2.9
+      - jax==0.2.10
       - git+https://github.com/explosion/thinc.git
       - omegaconf
       - test_tube
@@ -574,5 +574,5 @@ dependencies:
       - git+https://github.com/learnables/cherry.git
       - git+https://github.com/vballoli/nfnets-pytorch.git
       - git+https://github.com/ufoym/imbalanced-dataset-sampler.git
-      - pytorchcv
-      - git+https://github.com/ContinualAI/avalanche.git
+#      - pytorchcv
+#      - git+https://github.com/ContinualAI/avalanche.git
