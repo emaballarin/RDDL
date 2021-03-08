@@ -242,7 +242,7 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 # Post-fix Kerberos installation
 ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/"
 
-# Rich stacktraces
+# Rich stack-traces
 cd "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.8/site-packages/"
 mkdir sitecustomize
 cd sitecustomize
@@ -255,6 +255,6 @@ cd "$SELF_STORED_CALLDIR"
 echo ' '
 echo 'DONE!'
 echo ' '
-echo ' '
-echo 'NOTE: You may need to rebuild JupyterLab upon first start!'
-echo ' '
+#echo ' '
+#echo 'NOTE: You may need to rebuild JupyterLab upon first start!'
+#echo ' '
