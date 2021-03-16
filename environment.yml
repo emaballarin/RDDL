@@ -5,6 +5,7 @@ channels:
   - pytorch
   - pytorch-test
   - fastai
+  - nvidia
   - defaults
   - conda-forge
   - gpytorch
@@ -69,7 +70,7 @@ dependencies:
   - tensorboard=2.4.1
   - tensorboardx=2.1
   - tensorly=0.5.1
-  #- dgl-cuda11.1=0.6 # version still not available!
+  - dgl-cuda11.1=0.6.0post1 # version still not available!
   - faiss-gpu>=1.7 # <- end
 
   - fastcore=1.3.19 # <- Fast.ai & friends
@@ -78,26 +79,26 @@ dependencies:
   - fastgpu=1.0.1
   - fastscript=1 # <- end
 
-  - jupyterlab>=3.0.9 # Jupyter(Lab) & friends <- start
+  - jupyterlab>=3.0.10 # Jupyter(Lab) & friends <- start
   - notebook>=6.2 # <- end
 
-  - vaex=3 # Vaex & friends <- start
-  - vaex-core=2.0.3
-  - vaex-astro=0.7
-  - vaex-hdf5=0.6
-  - vaex-viz=0.4
-  - vaex-jupyter=0.5.2
-  - vaex-arrow=0.5.1
-  - vaex-server=0.3.1 # <- end
+  - vaex>=4 # Vaex & friends <- start
+  - vaex-core>=4
+  - vaex-astro>=0.8
+  - vaex-hdf5>=0.7
+  - vaex-viz>=0.5
+  - vaex-jupyter>=0.6
+  - vaex-server>=0.4
+  - vaex-ml>=0.9 # <- end
 
-  - dvc=2.0.3 # DVC & friends <- start
+  - dvc=2.0.5 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
-  - comet_ml=3.4
+  - comet_ml=3.5
 
   # Mathematical otimization
   - gurobi=9.1.1
-  - MOSEK=9.2.38
+  - MOSEK=9.2.40
 
   # Catalyst & friends (versioned)
   - aio-pika>=6 # It will be downgraded! (expected)
@@ -163,7 +164,8 @@ dependencies:
   - python-lmdb>=0.94
 
   # Install easers
-  - pip=20.3.4
+  - pip>=20.3.4
+  - pip-tools>=5.5
 
 
   # CONDA FLOATING #
@@ -382,9 +384,6 @@ dependencies:
   - dill
   - tabulate
 
-  # Vaex
-  - vaex-ml
-
   # TensorFlow & co (unpinned)
   - termcolor
   - terminaltables
@@ -399,6 +398,7 @@ dependencies:
   - bottle
   - pypeln
   - gsutil
+  - anytree
 
   # TensorFlow
   - absl-py # tensorflow: ==0.10 (may break ORTools)
@@ -417,6 +417,16 @@ dependencies:
   - typing_extensions
   - quadprog
 
+  # FSDL
+  - editdistance
+  - flask
+  - bandit
+  - nltk
+  - pycodestyle
+  - pydocstyle
+  - tornado
+  - safety
+
 
   # PIP #
   - pip:
@@ -427,7 +437,7 @@ dependencies:
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
-      - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.61+cuda111-cp38-none-manylinux2010_x86_64.whl
+      - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.62+cuda111-cp38-none-manylinux2010_x86_64.whl
       - jax==0.2.10
       - git+https://github.com/explosion/thinc.git
       - omegaconf
@@ -437,13 +447,14 @@ dependencies:
       - onnxruntime-gpu
       - onnxruntime-tools
       - fsspec
-      - pytorch-lightning
+      - git+https://github.com/PyTorchLightning/metrics.git
+      - git+https://github.com/PyTorchLightning/pytorch-lightning.git
       - clearml
       - clearml-agent
       - clearml-session
       - git+https://github.com/openai/atari-py.git
       - git+https://github.com/openai/gym.git
-      - pytorch-lightning-bolts
+      - git+https://github.com/PyTorchLightning/lightning-bolts.git
       - wget
       - git+https://github.com/pyro-ppl/pyro-api.git
       - git+https://github.com/pyro-ppl/pyro.git
@@ -574,3 +585,12 @@ dependencies:
       - git+https://github.com/learnables/cherry.git
       - git+https://github.com/vballoli/nfnets-pytorch.git
       - git+https://github.com/ufoym/imbalanced-dataset-sampler.git
+      - git+https://github.com/KieranWynn/pyquaternion.git
+      - git+https://github.com/giorgiozannini/hTorch.git
+      - git+https://github.com/TorchDrift/TorchDrift.git
+      - pyrser
+      - git+https://github.com/aimhubio/aimrecords.git
+      - git+https://github.com/aimhubio/aim.git
+      - git+https://github.com/MKuranowski/aiocsv.git
+      - git+https://github.com/szagoruyko/pytorchviz.git
+      - git+https://github.com/TylerYep/torchinfo.git

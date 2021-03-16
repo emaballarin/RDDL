@@ -4,6 +4,7 @@ channels:
 - pytorch
 - pytorch-test
 - fastai
+- nvidia
 - defaults
 - conda-forge
 - gpytorch
