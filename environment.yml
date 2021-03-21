@@ -588,9 +588,7 @@ dependencies:
       - git+https://github.com/KieranWynn/pyquaternion.git
       - git+https://github.com/giorgiozannini/hTorch.git
       - git+https://github.com/TorchDrift/TorchDrift.git
-      - pyrser
-      - git+https://github.com/aimhubio/aimrecords.git
-      - git+https://github.com/aimhubio/aim.git
       - git+https://github.com/MKuranowski/aiocsv.git
       - git+https://github.com/szagoruyko/pytorchviz.git
       - git+https://github.com/TylerYep/torchinfo.git
+      - bidict

@@ -146,6 +146,9 @@ pip install --upgrade --no-deps git+https://github.com/ElementAI/baal.git
 pip install --upgrade --no-deps --force --force-reinstall pynvml
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/tensorwerk/hangar-py.git
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/emaballarin/stockroom.git
+pip install --upgrade --no-deps --force pyrser
+pip install --upgrade --no-deps --force git+https://github.com/aimhubio/aimrecords.git
+pip install --upgrade --no-deps --force git+https://github.com/aimhubio/aim.git
 
 # Install / enable Jupyter(Lab) extensions
 
