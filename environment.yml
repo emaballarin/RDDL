@@ -34,7 +34,7 @@ dependencies:
 
   # Important pins
   - numpy=1.19.5 # tensorflow: ==1.19.5
-  - scipy>=1.6
+  - scipy>=1.6.1
   - pyyaml=5.3.1
   - tqdm=4.54.1
   - pyglet=1.5.0
@@ -60,8 +60,8 @@ dependencies:
   - torchaudio=0.8
   - torchtext=0.9
   - torchcsprng=0.2
-  - torchserve=0.3
-  - torch-model-archiver=0.3
+  - torchserve=0.3.1
+  - torch-model-archiver=0.3.1
   - gpytorch=1.4
   - botorch=0.4
   - ignite>=0.4.4
@@ -79,7 +79,7 @@ dependencies:
   - fastgpu=1.0.1
   - fastscript=1 # <- end
 
-  - jupyterlab>=3.0.10 # Jupyter(Lab) & friends <- start
+  - jupyterlab>=3.0.12 # Jupyter(Lab) & friends <- start
   - notebook>=6.2 # <- end
 
   - vaex>=4 # Vaex & friends <- start
@@ -91,10 +91,10 @@ dependencies:
   - vaex-server>=0.4
   - vaex-ml>=0.9 # <- end
 
-  - dvc=2.0.5 # DVC & friends <- start
+  - dvc=2.0.6 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
-  - comet_ml=3.5
+  - comet_ml=3.6
 
   # Mathematical otimization
   - gurobi=9.1.1
@@ -437,7 +437,7 @@ dependencies:
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
-      - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.62+cuda111-cp38-none-manylinux2010_x86_64.whl
+      - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.64+cuda111-cp38-none-manylinux2010_x86_64.whl
       - jax==0.2.10
       - git+https://github.com/explosion/thinc.git
       - omegaconf
