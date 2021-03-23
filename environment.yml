@@ -601,3 +601,4 @@ dependencies:
       - git+https://github.com/emaballarin/nengo-gui.git
       - git+https://github.com/nengo/pytorch-spiking.git
       - git+https://github.com/nengo/nengo-interfaces.git
+      - git+https://github.com/emaballarin/nengolib.git
