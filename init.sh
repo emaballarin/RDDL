@@ -108,6 +108,11 @@ pip install git+https://github.com/deepmind/jaxline
 pip install git+https://github.com/onnx/onnx-tensorflow.git
 pip install git+https://github.com/onnx/tensorflow-onnx.git
 pip install neptune-tensorboard
+pip install git+https://github.com/nengo/keras-spiking.git
+pip install git+https://github.com/nengo/nengo-dl.git
+pip install git+https://github.com/nengo/keras-lmu.git
+pip install git+https://github.com/nengo/nengo-spa.git
+
 ###
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
