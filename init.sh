@@ -47,6 +47,7 @@ pip install -U fastapi starlette bayesian-optimization
 pip install --upgrade --no-deps watchdog PyJWT
 pip install --upgrade --no-deps --force jedi==0.18.0
 pip install --upgrade --no-deps --force git+https://github.com/maciejkula/spotlight.git
+pip install --upgrade --no-deps --force pytorch_resample
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 ####################################################################################################
