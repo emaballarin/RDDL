@@ -485,7 +485,7 @@ dependencies:
       - git+https://github.com/facebookresearch/FDR_scheduler.git
       - git+https://github.com/google/neural-tangents.git
       - pgmpy
-      - git+https://github.com/deepmind/tree.git
+      - dm-tree
       - dm-env
       - chex
       - git+https://github.com/deepmind/dm-haiku.git
