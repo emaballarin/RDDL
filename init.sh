@@ -111,24 +111,23 @@ pip install neptune-tensorboard
 ###
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
-# WESSELB STUFF + OTHER STUFF
+# STUFF REQUIRING typing UNINSTALL (Python >=3.8)
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 # Fix typing deprecation
 pip uninstall -y typing
-#
 # (Nengo stuff)
 pip install git+https://github.com/nengo/keras-spiking.git
 pip install git+https://github.com/nengo/nengo-dl.git
 pip install git+https://github.com/nengo/keras-lmu.git
 pip install git+https://github.com/nengo/nengo-spa.git
 #
-# (cyclical deps)
+# (Wesselb cyclical deps)
 pip install \
 git+https://github.com/wesselb/matrix.git \
 git+https://github.com/wesselb/wbml.git \
 git+https://github.com/wesselb/stheno.git \
 git+https://github.com/wesselb/varz.git
-# (toposort deps)
+# (Wesselb toposort deps)
 pip install git+https://github.com/wesselb/psa.git
 pip install git+https://github.com/wesselb/gpcm.git
 pip install git+https://github.com/wesselb/gpar.git

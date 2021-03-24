@@ -443,7 +443,7 @@ dependencies:
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
       - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.64+cuda111-cp38-none-manylinux2010_x86_64.whl
-      - jax==0.2.10
+      - jax==0.2.11
       - git+https://github.com/explosion/thinc.git
       - omegaconf
       - test_tube
