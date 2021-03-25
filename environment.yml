@@ -8,6 +8,7 @@ channels:
   - nvidia
   - defaults
   - conda-forge
+  - numba
   - gpytorch
   - dglteam
   - pyviz
@@ -92,7 +93,7 @@ dependencies:
   - vaex-server>=0.4
   - vaex-ml>=0.9 # <- end
 
-  - dvc>=2.0.7 # DVC & friends <- start
+  - dvc>=2.0.9 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
   - comet_ml>=3.6
@@ -171,6 +172,10 @@ dependencies:
 
   # Brain / Neuro / SNNs
   - norse>=0.0.6
+
+  # Numba
+  - numba>=0.53
+  - numba-scipy>=0.2
 
 
   # CONDA FLOATING #
@@ -349,7 +354,6 @@ dependencies:
   - olefile
   - pycparser
 
-  - numba
   - rdflib
   - googledrivedownloader
 
