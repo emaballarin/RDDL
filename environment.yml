@@ -56,12 +56,12 @@ dependencies:
   - catalogue=2.0.1
   - immutables=0.15 # <- end
 
-  - pytorch=1.8
+  - pytorch=1.8.1
   - jpeg
-  - torchvision=0.9
-  - torchaudio=0.8
-  - torchtext=0.9
-  - torchcsprng=0.2
+  - torchvision=0.9.1
+  - torchaudio=0.8.1
+  - torchtext=0.9.1
+  - torchcsprng=0.2.1
   - torchserve=0.3.1
   - torch-model-archiver=0.3.1
   - gpytorch=1.4
@@ -93,10 +93,10 @@ dependencies:
   - vaex-server>=0.4
   - vaex-ml>=0.9 # <- end
 
-  - dvc>=2.0.9 # DVC & friends <- start
+  - dvc>=2.0.11 # DVC & friends <- start
   - networkx>=2.4 # (dvc requires < 2.5) # <- end
 
-  - comet_ml>=3.6
+  - comet_ml>=3.7
 
   # Mathematical otimization
   - gurobi>=9.1.1
@@ -174,7 +174,7 @@ dependencies:
   - norse>=0.0.6
 
   # Numba
-  - numba>=0.53
+  - numba>=0.53.1
   - numba-scipy>=0.2
 
 
@@ -606,3 +606,11 @@ dependencies:
       - git+https://github.com/nengo/pytorch-spiking.git
       - git+https://github.com/nengo/nengo-interfaces.git
       - git+https://github.com/emaballarin/nengolib.git
+      - pyDeprecate
+      - pytorch-tabnet==3.1
+      - git+https://github.com/huggingface/huggingface_hub.git
+      - git+https://github.com/huggingface/datasets.git
+      - rouge-score
+      - pycocotools
+      - git+https://github.com/PyTorchLightning/lightning-flash.git
+      - git+https://github.com/digantamisra98/Echo.git
