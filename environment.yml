@@ -25,157 +25,165 @@ channels:
   - norse
 
 dependencies:
-  # CONDA PINNED
-  - python=3.8.8
-  - cudatoolkit=11.1
-  - magma-cuda111=2.5.2
-  - blas=*.*=mkl
-  - opt_einsum=3.3
-  - pillow=7.0 # Pillow-SIMD
-  - parso=0.8.1
 
-  # Important pins
-  - numpy=1.19.5 # tensorflow: ==1.19.5
-  - scipy>=1.6.1
-  - pyyaml=5.3.1
-  - tqdm=4.54.1
-  - pyglet=1.5.0
-  - fastapi=0.58.1
-  - mypy=0.790
-  - fasteners=0.15
+  # General pins
+  - python=3.8.8         # Latest 3.8.x
+  - cudatoolkit=11.1     # Latest supported by PyTorch
+  - magma-cuda111=2.5.2  # Latest
+  - blas=*.*=mkl         # No updates needed
+  - opt_einsum=3.3       # Latest
+  - pillow=7.0           # Same as Pillow-SIMD
+  - parso=0.8.2          # Latest
 
-  - visdom=0.1.8.9
+  # Dependency pins
+  - numpy=1.19.5     # Pinned by tensorflow: Latest 1.19.x (https://github.com/tensorflow/tensorflow/issues/47691)
+  - scipy>=1.6.2     # Latest, with >=
+  - pyyaml=5.3.1     # PINNED BY (?)
+  - tqdm=4.54.1      # PINNED BY (?)
+  - pyglet=1.5.0     # Pinned by Atari Gym
+  - fastapi=0.58.1   # PINNED BY (?)
+  - mypy=0.790       # PINNED BY (?)
+  - fasteners=0.15   # PINNED BY (?)
 
-  - cython-blis=0.7.4 # ThinC & friends <- start
-  - cymem=2.0.5
-  - murmurhash=1.0.5
-  - preshed=3.0.5
-  - pydantic=1.7.3 # fixed!
-  - wasabi=0.8.2
-  - srsly=2.4
-  - catalogue=2.0.1
-  - immutables=0.15 # <- end
+  # Extra pins
+  - visdom=0.1.8.9   # Pinned by Anaconda quirks: max(Latest, 0.1.8.9)
 
-  - pytorch=1.8.1
-  - jpeg
-  - torchvision=0.9.1
-  - torchaudio=0.8.1
-  - torchtext=0.9.1
-  - torchcsprng=0.2.1
-  - torchserve=0.3.1
-  - torch-model-archiver=0.3.1
-  - gpytorch=1.4
-  - botorch=0.4
-  - ignite>=0.4.4
-  - captum=0.3.1
-  - onnx=1.8.1
-  - tensorboard=2.4.1
-  - tensorboardx=2.1
-  - tensorly>=0.5.1
-  - dgl-cuda11.1>=0.6.0post1 # version still not available!
-  - faiss-gpu>=1.7 # <- end
+  # ThinC and friends
+  - cython-blis=0.7.4  # Latest
+  - cymem=2.0.5        # Latest
+  - murmurhash=1.0.5   # Latest
+  - preshed=3.0.5      # Latest
+  - pydantic=1.7.3     # PINNED BY (?)
+  - wasabi=0.8.2       # Latest
+  - srsly=2.4          # Latest
+  - catalogue=2.0.1    # Latest
+  - immutables=0.15    # Latest
 
-  - fastcore>=1.3.19 # <- Fast.ai & friends
-  - fastprogress>=1
-  - nbdev>=1.1.13
-  - fastgpu>=1.0.1
-  - fastscript>=1 # <- end
+  # Main PyTorch pins
+  - pytorch=1.8.1                 # Latest
+  - jpeg                          # UNPINNED (but leave it here for eventual pins)
+  - torchvision=0.9.1             # Latest
+  - torchaudio=0.8.1              # Latest
+  - torchtext=0.9.1               # Latest
+  - torchcsprng=0.2.1             # Latest
+  - torchserve=0.3.1              # Latest
+  - torch-model-archiver=0.3.1    # Latest
+  - gpytorch=1.4                  # Latest
+  - botorch=0.4                   # Latest
+  - ignite>=0.4.4                 # Latest, with >=
+  - captum=0.3.1                  # Latest
+  - onnx=1.8.1                    # Latest
+  - tensorboard=2.4.1             # Latest
+  - tensorboardx=2.2              # Latest
+  - tensorly>=0.5.1               # Latest, with >=
+  - dgl-cuda11.1>=0.6.1           # Latest, with >=
+  - faiss-gpu>=1.7                # Latest, with >=
 
-  - jupyterlab>=3.0.12 # Jupyter(Lab) & friends <- start
-  - notebook>=6.3 # <- end
+  # Fast.ai and friends
+  - fastcore>=1.3.19  # Latest, with >=
+  - fastprogress>=1   # Latest, with >=
+  - nbdev>=1.1.14     # Latest, with >=
+  - fastgpu>=1.0.1    # Latest, with >=
+  - fastscript>=1     # Latest, with >=
 
-  - vaex>=4 # Vaex & friends <- start
-  - vaex-core>=4
-  - vaex-astro>=0.8
-  - vaex-hdf5>=0.7
-  - vaex-viz>=0.5
-  - vaex-jupyter>=0.6
-  - vaex-server>=0.4
-  - vaex-ml>=0.9 # <- end
+  # Jupyter, JupyterLab, IPython
+  - jupyterlab>=3.0.13  # Latest, with >=
+  - notebook>=6.3       # Latest, with >=
 
-  - dvc>=2.0.11 # DVC & friends <- start
-  - networkx>=2.4 # (dvc requires < 2.5) # <- end
+  # Vaex
+  - vaex>=4            # Latest, with >=
+  - vaex-core>=4       # Same as vaex, with >=
+  - vaex-astro>=0.8    # Latest
+  - vaex-hdf5>=0.7     # Latest
+  - vaex-viz>=0.5      # Latest
+  - vaex-jupyter>=0.6  # Latest
+  - vaex-server>=0.4   # Latest
+  - vaex-ml>=0.9       # Pinned at 0.9, with >=
 
-  - comet_ml>=3.7
+  # DVC and NetworkX
+  - dvc>=2.0.17      # Latest, with >=
+  - networkx>=2.5.1  # Latest, with >= (check if DVC pins!)
+
+  - comet_ml>=3.8.1  # Latest, with >=
 
   # Mathematical otimization
-  - gurobi>=9.1.1
-  - MOSEK>=9.2.40
+  - gurobi>=9.1.1  # Latest, with >=
+  - MOSEK>=9.2.40  # Latest, with >=
 
   # Catalyst & friends (versioned)
-  - aio-pika>=6 # It will be downgraded! (expected)
+  - aio-pika>=6 # Pin >=6 (will be downgraded anyway!)
 
   # TensorAnnotations
-  - pytype>=2020.10.8
+  - pytype>=2020.10.8  # Latest, with >=
 
   # JAX Verify + CVXPY
-  - cvxpy>=1.1.11
-  - cvxpy-base>=1.1.11
-  - ecos>=2.0.7.post1
-  - osqp>=0.6.2
-  - scs>=2.1.2
+  - cvxpy>=1.1.12       # Latest, with >=
+  - cvxpy-base>=1.1.12  # Latest, with >=
+  - ecos>=2.0.8         # Latest, with >=
+  - osqp>=0.6.2         # Latest, with >=
+  - scs>=2.1.2          # Latest, with >=
 
   # Dependency fixups (1)
-  - idna=2.8
-  - requests=2.22.0
-  - yarl=1.4.2
-  - virtualenv=16.7
+  - idna=2.8         # PINNED BY (pip-installed)
+  - requests=2.22.0  # PINNED BY (pip-installed)
+  - yarl=1.4.2       # PINNED BY (pip-installed)
+  - virtualenv=16.7  # PINNED BY (pip-installed)
 
   # Carefree Toolkits & co.
-  - pathos>=0.2.7
-  - black>=20.8b1
-  - nb_black>=1.0.7
-  - mlflow>=1.14.1
+  - pathos>=0.2.7    # Latest, with >=
+  - black>=20.8b1    # Latest, with >=
+  - nb_black>=1.0.7  # Latest, with >=
+  - mlflow>=1.15     # Latest, with >=
 
   # ATHENA
-  - gpy=1.9.9
-  - gpyopt=1.2.6
+  - gpy=1.9.9     # Latest
+  - gpyopt=1.2.6  # Latest
 
   # MackeLab
-  - simpleeval>=0.9.10
-  - blosc>=1.21
-  - astunparse>=1.6.3 # tensorflow: ==1.6.3
+  - simpleeval>=0.9.10  # Latest, with >=
+  - blosc>=1.21         # Latest, with >=
+  - astunparse>=1.6.3   # Latest, with >= (NOTE: tensorflow pins ==1.6.3)
 
   # BAAL
-  - structlog>=21.1
+  - structlog>=21.1  # Latest, with >=
 
   # TensorFlow & co. (pinned)
-  - grpcio=1.34
-  - wrapt=1.12.1
-  - h5py=2.10
-  - gast=0.4
-  - google-pasta>=0.2
-  - typeguard>=2.7
-  - gin-config>=0.4
+  - grpcio=1.34   # Pinned by TensorFlow (pip-installed)
+  - wrapt=1.12.1  # Pinned by TensorFlow (pip-installed)
+  - h5py=2.10     # Pinned by TensorFlow (pip-installed)
+  - gast=0.4      # Pinned by TensorFlow (pip-installed)
+  - google-pasta>=0.2  # Latest, with >= (but TensorFlow-compatible)
+  - typeguard>=2.12    # Latest, with >= (but TensorFlow-compatible)
+  - gin-config>=0.4    # Latest, with >= (but TensorFlow-compatible)
 
   # Some extras
-  - streamlit>=0.78
-  - altair>=2.3.0
-  - boltons>=20.2.1
-  - trampoline>=0.1.2
-  - python-libsbml>=5.19
-  - fastrlock>=0.5
+  - streamlit>=0.80       # Latest, with >=
+  - altair>=2.3.0         # Pinned by Aesara/PyMC3, with >=
+  - boltons>=20.2.1       # Latest, with >=
+  - trampoline>=0.1.2     # Latest, with >=
+  - python-libsbml>=5.19  # Latest, with >=
+  - fastrlock>=0.5        # PINNED BY (?), with >=
 
   # Aesara and PyMC3
-  - aesara>=2.0.2
-  - pymc3>=3.11.1
-  - theano-pymc>=1.1.2
+  - aesara>=2.0.6       # Latest, with >=
+  - pymc3>=3.11.2       # Latest, with >=
+  - theano-pymc>=1.1.2  # Latest, with >=
 
   # TensorWerk
-  - cloudpickle>=1.4
-  - hdf5plugin>=2
-  - python-lmdb>=0.94
+  - cloudpickle>=1.4   # Pinned by TensorWerk, with >=
+  - hdf5plugin>=2      # Pinned by TensorWerk, with >=
+  - python-lmdb>=0.94  # Pinned by TensorWerk, with >=
 
   # Install easers
-  - pip>=20.3.4
-  - pip-tools>=5.5
+  - pip>=20.3.4     # ((?))
+  - pip-tools>=5.5  # ((?))
 
   # Brain / Neuro / SNNs
-  - norse>=0.0.6
+  - norse>=0.0.6  # Latest, with >=
 
   # Numba
-  - numba>=0.53.1
-  - numba-scipy>=0.2
+  - numba>=0.53.1     # Latest, with >=
+  - numba-scipy>=0.2  # Latest, with >=
 
 
   # CONDA FLOATING #
@@ -440,14 +448,22 @@ dependencies:
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
+      # PINS:
+      # - jaxlib:             Latest
+      # - jax:                Latest
+      # - ray:                Latest
+      # - adabelief-pytorch:  Latest
+      # - pytorch-tabnet:     Pinned by the PyTorch Lightning stack
+      # - datasets:           Pinned by the PyTorch Lightning stack
+      #
       - opencv-python
       - py-spy
       - colorful
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
-      - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.64+cuda111-cp38-none-manylinux2010_x86_64.whl
-      - jax==0.2.11
+      - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.65+cuda111-cp38-none-manylinux2010_x86_64.whl
+      - jax==0.2.12
       - git+https://github.com/explosion/thinc.git
       - omegaconf
       - test_tube
@@ -468,7 +484,7 @@ dependencies:
       - git+https://github.com/pyro-ppl/pyro-api.git
       - git+https://github.com/pyro-ppl/pyro.git
       - makefun
-      - git+https://github.com/emaballarin/numpyro.git
+      - git+https://github.com/pyro-ppl/numpyro.git
       - git+https://github.com/pyro-ppl/funsor.git
       - git+https://github.com/emaballarin/pyro-models.git
       - py
@@ -609,8 +625,16 @@ dependencies:
       - pyDeprecate
       - pytorch-tabnet==3.1
       - git+https://github.com/huggingface/huggingface_hub.git
-      - git+https://github.com/huggingface/datasets.git
+      - datasets==1.2.1
       - rouge-score
       - pycocotools
-      - git+https://github.com/PyTorchLightning/lightning-flash.git
       - git+https://github.com/digantamisra98/Echo.git
+      - git+https://github.com/bashtage/randomgen.git
+      - git+https://github.com/niklexical/brc_pytorch.git
+      - git+https://github.com/davidtvs/pytorch-lr-finder.git
+      - git+https://github.com/facebookresearch/madgrad.git
+      - typish
+      - git+https://github.com/ramonhagenaars/nptyping.git
+      - git+https://github.com/scardine/image_size.git
+      - git+https://github.com/huggingface/accelerate.git
+      - git+https://github.com/huggingface/huggingface_hub.git
