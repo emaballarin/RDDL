@@ -160,7 +160,7 @@ pip install --upgrade --no-deps --force --force-reinstall git+https://github.com
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/FrancescoSaverioZuppichini/glasses.git
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/huggingface/datasets.git
 pip install --upgrade --no-deps --force --force-reinstall sacremoses tokenizers transformers
-pip install --upgrade --no-deps --force --force-reinstall https://github.com/huggingface/nn_pruning.git
+pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/huggingface/nn_pruning.git
 
 # Install / enable Jupyter(Lab) extensions
 
@@ -175,7 +175,7 @@ jupyter labextension install plotlywidget --no-build
 jupyter labextension install neptune-notebooks
 jupyter labextension install @jupyter-widgets/jupyterlab-manager ipygany --no-build
 
-pip install --upgrade --no-deps --force --force-reinstall
+pip install --upgrade --no-deps --force --force-reinstall lckr-jupyterlab-variableinspector
 
 jupyter serverextension enable --py jupyter_http_over_ws
 
