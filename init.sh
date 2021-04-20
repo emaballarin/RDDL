@@ -175,7 +175,6 @@ jupyter labextension install plotlywidget --no-build
 jupyter labextension install neptune-notebooks
 jupyter labextension install @jupyter-widgets/jupyterlab-manager ipygany --no-build
 
-#jupyter labextension install @lckr/jupyterlab_variableinspector
 pip install --upgrade --no-deps --force --force-reinstall
 
 jupyter serverextension enable --py jupyter_http_over_ws
