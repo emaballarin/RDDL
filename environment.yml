@@ -107,8 +107,8 @@ dependencies:
   - comet_ml>=3.9    # Latest, with >=
 
   # Mathematical otimization
-  - gurobi>=9.1.1  # Latest, with >=
-  - MOSEK>=9.2.40  # Latest, with >=
+  - gurobi>=9.1.2  # Latest, with >=
+  - MOSEK>=9.2.41  # Latest, with >=
 
   # Catalyst & friends (versioned)
   - aio-pika>=6 # Pin >=6 (will be downgraded anyway!)
@@ -183,7 +183,7 @@ dependencies:
 
   # Numba
   - numba>=0.53.1     # Latest, with >=
-  - numba-scipy>=0.2  # Latest, with >=
+  - numba-scipy>=0.3  # Latest, with >=
 
 
   # CONDA FLOATING #
@@ -638,3 +638,13 @@ dependencies:
       - git+https://github.com/scardine/image_size.git
       - git+https://github.com/huggingface/accelerate.git
       - git+https://github.com/huggingface/huggingface_hub.git
+      - munch
+      - git+https://github.com/Cadene/pretrained-models.pytorch.git
+      - git+https://github.com/fadel/pytorch_ema.git
+      - git+https://github.com/google-research/soft-dtw-divergences.git
+      - git+https://github.com/google-research/ott.git
+      - git+https://github.com/google-research/fast-soft-sort.git
+      - git+https://github.com/emaballarin/pytorch-kfac.git
+      - git+https://github.com/bayesiains/nflows.git
+      - git+https://github.com/noegroup/bgflow.git
+      - git+https://github.com/zalandoresearch/JaxRK.git
