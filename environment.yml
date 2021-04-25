@@ -648,3 +648,4 @@ dependencies:
       - git+https://github.com/bayesiains/nflows.git
       - git+https://github.com/noegroup/bgflow.git
       - git+https://github.com/zalandoresearch/JaxRK.git
+      - git+https://github.com/facebookresearch/aepsych.git

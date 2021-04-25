@@ -157,6 +157,7 @@ pip install --upgrade --no-deps --force pyrser
 pip install --upgrade --no-deps --force git+https://github.com/aimhubio/aimrecords.git
 pip install --upgrade --no-deps --force git+https://github.com/aimhubio/aim.git
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/PyTorchLightning/lightning-flash.git
+pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/PyTorchLightning/lightning-transformers.git
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/FrancescoSaverioZuppichini/glasses.git
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/huggingface/datasets.git
 pip install --upgrade --no-deps --force --force-reinstall sacremoses tokenizers transformers
