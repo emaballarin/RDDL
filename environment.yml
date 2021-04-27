@@ -131,7 +131,7 @@ dependencies:
 
   # Carefree Toolkits & co.
   - pathos>=0.2.7    # Latest, with >=
-  - black>=20.8b1    # Latest, with >=
+  - black>=21.4b0    # Latest, with >=
   - nb_black>=1.0.7  # Latest, with >=
   - mlflow>=1.15     # Latest, with >=
 
@@ -185,6 +185,12 @@ dependencies:
   - numba>=0.53.1     # Latest, with >=
   - numba-scipy>=0.3  # Latest, with >=
 
+  # Kosio Krachev & Co. Deps
+  - dask>=2021.4.1    # Latest, with >=
+  - astor>=0.8.1      # Latest, with >=
+  - lxml>=4.6.3       # Latest, with >=
+  - numcodecs>=0.7.3  # Latest, with >=
+  - zarr>=2.7.1       # Latest, with >=
 
   # CONDA FLOATING #
   - conda
@@ -465,7 +471,7 @@ dependencies:
       - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.65+cuda111-cp38-none-manylinux2010_x86_64.whl
       - jax==0.2.12
       - git+https://github.com/explosion/thinc.git
-      - omegaconf
+      - git+https://github.com/omry/omegaconf.git
       - test_tube
       - wandb
       - protobuf
@@ -649,3 +655,12 @@ dependencies:
       - git+https://github.com/noegroup/bgflow.git
       - git+https://github.com/zalandoresearch/JaxRK.git
       - git+https://github.com/facebookresearch/aepsych.git
+      - frozenlist
+      - pygccxml
+      - git+https://github.com/kosiokarchev/clipppy.git
+      - git+https://github.com/emaballarin/phytorch.git
+      - git+https://github.com/kosiokarchev/pyrofit-utils.git
+      - git+https://github.com/kosiokarchev/uplot.git
+      - git+https://github.com/kosiokarchev/headache.git
+      - git+https://github.com/undark-lab/swyft.git
+      - git+https://github.com/paris-saclay-cds/ramp-workflow.git
