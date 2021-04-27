@@ -664,3 +664,4 @@ dependencies:
       - git+https://github.com/kosiokarchev/headache.git
       - git+https://github.com/undark-lab/swyft.git
       - git+https://github.com/paris-saclay-cds/ramp-workflow.git
+      - git+https://github.com/sissa-data-science/DULY.git
