@@ -79,7 +79,7 @@ dependencies:
   - tensorboardx=2.2              # Latest
   - tensorly>=0.5.1               # Latest, with >=
   - dgl-cuda11.1>=0.6.1           # Latest, with >=
-  - faiss-gpu>=1.7                # Latest, with >=
+  - faiss-gpu>=1.7.1              # Latest, with >=
 
   # Fast.ai and friends
   - fastcore>=1.3.20  # Latest, with >=
@@ -103,14 +103,14 @@ dependencies:
   - vaex-ml>=0.9       # Pinned at 0.9, with >=
 
   # DVC and NetworkX
-  - dvc>=2.1         # Latest, with >=
+  - dvc>=2.2         # Latest, with >=
   - networkx>=2.5.1  # Latest, with >= (check if DVC pins!)
 
-  - comet_ml>=3.10   # Latest, with >=
+  - comet_ml>=3.11   # Latest, with >=
 
   # Mathematical otimization
   - gurobi>=9.1.2  # Latest, with >=
-  - MOSEK>=9.2.44  # Latest, with >=
+  - MOSEK>=9.2.45  # Latest, with >=
 
   # Catalyst & friends (versioned)
   - aio-pika>=6 # Pin >=6 (will be downgraded anyway!)
@@ -119,8 +119,8 @@ dependencies:
   - pytype>=2020.10.8  # Latest, with >=
 
   # JAX Verify + CVXPY
-  - cvxpy>=1.1.12       # Latest, with >=
-  - cvxpy-base>=1.1.12  # Latest, with >=
+  - cvxpy>=1.1.13       # Latest, with >=
+  - cvxpy-base>=1.1.13  # Latest, with >=
   - ecos>=2.0.8         # Latest, with >=
   - osqp>=0.6.2         # Latest, with >=
   - scs>=2.1.3          # Latest, with >=
@@ -133,7 +133,7 @@ dependencies:
 
   # Carefree Toolkits & co.
   - pathos>=0.2.7    # Latest, with >=
-  - black>=21.5b0    # Latest, with >=
+  - black>=21.5b1    # Latest, with >=
   - nb_black>=1.0.7  # Latest, with >=
   - mlflow>=1.17     # Latest, with >=
 
@@ -161,13 +161,13 @@ dependencies:
   # Some extras
   - streamlit>=0.81.1     # Latest, with >=
   - altair>=2.3.0         # Pinned by Aesara/PyMC3, with >=
-  - boltons>=20.2.1       # Latest, with >=
+  - boltons>=21           # Latest, with >=
   - trampoline>=0.1.2     # Latest, with >=
   - python-libsbml>=5.19  # Latest, with >=
   - fastrlock>=0.5        # PINNED BY (?), with >=
 
   # Aesara and PyMC3
-  - aesara>=2.0.8       # Latest, with >=
+  - aesara>=2.0.10      # Latest, with >=
   - pymc3>=3.11.2       # Latest, with >=
   - theano-pymc>=1.1.2  # Latest, with >=
 
@@ -188,7 +188,7 @@ dependencies:
 #  - numba-scipy>=0.3  # Latest, with >=
 
   # Kosio Krachev & Co. Deps
-  - dask>=2021.5.0    # Latest, with >=
+  - dask>=2021.5.1    # Latest, with >=
   - astor>=0.8.1      # Latest, with >=
   - lxml>=4.6.3       # Latest, with >=
   - numcodecs>=0.7.3  # Latest, with >=
@@ -586,7 +586,7 @@ dependencies:
       - git+https://github.com/KevinMusgrave/pytorch-metric-learning.git
       - git+https://github.com/rtqichen/torchdiffeq
       - git+https://github.com/emaballarin/torchsde.git
-      - git+https://github.com/patrick-kidger/torchcde.git
+      - git+https://github.com/emaballarin/torchcde.git
       - git+https://github.com/patrick-kidger/torchcubicspline.git
       - git+https://github.com/patrick-kidger/signatory.git
       - git+https://github.com/SystemsBioinformatics/stochpy.git

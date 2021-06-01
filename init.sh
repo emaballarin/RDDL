@@ -13,7 +13,7 @@ export ANACONDA_BASEDIR_NAME="anaconda3"
 
 # A directory with CUDA / CUDNN / NCCL installed inside, and ./lib64/ folder removed
 # after having it merged with ./lib/
-export PORTABLECUDA_ROOT="/opt/portablecuda/11.1.1/"
+export PORTABLECUDA_ROOT="$RDDL_PORTABLECUDA_ROOT/portablecuda/11.1.1/"
 
 # Package path (to manually install packages in, if needed)
 export PYPKG_DIR="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.8/site-packages/"
