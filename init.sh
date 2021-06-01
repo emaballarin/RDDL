@@ -162,6 +162,10 @@ pip install --upgrade --no-deps --force --force-reinstall git+https://github.com
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/huggingface/datasets.git
 pip install --upgrade --no-deps --force --force-reinstall sacremoses tokenizers transformers
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/huggingface/nn_pruning.git
+pip install --upgrade --no-deps --force --force-reinstall https://ballarin.cc/mirrorsrv/tinydfa/tinydfa.zip
+pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/thu-ml/tianshou.git
+MARCH_NATIVE=1 OPENMP_FLAG="-fopenmp" pip install git+https://github.com/cvxgrp/diffcp.git
+pip install git+https://github.com/cvxgrp/cvxpylayers.git
 
 # Install / enable Jupyter(Lab) extensions
 
