@@ -79,7 +79,8 @@ dependencies:
   - tensorboardx=2.2              # Latest
   - tensorly>=0.5.1               # Latest, with >=
   - dgl-cuda11.1>=0.6.1           # Latest, with >=
-  - faiss-gpu>=1.7.1              # Latest, with >=
+  - faiss-gpu                     # Leave unversioned
+#  - faiss-gpu>=1.7.1              # Latest, with >=
 
   # Fast.ai and friends
   - fastcore>=1.3.20  # Latest, with >=
