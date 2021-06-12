@@ -669,3 +669,5 @@ dependencies:
       - git+https://github.com/sissa-data-science/DULY.git
       - base58
       - git+https://github.com/SymJAX/SymJAX.git
+      - mpmath
+      - git+https://github.com/jeffalstott/powerlaw.git

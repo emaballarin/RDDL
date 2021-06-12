@@ -164,6 +164,7 @@ pip install --upgrade --no-deps --force --force-reinstall sacremoses tokenizers 
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/huggingface/nn_pruning.git
 pip install --upgrade --no-deps --force --force-reinstall https://ballarin.cc/mirrorsrv/tinydfa/tinydfa.zip
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/thu-ml/tianshou.git
+pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/CalculatedContent/WeightWatcher.git
 MARCH_NATIVE=1 OPENMP_FLAG="-fopenmp" pip install git+https://github.com/cvxgrp/diffcp.git
 pip install git+https://github.com/cvxgrp/cvxpylayers.git
 
@@ -196,27 +197,27 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ################################################################################
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 
-export PTG_PREPATH="$PATH"
-export PTG_FAKEPATHDIR="$(pwd)"
-
-mkdir -p ./faketop && cd ./faketop
-
-export PATH="$PTG_FAKEPATHDIR/faketop:$PATH"
-
-ln -s $(which gcc-7) ./gcc
-ln -s $(which g++-7) ./g++
-ln -s $(which gfortran-7) ./gfortran
-
-cd ..
+#export PTG_PREPATH="$PATH"
+#export PTG_FAKEPATHDIR="$(pwd)"
+#
+#mkdir -p ./faketop && cd ./faketop
+#
+#export PATH="$PTG_FAKEPATHDIR/faketop:$PATH"
+#
+#ln -s $(which gcc-7) ./gcc
+#ln -s $(which g++-7) ./g++
+#ln -s $(which gfortran-7) ./gfortran
+#
+#cd ..
 
 # APEX (from above)
 pip install --upgrade --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git
 
-export PATH="$PTG_PREPATH"
-unset PTG_PREPATH
-rm -R -f "$PTG_FAKEPATHDIR/faketop"
-unset PTG_FAKEPATHDIR
-
+#export PATH="$PTG_PREPATH"
+#unset PTG_PREPATH
+#rm -R -f "$PTG_FAKEPATHDIR/faketop"
+#unset PTG_FAKEPATHDIR
+#
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ################################################################################
 # Phew! Done! :)
@@ -226,34 +227,34 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ######################################################################################
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 
-export PTG_PREPATH="$PATH"
-export PTG_FAKEPATHDIR="$(pwd)"
-
-mkdir -p ./faketop && cd ./faketop
-
-export PATH="$PTG_FAKEPATHDIR/faketop:$PATH"
-
-ln -s $(which gcc-5) ./gcc
-ln -s $(which g++-5) ./g++
-ln -s $(which gfortran-5) ./gfortran
-
-cd ..
-
-export PRE_CUDA="$CUDA"
-export CUDA="cu111"
+#export PTG_PREPATH="$PATH"
+#export PTG_FAKEPATHDIR="$(pwd)"
+#
+#mkdir -p ./faketop && cd ./faketop
+#
+#export PATH="$PTG_FAKEPATHDIR/faketop:$PATH"
+#
+#ln -s $(which gcc-5) ./gcc
+#ln -s $(which g++-5) ./g++
+#ln -s $(which gfortran-5) ./gfortran
+#
+#cd ..
+#
+#export PRE_CUDA="$CUDA"
+#export CUDA="cu111"
 pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
 pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
 pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
 pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
 pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
 pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps
-export CUDA="$PRE_CUDA"
-unset PRE_CUDA
-
-export PATH="$PTG_PREPATH"
-unset PTG_PREPATH
-rm -R -f "$PTG_FAKEPATHDIR/faketop"
-unset PTG_FAKEPATHDIR
+#export CUDA="$PRE_CUDA"
+#unset PRE_CUDA
+#
+#export PATH="$PTG_PREPATH"
+#unset PTG_PREPATH
+#rm -R -f "$PTG_FAKEPATHDIR/faketop"
+#unset PTG_FAKEPATHDIR
 
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ######################################################################################
