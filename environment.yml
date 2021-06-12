@@ -596,7 +596,7 @@ dependencies:
       - fire
       - keras2onnx
       - onnxmltools
-      - git+https://github.com/onnx/optimizer.git
+      - onnxoptimizer
       - click-didyoumean
       - git+https://github.com/wesselb/plum.git
       - git+https://github.com/wesselb/fdm.git
