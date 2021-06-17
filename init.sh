@@ -242,10 +242,10 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 #
 #export PRE_CUDA="$CUDA"
 #export CUDA="cu111"
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html --no-deps
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.9.0+cu111.html --no-deps
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.9.0+cu111.html --no-deps
+pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.9.0+cu111.html --no-deps
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.9.0+cu111.html --no-deps
 pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
 pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps
 #export CUDA="$PRE_CUDA"

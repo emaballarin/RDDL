@@ -47,25 +47,24 @@ dependencies:
 
   # Extra pins
   - visdom=0.1.8.9                    # Pinned by Anaconda quirks: max(Latest, 0.1.8.9)
-#  - scikit-learn-intelex>=2021.2.2    # Latest, with >=
 
   # ThinC and friends
   - cython-blis=0.7.4  # Latest
   - cymem=2.0.5        # Latest
   - murmurhash=1.0.5   # Latest
   - preshed=3.0.5      # Latest
-  - pydantic=1.7.3     # PINNED BY (?)
+  - pydantic=1.8.2     # PINNED BY (?)
   - wasabi=0.8.2       # Latest
   - srsly=2.4.1        # Latest
   - catalogue=2.0.4    # Latest
   - immutables=0.15    # Latest
 
   # Main PyTorch pins
-  - pytorch=1.8.1                 # Latest
+  - pytorch=1.9                   # Latest
   - jpeg                          # UNPINNED (but leave it here for eventual pins)
-  - torchvision=0.9.1             # Latest
-  - torchaudio=0.8.1              # Latest
-  - torchtext=0.9.1               # Latest
+  - torchvision=0.10              # Latest
+  - torchaudio=0.9                # Latest
+  - torchtext=0.10                # Latest
   - torchcsprng=0.2.1             # Latest
   - torchserve=0.4                # Latest
   - torch-model-archiver=0.4      # Latest
@@ -75,12 +74,11 @@ dependencies:
   - ignite>=0.4.4                 # Latest, with >=
   - captum=0.3.1                  # Latest
   - onnx=1.9                      # Latest
-  - tensorboard=2.4.1             # Latest
+  - tensorboard=2.5               # Latest
   - tensorboardx=2.2              # Latest
   - tensorly>=0.5.1               # Latest, with >=
   - dgl-cuda11.1>=0.6.1           # Latest, with >=
   - faiss-gpu                     # Leave unversioned
-#  - faiss-gpu>=1.7.1              # Latest, with >=
 
   # Fast.ai and friends
   - fastcore>=1.3.20  # Latest, with >=
@@ -94,9 +92,9 @@ dependencies:
   - notebook>=6.4       # Latest, with >=
 
   # Vaex
-  - vaex>=4            # Latest, with >=
-  - vaex-core>=4       # Same as vaex, with >=
-  - vaex-astro>=0.8    # Latest
+  - vaex>=4.1          # Latest, with >=
+  - vaex-core>=4.1     # Same as vaex, with >=
+  - vaex-astro>=0.8.1  # Latest
   - vaex-hdf5>=0.7     # Latest
   - vaex-viz>=0.5      # Latest
   - vaex-jupyter>=0.6  # Latest
@@ -104,14 +102,14 @@ dependencies:
   - vaex-ml>=0.9       # Pinned at 0.9, with >=
 
   # DVC and NetworkX
-  - dvc>=2.2         # Latest, with >=
+  - dvc>=2.3         # Latest, with >=
   - networkx>=2.5.1  # Latest, with >= (check if DVC pins!)
 
-  - comet_ml>=3.11   # Latest, with >=
+  - comet_ml>=3.12   # Latest, with >=
 
   # Mathematical otimization
   - gurobi>=9.1.2  # Latest, with >=
-  - MOSEK>=9.2.45  # Latest, with >=
+  - MOSEK>=9.2.47  # Latest, with >=
 
   # Catalyst & friends (versioned)
   - aio-pika>=6 # Pin >=6 (will be downgraded anyway!)
@@ -124,7 +122,7 @@ dependencies:
   - cvxpy-base>=1.1.13  # Latest, with >=
   - ecos>=2.0.8         # Latest, with >=
   - osqp>=0.6.2         # Latest, with >=
-  - scs>=2.1.3          # Latest, with >=
+  - scs>=2.1.4          # Latest, with >=
 
   # Dependency fixups (1)
   - idna=2.8         # PINNED BY (pip-installed)
@@ -134,7 +132,7 @@ dependencies:
 
   # Carefree Toolkits & co.
   - pathos>=0.2.7    # Latest, with >=
-  - black>=21.5b1    # Latest, with >=
+  - black>=21.5b2    # Latest, with >=
   - nb_black>=1.0.7  # Latest, with >=
   - mlflow>=1.17     # Latest, with >=
 
@@ -160,15 +158,15 @@ dependencies:
   - gin-config>=0.4    # Latest, with >= (but TensorFlow-compatible)
 
   # Some extras
-  - streamlit>=0.81.1     # Latest, with >=
+  - streamlit>=0.82       # Latest, with >=
   - altair>=2.3.0         # Pinned by Aesara/PyMC3, with >=
   - boltons>=21           # Latest, with >=
   - trampoline>=0.1.2     # Latest, with >=
   - python-libsbml>=5.19  # Latest, with >=
-  - fastrlock>=0.5        # PINNED BY (?), with >=
+  - fastrlock>=0.5        # PINNED BY (?, to .05), with >=
 
   # Aesara and PyMC3
-  - aesara>=2.0.10      # Latest, with >=
+  - aesara>=2.0.11      # Latest, with >=
   - pymc3>=3.11.2       # Latest, with >=
   - theano-pymc>=1.1.2  # Latest, with >=
 
@@ -186,10 +184,9 @@ dependencies:
 
   # Numba
   - numba>=0.53.1     # Latest, with >=
-#  - numba-scipy>=0.3  # Latest, with >=
 
   # Kosio Krachev & Co. Deps
-  - dask>=2021.5.1    # Latest, with >=
+  - dask>=2021.6      # Latest, with >=
   - astor>=0.8.1      # Latest, with >=
   - lxml>=4.6.3       # Latest, with >=
   - numcodecs>=0.7.3  # Latest, with >=
@@ -472,7 +469,7 @@ dependencies:
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
       - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.67+cuda111-cp38-none-manylinux2010_x86_64.whl
-      - jax==0.2.13
+      - jax==0.2.14
       - git+https://github.com/explosion/thinc.git
       - git+https://github.com/omry/omegaconf.git
       - test_tube
@@ -626,7 +623,7 @@ dependencies:
       - git+https://github.com/TylerYep/torchinfo.git
       - bidict
       - git+https://github.com/nengo/nengo.git
-      - git+https://github.com/emaballarin/nengo-gui.git
+      - git+https://github.com/nengo/nengo-gui.git
       - git+https://github.com/nengo/pytorch-spiking.git
       - git+https://github.com/nengo/nengo-interfaces.git
       - git+https://github.com/emaballarin/nengolib.git
@@ -671,3 +668,8 @@ dependencies:
       - git+https://github.com/SymJAX/SymJAX.git
       - mpmath
       - git+https://github.com/jeffalstott/powerlaw.git
+      - git+https://github.com/mortada/fredapi.git
+      - multitasking
+      - git+https://github.com/ranaroussi/yfinance.git
+      - git+https://github.com/RomelTorres/alpha_vantage.git
+      - git+https://github.com/TorchEnsemble-Community/Ensemble-Pytorch.git
