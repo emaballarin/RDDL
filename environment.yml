@@ -65,7 +65,7 @@ dependencies:
   - torchvision=0.10              # Latest
   - torchaudio=0.9                # Latest
   - torchtext=0.10                # Latest
-  - torchcsprng=0.2.1             # Latest
+#  - torchcsprng=0.2.1             # Latest
   - torchserve=0.4                # Latest
   - torch-model-archiver=0.4      # Latest
   - torch-workflow-archiver=0.1   # Latest
@@ -92,20 +92,20 @@ dependencies:
   - notebook>=6.4       # Latest, with >=
 
   # Vaex
-  - vaex>=4.1          # Latest, with >=
-  - vaex-core>=4.1     # Same as vaex, with >=
-  - vaex-astro>=0.8.1  # Latest
-  - vaex-hdf5>=0.7     # Latest
+  - vaex>=4.3          # Latest, with >=
+  - vaex-core>=4.3     # Same as vaex, with >=
+  - vaex-astro>=0.8.2  # Latest
+  - vaex-hdf5>=0.8     # Latest
   - vaex-viz>=0.5      # Latest
   - vaex-jupyter>=0.6  # Latest
-  - vaex-server>=0.4   # Latest
+  - vaex-server>=0.5   # Latest
   - vaex-ml>=0.9       # Pinned at 0.9, with >=
 
   # DVC and NetworkX
   - dvc>=2.3         # Latest, with >=
   - networkx>=2.5.1  # Latest, with >= (check if DVC pins!)
 
-  - comet_ml>=3.12   # Latest, with >=
+  - comet_ml>=3.12.1 # Latest, with >=
 
   # Mathematical otimization
   - gurobi>=9.1.2  # Latest, with >=
@@ -131,10 +131,11 @@ dependencies:
   - virtualenv=16.7  # PINNED BY (pip-installed)
 
   # Carefree Toolkits & co.
-  - pathos>=0.2.7    # Latest, with >=
+  - pathos>=0.2.8    # Latest, with >=
   - black>=21.5b2    # Latest, with >=
   - nb_black>=1.0.7  # Latest, with >=
-  - mlflow>=1.17     # Latest, with >=
+  - mlflow>=1.18     # Latest, with >=
+  - airflow>=2.1     # Latest, with >=
 
   # ATHENA
   - gpy=1.10.0    # Latest
@@ -154,11 +155,11 @@ dependencies:
   - h5py=3.1      # Pinned by TensorFlow (pip-installed)
   - gast=0.4      # Pinned by TensorFlow (pip-installed)
   - google-pasta>=0.2  # Latest, with >= (but TensorFlow-compatible)
-  - typeguard>=2.12    # Latest, with >= (but TensorFlow-compatible)
+  - typeguard>=2.12.1  # Latest, with >= (but TensorFlow-compatible)
   - gin-config>=0.4    # Latest, with >= (but TensorFlow-compatible)
 
   # Some extras
-  - streamlit>=0.82       # Latest, with >=
+  - streamlit>=0.83       # Latest, with >=
   - altair>=2.3.0         # Pinned by Aesara/PyMC3, with >=
   - boltons>=21           # Latest, with >=
   - trampoline>=0.1.2     # Latest, with >=
@@ -186,7 +187,7 @@ dependencies:
   - numba>=0.53.1     # Latest, with >=
 
   # Kosio Krachev & Co. Deps
-  - dask>=2021.6      # Latest, with >=
+  - dask>=2021.6.1    # Latest, with >=
   - astor>=0.8.1      # Latest, with >=
   - lxml>=4.6.3       # Latest, with >=
   - numcodecs>=0.7.3  # Latest, with >=
@@ -673,3 +674,5 @@ dependencies:
       - git+https://github.com/ranaroussi/yfinance.git
       - git+https://github.com/RomelTorres/alpha_vantage.git
       - git+https://github.com/TorchEnsemble-Community/Ensemble-Pytorch.git
+      - urwid
+      - git+https://github.com/wandb/pyrasite.git
