@@ -135,7 +135,6 @@ dependencies:
   - black>=21.5b2    # Latest, with >=
   - nb_black>=1.0.7  # Latest, with >=
   - mlflow>=1.18     # Latest, with >=
-  - airflow>=2.1     # Latest, with >=
 
   # ATHENA
   - gpy=1.10.0    # Latest
@@ -167,7 +166,7 @@ dependencies:
   - fastrlock>=0.5        # PINNED BY (?, to .05), with >=
 
   # Aesara and PyMC3
-  - aesara>=2.0.11      # Latest, with >=
+  - aesara>=2.0.12      # Latest, with >=
   - pymc3>=3.11.2       # Latest, with >=
   - theano-pymc>=1.1.2  # Latest, with >=
 
@@ -192,6 +191,10 @@ dependencies:
   - lxml>=4.6.3       # Latest, with >=
   - numcodecs>=0.7.3  # Latest, with >=
   - zarr>=2.8.3       # Latest, with >=
+
+  # GradIO
+  - flask>=1.1.1       # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
+  - flask-cors>=3.0.8  # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
 
   # CONDA FLOATING #
   - conda
@@ -443,13 +446,26 @@ dependencies:
 
   # FSDL
   - editdistance
-  - flask
+  - flask-login
   - bandit
   - nltk
   - pycodestyle
   - pydocstyle
   - tornado
   - safety
+
+  # GradIO
+  - markdown2
+  - pycryptodome
+  - cryptography
+  - markupsafe
+  - werkzeug
+  - monotonic
+  - itsdangerous
+  - backoff
+  - bcrypt
+  - pycparser
+  - pynacl
 
 
   # PIP #
@@ -676,3 +692,8 @@ dependencies:
       - git+https://github.com/TorchEnsemble-Community/Ensemble-Pytorch.git
       - urwid
       - git+https://github.com/wandb/pyrasite.git
+      - ffmpy
+      - paramiko
+      - analytics-python
+      - flask-cachebuster
+      - gradio

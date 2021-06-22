@@ -270,6 +270,18 @@ cd sitecustomize
 echo "from rich.traceback import install" >> __init__.py
 echo "install()" >> __init__.py
 
+echo ""
+echo "If you want compatibility with Microsoft DeepSpeed, just rund the following"
+echo "in the newly-created Conda environment."
+echo "------------------------------------------"
+echo "pip install mpi4py"
+echo "pip install triton"
+echo "pip install ninja"
+echo "pip install --upgrade deepspeed"
+echo "pip install --upgrade tensorboardx"
+echo "pip install --upgrade ninja"
+echo "------------------------------------------"
+echo ""
 
 # End
 cd "$SELF_STORED_CALLDIR"
