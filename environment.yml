@@ -697,3 +697,4 @@ dependencies:
       - analytics-python
       - flask-cachebuster
       - gradio
+      - git+https://github.com/geoopt/geoopt.git
