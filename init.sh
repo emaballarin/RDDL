@@ -271,7 +271,7 @@ echo "from rich.traceback import install" >> __init__.py
 echo "install()" >> __init__.py
 
 echo ""
-echo "If you want compatibility with Microsoft DeepSpeed, just rund the following"
+echo "If you want compatibility with Microsoft DeepSpeed, just run the following"
 echo "in the newly-created Conda environment."
 echo "------------------------------------------"
 echo "pip install mpi4py"
