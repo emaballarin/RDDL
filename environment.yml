@@ -27,7 +27,7 @@ channels:
 dependencies:
 
   # General pins
-  - python=3.8.10        # Latest 3.8.x
+  - python=3.8.11        # Latest 3.8.x
   - cudatoolkit=11.1     # Latest supported by PyTorch
   - magma-cuda111=2.5.2  # Latest
   - blas=*.*=mkl         # No updates needed
@@ -37,7 +37,7 @@ dependencies:
 
   # Dependency pins
   - numpy=1.19.5     # Pinned by tensorflow: Latest 1.19.x (https://github.com/tensorflow/tensorflow/issues/47691)
-  - scipy>=1.6.3     # Latest, with >=
+  - scipy>=1.7.1     # Latest, with >=
   - pyyaml=5.3.1     # PINNED BY (?)
   - tqdm=4.54.1      # PINNED BY (?)
   - pyglet=1.5.0     # Pinned by Atari Gym
@@ -56,8 +56,8 @@ dependencies:
   - pydantic=1.8.2     # PINNED BY (?)
   - wasabi=0.8.2       # Latest
   - srsly=2.4.1        # Latest
-  - catalogue=2.0.4    # Latest
-  - immutables=0.15    # Latest
+  - catalogue=2.0.5    # Latest
+  - immutables=0.16    # Latest
 
   # Main PyTorch pins
   - pytorch=1.9                   # Latest
@@ -66,50 +66,50 @@ dependencies:
   - torchaudio=0.9                # Latest
   - torchtext=0.10                # Latest
 #  - torchcsprng=0.2.1             # Latest
-  - torchserve=0.4                # Latest
-  - torch-model-archiver=0.4      # Latest
-  - torch-workflow-archiver=0.1   # Latest
-  - gpytorch=1.4.2                # Latest
-  - botorch=0.4                   # Latest
-  - ignite>=0.4.4                 # Latest, with >=
-  - captum=0.3.1                  # Latest
-  - onnx=1.9                      # Latest
-  - tensorboard=2.5               # Latest
-  - tensorboardx=2.2              # Latest
+  - torchserve=0.4.2              # Latest
+  - torch-model-archiver=0.4.2    # Latest
+  - torch-workflow-archiver=0.1.2 # Latest
+  - gpytorch=1.5                  # Latest
+  - botorch=0.5                   # Latest
+  - ignite>=0.4.6                 # Latest, with >=
+  - captum=0.4                    # Latest
+  - onnx=1.10.1                   # Latest
+  - tensorboard=2.6               # Latest
+  - tensorboardx=2.4              # Latest
   - tensorly>=0.5.1               # Latest, with >=
-  - dgl-cuda11.1>=0.6.1           # Latest, with >=
+  - dgl-cuda11.1>=0.7             # Latest, with >=
   - faiss-gpu                     # Leave unversioned
 
   # Fast.ai and friends
-  - fastcore>=1.3.20  # Latest, with >=
+  - fastcore>=1.3.26  # Latest, with >=
   - fastprogress>=1   # Latest, with >=
-  - nbdev>=1.1.14     # Latest, with >=
+  - nbdev>=1.1.22     # Latest, with >=
   - fastgpu>=1.0.1    # Latest, with >=
   - fastscript>=1     # Latest, with >=
 
   # Jupyter, JupyterLab, IPython
-  - jupyterlab>=3.0.16  # Latest, with >=
-  - notebook>=6.4       # Latest, with >=
+  - jupyterlab>=3.1.7   # Latest, with >=
+  - notebook>=6.4.3     # Latest, with >=
 
   # Vaex
   - vaex>=4.3          # Latest, with >=
   - vaex-core>=4.3     # Same as vaex, with >=
-  - vaex-astro>=0.8.2  # Latest
-  - vaex-hdf5>=0.8     # Latest
-  - vaex-viz>=0.5      # Latest
-  - vaex-jupyter>=0.6  # Latest
-  - vaex-server>=0.5   # Latest
+  - vaex-astro>=0.8.3  # Latest, with >=
+  - vaex-hdf5>=0.8     # Latest compatible with latest vaex, with >=
+  - vaex-viz>=0.5      # Latest, with >=
+  - vaex-jupyter>=0.6  # Latest, with >=
+  - vaex-server>=0.5   # Latest compatible with latest vaex, with >=
   - vaex-ml>=0.9       # Pinned at 0.9, with >=
 
   # DVC and NetworkX
-  - dvc>=2.3         # Latest, with >=
-  - networkx>=2.5.1  # Latest, with >= (check if DVC pins!)
+  - dvc>=2.5.4       # Latest, with >=
+  - networkx>=2.6.2  # Latest, with >= (check if DVC pins!)
 
-  - comet_ml>=3.12.1 # Latest, with >=
+  - comet_ml>=3.14.1 # Latest, with >=
 
   # Mathematical otimization
   - gurobi>=9.1.2  # Latest, with >=
-  - MOSEK>=9.2.47  # Latest, with >=
+  - MOSEK>=9.3.3   # Latest, with >=
 
   # Catalyst & friends (versioned)
   - aio-pika>=6 # Pin >=6 (will be downgraded anyway!)
@@ -118,8 +118,8 @@ dependencies:
   - pytype>=2020.10.8  # Latest, with >=
 
   # JAX Verify + CVXPY
-  - cvxpy>=1.1.13       # Latest, with >=
-  - cvxpy-base>=1.1.13  # Latest, with >=
+  - cvxpy>=1.1.15       # Latest, with >=
+  - cvxpy-base>=1.1.15  # Latest, with >=
   - ecos>=2.0.8         # Latest, with >=
   - osqp>=0.6.2         # Latest, with >=
   - scs>=2.1.4          # Latest, with >=
@@ -132,9 +132,9 @@ dependencies:
 
   # Carefree Toolkits & co.
   - pathos>=0.2.8    # Latest, with >=
-  - black>=21.5b2    # Latest, with >=
+  - black>=21.7b0    # Latest, with >=
   - nb_black>=1.0.7  # Latest, with >=
-  - mlflow>=1.18     # Latest, with >=
+  - mlflow>=1.19     # Latest, with >=
 
   # ATHENA
   - gpy=1.10.0    # Latest
@@ -158,16 +158,16 @@ dependencies:
   - gin-config>=0.4    # Latest, with >= (but TensorFlow-compatible)
 
   # Some extras
-  - streamlit>=0.83       # Latest, with >=
+  - streamlit>=0.87       # Latest, with >=
   - altair>=2.3.0         # Pinned by Aesara/PyMC3, with >=
   - boltons>=21           # Latest, with >=
   - trampoline>=0.1.2     # Latest, with >=
   - python-libsbml>=5.19  # Latest, with >=
-  - fastrlock>=0.5        # PINNED BY (?, to .05), with >=
+  - fastrlock>=0.5        # PINNED BY (?, to 0.5), with >=
 
   # Aesara and PyMC3
-  - aesara>=2.0.12      # Latest, with >=
-  - pymc3>=3.11.2       # Latest, with >=
+  - aesara>=2.2         # Latest, with >=
+  - pymc3>=3.11.3       # Latest, with >=
   - theano-pymc>=1.1.2  # Latest, with >=
 
   # TensorWerk
@@ -186,10 +186,10 @@ dependencies:
   - numba>=0.53.1     # Latest, with >=
 
   # Kosio Krachev & Co. Deps
-  - dask>=2021.6.1    # Latest, with >=
+  - dask>=2021.8.1    # Latest, with >=
   - astor>=0.8.1      # Latest, with >=
   - lxml>=4.6.3       # Latest, with >=
-  - numcodecs>=0.7.3  # Latest, with >=
+  - numcodecs>=0.9    # Latest, with >=
   - zarr>=2.8.3       # Latest, with >=
 
   # GradIO
@@ -485,8 +485,8 @@ dependencies:
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - git+https://github.com/explosion/ml-datasets.git
-      - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.67+cuda111-cp38-none-manylinux2010_x86_64.whl
-      - jax==0.2.14
+      - https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.70+cuda111-cp38-none-manylinux2010_x86_64.whl
+      - jax==0.2.19
       - git+https://github.com/explosion/thinc.git
       - git+https://github.com/omry/omegaconf.git
       - test_tube
@@ -573,7 +573,7 @@ dependencies:
       - git+https://github.com/catalyst-team/reaction.git
       - git+https://github.com/catalyst-team/catalyst.git
       - git+https://github.com/TezRomacH/safitty.git
-      - git+https://github.com/getkeops/keops.git
+      - git+https://github.com/emaballarin/keops.git
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/fmfn/BayesianOptimization.git
       - git+https://github.com/google/objax.git
@@ -601,7 +601,7 @@ dependencies:
       - git+https://github.com/KevinMusgrave/pytorch-metric-learning.git
       - git+https://github.com/rtqichen/torchdiffeq
       - git+https://github.com/emaballarin/torchsde.git
-      - git+https://github.com/emaballarin/torchcde.git
+      - git+https://github.com/patrick-kidger/torchcde.git
       - git+https://github.com/patrick-kidger/torchcubicspline.git
       - git+https://github.com/patrick-kidger/signatory.git
       - git+https://github.com/SystemsBioinformatics/stochpy.git
