@@ -75,7 +75,7 @@ dependencies:
   - captum=0.4                    # Latest
   - onnx=1.10.1                   # Latest
   - tensorboard=2.6               # Latest
-  - tensorboardx=2.4              # Latest
+  - tensorboardx=2.4              # Pinned by (?)
   - tensorly>=0.5.1               # Latest, with >=
   - dgl-cuda11.1>=0.7             # Latest, with >=
   - faiss-gpu                     # Leave unversioned
@@ -112,7 +112,7 @@ dependencies:
   - MOSEK>=9.3.3   # Latest, with >=
 
   # Catalyst & friends (versioned)
-  - aio-pika>=6 # Pin >=6 (will be downgraded anyway!)
+  - aio-pika>=6 # Pinned by (?)
 
   # TensorAnnotations
   - pytype>=2020.10.8  # Latest, with >=
@@ -120,7 +120,7 @@ dependencies:
   # JAX Verify + CVXPY
   - cvxpy>=1.1.15       # Latest, with >=
   - cvxpy-base>=1.1.15  # Latest, with >=
-  - ecos>=2.0.8         # Latest, with >=
+  - ecos>=2.0.8         # Pinned by (?)
   - osqp>=0.6.2         # Latest, with >=
   - scs>=2.1.4          # Latest, with >=
 
@@ -159,7 +159,7 @@ dependencies:
 
   # Some extras
   - streamlit>=0.87       # Latest, with >=
-  - altair>=2.3.0         # Pinned by Aesara/PyMC3, with >=
+  - altair>=2.3           # Pinned by Aesara/PyMC3, with >=
   - boltons>=21           # Latest, with >=
   - trampoline>=0.1.2     # Latest, with >=
   - python-libsbml>=5.19  # Latest, with >=
@@ -195,6 +195,11 @@ dependencies:
   # GradIO
   - flask>=1.1.1       # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
   - flask-cors>=3.0.8  # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
+
+  # Fixups (all pinned)
+  - attrs # =20.3.0
+  - python-daemon # =2.2.4
+  - backoff # =1.10
 
   # CONDA FLOATING #
   - conda
@@ -284,7 +289,6 @@ dependencies:
   - boto3
   - azure-storage-blob
 
-  - attrs
   - funcsigs
   - furl
   - humanfriendly
@@ -394,8 +398,7 @@ dependencies:
   - path.py # <- end
 
   # Catalyst & friends (extras) <- start
-  - deprecation
-  - python-daemon # <- end
+  - deprecation  # <- end
 
   # ObJAX
   - parameterized
@@ -462,7 +465,6 @@ dependencies:
   - werkzeug
   - monotonic
   - itsdangerous
-  - backoff
   - bcrypt
   - pycparser
   - pynacl
@@ -476,6 +478,7 @@ dependencies:
       # - jax:                Latest
       # - ray:                Latest
       # - adabelief-pytorch:  Latest
+      # - aiormq:             Pinned by (?)
       # - pytorch-tabnet:     Pinned by the PyTorch Lightning stack
       # - datasets:           Pinned by the PyTorch Lightning stack
       #
@@ -558,7 +561,7 @@ dependencies:
       - orjson
       - uvicorn
       - ujson
-      - aiormq
+      - aiormq==2.4.2
       - dnspython
       - git+https://github.com/python-hyper/h11.git
       - websockets

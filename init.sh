@@ -13,7 +13,7 @@ export ANACONDA_BASEDIR_NAME="anaconda3"
 
 # A directory with CUDA / CUDNN / NCCL installed inside, and ./lib64/ folder removed
 # after having it merged with ./lib/
-export PORTABLECUDA_ROOT="$RDDL_PORTABLECUDA_ROOT/portablecuda/11.1.1/"
+export PORTABLECUDA_ROOT="$RDDL_PORTABLECUDA_ROOT/portablecuda/11.1.105/"
 
 # Package path (to manually install packages in, if needed)
 export PYPKG_DIR="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.8/site-packages/"
@@ -62,6 +62,7 @@ conda remove -y cmake curl krb5 mpi cudatoolkit cudnn nccl nccl2 --force --force
 
 mkdir -p "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/"
 rm -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/ld"
+rm -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/ld"
 ln -s "$(which ld)" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/"
 ln -s "$(which ld)" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/"
 
@@ -164,7 +165,7 @@ pip install --upgrade --no-deps --force --force-reinstall sacremoses tokenizers 
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/huggingface/nn_pruning.git
 pip install --upgrade --no-deps --force --force-reinstall https://ballarin.cc/mirrorsrv/tinydfa/tinydfa.zip
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/thu-ml/tianshou.git
-pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/CalculatedContent/WeightWatcher.git
+#pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/CalculatedContent/WeightWatcher.git
 MARCH_NATIVE=1 OPENMP_FLAG="-fopenmp" pip install git+https://github.com/cvxgrp/diffcp.git
 pip install git+https://github.com/cvxgrp/cvxpylayers.git
 
