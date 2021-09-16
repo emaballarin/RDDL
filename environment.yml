@@ -576,7 +576,7 @@ dependencies:
       - git+https://github.com/catalyst-team/reaction.git
       - git+https://github.com/catalyst-team/catalyst.git
       - git+https://github.com/TezRomacH/safitty.git
-      - git+https://github.com/emaballarin/keops.git
+      - git+https://github.com/getkeops/keops.git
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/fmfn/BayesianOptimization.git
       - git+https://github.com/google/objax.git
