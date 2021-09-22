@@ -701,3 +701,4 @@ dependencies:
       - flask-cachebuster
       - gradio
       - git+https://github.com/geoopt/geoopt.git
+      - git+https://github.com/lessw2020/Ranger21.git
