@@ -27,7 +27,7 @@ channels:
 dependencies:
 
   # General pins
-  - python=3.8.12        # Latest 3.8.x
+  - python=3.8.11        # Latest 3.8.x
   - cudatoolkit=11.1     # Latest supported by PyTorch
   - magma-cuda111=2.5.2  # Latest
   - blas=*.*=mkl         # No updates needed
@@ -81,11 +81,12 @@ dependencies:
   - faiss-gpu                     # Leave unversioned
 
   # Fast.ai and friends
-  - fastcore>=1.3.26  # Latest, with >=
-  - fastprogress>=1   # Latest, with >=
-  - nbdev>=1.1.22     # Latest, with >=
-  - fastgpu>=1.0.1    # Latest, with >=
-  - fastscript>=1     # Latest, with >=
+  - fastcore>=1.3.26    # Latest, with >=
+  - fastprogress>=1     # Latest, with >=
+  - nbdev>=1.1.22       # Latest, with >=
+  - fastgpu>=1.0.1      # Latest, with >=
+  - fastscript>=1       # Latest, with >=
+  - fastdownload>=0.0.5 # Latest, with >=
 
   # Jupyter, JupyterLab, IPython
   - jupyterlab>=3.1.13   # Latest, with >=
@@ -94,11 +95,11 @@ dependencies:
   # Vaex
   - vaex>=4.3          # Latest, with >=
   - vaex-core>=4.3     # Same as vaex, with >=
-  - vaex-astro>=0.9    # Latest, with >=
-  - vaex-hdf5>=0.10    # Latest compatible with latest vaex, with >=
+  - vaex-astro>=0.8.1  # Latest, with >=
+  - vaex-hdf5>=0.8     # Latest compatible with latest vaex, with >=
   - vaex-viz>=0.5      # Latest, with >=
   - vaex-jupyter>=0.6  # Latest, with >=
-  - vaex-server>=0.6.1 # Latest compatible with latest vaex, with >=
+  - vaex-server>=0.5   # Latest compatible with latest vaex, with >=
   - vaex-ml>=0.9       # Pinned at 0.9, with >=
 
   # DVC and NetworkX
@@ -120,7 +121,7 @@ dependencies:
   # JAX Verify + CVXPY
   - cvxpy>=1.1.15       # Latest, with >=
   - cvxpy-base>=1.1.15  # Latest, with >=
-  - ecos>=2.0.8         # Pinned by (?)
+  - ecos>=2.0.7.post1   # Pinned by (?)
   - osqp>=0.6.2         # Latest, with >=
   - scs>=2.1.4          # Latest, with >=
 
@@ -132,9 +133,9 @@ dependencies:
 
   # Carefree Toolkits & co.
   - pathos>=0.2.8    # Latest, with >=
-  - black>=21.9b0    # Latest, with >=
+  - black>=21.7b0    # Latest, with >= (pinned by dvc -> path...)
   - nb_black>=1.0.7  # Latest, with >=
-  - mlflow>=1.20.2 ss  # Latest, with >=
+  - mlflow>=1.20.2   # Latest, with >=
 
   # ATHENA
   - gpy=1.10.0    # Latest
@@ -706,3 +707,5 @@ dependencies:
       - git+https://github.com/jonasrauber/attax.git
       - git+https://github.com/facebookresearch/rlstructures.git
       - git+https://github.com/tfjgeorge/nngeometry.git
+      - jsonpatch
+      - yacs

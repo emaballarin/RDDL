@@ -150,13 +150,13 @@ pip install --upgrade --no-deps --pre hydra-core
 pip install --upgrade --no-deps --pre fastai
 CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
 pip install --upgrade --no-deps --pre cupy-cuda111
-pip install --upgrade --no-deps git+https://github.com/ElementAI/baal.git
+# pip install --upgrade --no-deps git+https://github.com/ElementAI/baal.git
 pip install --upgrade --no-deps --force --force-reinstall pynvml
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/tensorwerk/hangar-py.git
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/emaballarin/stockroom.git
 pip install --upgrade --no-deps --force pyrser
-pip install --upgrade --no-deps --force git+https://github.com/aimhubio/aimrecords.git
-pip install --upgrade --no-deps --force git+https://github.com/aimhubio/aim.git
+# pip install --upgrade --no-deps --force git+https://github.com/aimhubio/aimrecords.git
+# pip install --upgrade --no-deps --force git+https://github.com/aimhubio/aim.git
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/PyTorchLightning/lightning-flash.git
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/PyTorchLightning/lightning-transformers.git
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/FrancescoSaverioZuppichini/glasses.git
@@ -268,6 +268,18 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 # Post-fix Kerberos installation
 ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/"
 
+# Very final fixups
+pip install --upgrade typing-extensions
+pip install onnxruntime-training
+pip install --upgrade requests
+pip install git+https://github.com/facebookresearch/fairscale.git
+pip install jsonargparse
+
+# Microsoft DeepSpeed
+pip install triton
+pip install --upgrade deepspeed
+pip install --upgrade tensorboardx==2.2
+
 # Rich stack-traces
 cd "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.8/site-packages/"
 mkdir sitecustomize
@@ -276,17 +288,17 @@ echo "from rich.traceback import install" >> __init__.py
 echo "install()" >> __init__.py
 
 echo ""
-echo "If you want compatibility with Microsoft DeepSpeed, just run the following"
-echo "in the newly-created Conda environment."
-echo "------------------------------------------"
-# echo "pip install mpi4py"
-echo "pip install triton"
-# echo "pip install ninja"
-echo "pip install --upgrade deepspeed"
-echo "pip install --upgrade tensorboardx==2.2"
-# echo "pip install --upgrade ninja"
-echo "------------------------------------------"
-echo ""
+# echo "If you want compatibility with Microsoft DeepSpeed, just run the following"
+# echo "in the newly-created Conda environment."
+# echo "------------------------------------------"
+# # echo "pip install mpi4py"
+# echo "pip install triton"
+# # echo "pip install ninja"
+# echo "pip install --upgrade deepspeed"
+# echo "pip install --upgrade tensorboardx==2.2"
+# # echo "pip install --upgrade ninja"
+# echo "------------------------------------------"
+# echo ""
 
 # End
 cd "$SELF_STORED_CALLDIR"
