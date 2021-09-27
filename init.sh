@@ -168,6 +168,10 @@ pip install --upgrade --no-deps --force --force-reinstall git+https://github.com
 #pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/CalculatedContent/WeightWatcher.git
 MARCH_NATIVE=1 OPENMP_FLAG="-fopenmp" pip install git+https://github.com/cvxgrp/diffcp.git
 pip install git+https://github.com/cvxgrp/cvxpylayers.git
+pip install --upgrade --no-deps git+https://github.com/bethgelab/imagecorruptions.git
+pip install --upgrade --no-deps git+https://github.com/bethgelab/foolbox.git
+pip install --upgrade --no-deps git+https://github.com/pytorch/ort.git
+pip install --upgrade --no-deps pytorchfi
 
 # Install / enable Jupyter(Lab) extensions
 
