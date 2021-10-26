@@ -82,13 +82,14 @@ pip install keras-preprocessing
 pip install tensorflow
 pip install tensorflow-estimator
 pip install keras-tuner
-pip install autokeras
+#pip install autokeras  # It downgrades TF
 pip install tensorflow-metadata
 pip install tensorflow_probability
 pip install tensorflow-addons
 #pip install waymo-open-dataset-tf-2-3-0
 pip install model-pruning-google-research
 pip install tensorflow-datasets
+pip install --upgrade keras
 #pip install lingvo
 pip install dm-reverb
 pip install tf-agents
@@ -141,8 +142,8 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 
 # Install TensorAnnotations
 pip install git+https://github.com/deepmind/tensor_annotations
-pip install 'git+https://github.com/deepmind/tensor_annotations#egg=jax-stubs&subdirectory=jax-stubs'
-pip install 'git+https://github.com/deepmind/tensor_annotations#egg=tensorflow-stubs&subdirectory=tensorflow-stubs'
+pip install 'git+https://github.com/deepmind/tensor_annotations#egg=tensor_annotations_jax_stubs&subdirectory=jax-stubs'
+pip install 'git+https://github.com/deepmind/tensor_annotations#egg=tensor_annotations_tensorflow_stubs&subdirectory=tensorflow-stubs'
 
 
 # Install deferred extra packages
