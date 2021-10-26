@@ -95,7 +95,7 @@ dependencies:
   # Vaex
   - vaex>=4.5          # Latest, with >=
   - vaex-core>=4.5     # Same as vaex, with >=
-  - vaex-astro>=0.9    # Latest, with >=
+  - vaex-astro>=0.8.3  # Pinned to >= 0.8.3 by vaex
   - vaex-hdf5>=0.10    # Latest compatible with latest vaex, with >=
   - vaex-viz>=0.5      # Latest, with >=
   - vaex-jupyter>=0.6  # Latest, with >=
@@ -123,7 +123,7 @@ dependencies:
   - cvxpy-base>=1.1.15  # Latest, with >=
   - ecos>=2.0.7.post1   # Pinned by (?)
   - osqp>=0.6.2         # Latest, with >=
-  - scs>=3              # Latest, with >=
+  - scs>=2.1.4          # Latest, with >=
 
   # Dependency fixups (1)
   - idna=2.8         # PINNED BY (pip-installed)
@@ -147,7 +147,7 @@ dependencies:
   - astunparse>=1.6.3   # Latest, with >= (NOTE: tensorflow pins ==1.6.3)
 
   # BAAL
-  - structlog>=21.2  # Latest, with >=
+  #- structlog>=21.2  # Latest, with >=
 
   # TensorFlow & co. (pinned)
   - grpcio>=1.37  # Pinned by TensorFlow (pip-installed)
@@ -159,7 +159,7 @@ dependencies:
   - gin-config>=0.4    # Latest, with >= (but TensorFlow-compatible)
 
   # Some extras
-  - streamlit>=1.1        # Latest, with >=
+  #- streamlit>=1.1        # Latest, with >=
   - altair>=2.3           # Pinned by Aesara/PyMC3, with >=
   - boltons>=21           # Latest, with >=
   - trampoline>=0.1.2     # Latest, with >=
@@ -167,7 +167,7 @@ dependencies:
   - fastrlock>=0.5        # PINNED BY (?, to 0.5), with >=
 
   # Aesara and PyMC3
-  - aesara>=2.2.4       # Latest, with >=
+  - aesara>=2.2.3       # Latest, with >=
   - pymc3>=3.11.4       # Latest, with >=
   - theano-pymc>=1.1.2  # Latest, with >=
 
@@ -181,7 +181,7 @@ dependencies:
   - pip-tools>=5.5  # ((?))
 
   # Brain / Neuro / SNNs
-  - norse>=0.0.7  # Latest, with >=
+  #- norse>=0.0.7  # Latest, with >=
 
   # Numba
   - numba>=0.54.1     # Latest, with >=
