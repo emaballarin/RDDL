@@ -13,7 +13,7 @@ export ANACONDA_BASEDIR_NAME="anaconda3"
 
 # A directory with CUDA / CUDNN / NCCL installed inside, and ./lib64/ folder removed
 # after having it merged with ./lib/
-export PORTABLECUDA_ROOT="$RDDL_PORTABLECUDA_ROOT/portablecuda/11.1.105/"
+export PORTABLECUDA_ROOT="$RDDL_PORTABLECUDA_ROOT/portablecuda/11.3.1/"
 
 # Package path (to manually install packages in, if needed)
 export PYPKG_DIR="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.8/site-packages/"
@@ -149,7 +149,7 @@ pip install 'git+https://github.com/deepmind/tensor_annotations#egg=tensorflow-s
 pip install --upgrade --no-deps --pre hydra-core
 pip install --upgrade --no-deps --pre fastai
 CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
-pip install --upgrade --no-deps --pre cupy-cuda111
+pip install --upgrade --no-deps --pre cupy-cuda113
 # pip install --upgrade --no-deps git+https://github.com/ElementAI/baal.git
 pip install --upgrade --no-deps --force --force-reinstall pynvml
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/tensorwerk/hangar-py.git
@@ -247,12 +247,12 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 #
 #export PRE_CUDA="$CUDA"
 #export CUDA="cu111"
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.9.0+cu111.html --no-deps
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.9.0+cu111.html --no-deps
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.9.0+cu111.html --no-deps
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.9.0+cu111.html --no-deps
-pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
-pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps
+### pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.9.1+cu111.html --no-deps (not yet available for PyTorch 1.10; CUDA 11.3.1)
+### pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.9.1+cu111.html --no-deps (not yet available for PyTorch 1.10; CUDA 11.3.1)
+### pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.9.1+cu111.html --no-deps (not yet available for PyTorch 1.10; CUDA 11.3.1)
+### pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.9.1+cu111.html --no-deps (not yet available for PyTorch 1.10; CUDA 11.3.1)
+### pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps (not yet available for PyTorch 1.10; CUDA 11.3.1)
+### pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps (not yet available for PyTorch 1.10; CUDA 11.3.1)
 #export CUDA="$PRE_CUDA"
 #unset PRE_CUDA
 #
