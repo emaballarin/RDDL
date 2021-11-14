@@ -25,177 +25,176 @@ channels:
   - norse
 
 dependencies:
-
   # General pins
-  - python=3.8.12        # Latest 3.8.x
-  - cudatoolkit=11.3     # Latest supported by PyTorch
-  - magma-cuda113=2.5.2  # Latest
-  - blas=*.*=mkl         # No updates needed
-  - opt_einsum=3.3       # Latest
-  - pillow=7.0           # Same as Pillow-SIMD
-  - parso=0.8.2          # Latest
+  - python=3.8.12 # Latest 3.8.x
+  - cudatoolkit=11.3 # Latest supported by PyTorch
+  - magma-cuda113=2.5.2 # Latest
+  - blas=*.*=mkl # No updates needed
+  - opt_einsum=3.3 # Latest
+  - pillow=7.0 # Same as Pillow-SIMD
+  - parso=0.8.2 # Latest
 
   # Dependency pins
-  - numpy=1.19.5     # Pinned by tensorflow: Latest 1.19.x (https://github.com/tensorflow/tensorflow/issues/47691)
-  - scipy>=1.7.1     # Latest, with >=
-  - pyyaml=5.3.1     # PINNED BY (?)
-  - tqdm=4.54.1      # PINNED BY (?)
-  - pyglet=1.5.0     # Pinned by Atari Gym
-  - fastapi=0.58.1   # PINNED BY (?)
-  - mypy=0.790       # PINNED BY (?)
-  - fasteners=0.15   # PINNED BY (?)
+  - numpy=1.19.5 # Pinned by tensorflow: Latest 1.19.x (https://github.com/tensorflow/tensorflow/issues/47691)
+  - scipy>=1.7.1 # Latest, with >=
+  - pyyaml=5.3.1 # PINNED BY (?)
+  - tqdm=4.54.1 # PINNED BY (?)
+  - pyglet=1.5.0 # Pinned by Atari Gym
+  - fastapi=0.58.1 # PINNED BY (?)
+  - mypy=0.790 # PINNED BY (?)
+  - fasteners=0.15 # PINNED BY (?)
 
   # Extra pins
-  - visdom=0.1.8.9                    # Pinned by Anaconda quirks: max(Latest, 0.1.8.9)
+  - visdom=0.1.8.9 # Pinned by Anaconda quirks: max(Latest, 0.1.8.9)
 
   # ThinC and friends
-  - cython-blis=0.7.4  # Latest
-  - cymem=2.0.6        # Latest
-  - murmurhash=1.0.6   # Latest
-  - preshed=3.0.6      # Latest
-  - pydantic=1.8.2     # PINNED BY (?)
-  - wasabi=0.8.2       # Latest
-  - srsly=2.4.2        # Latest
-  - catalogue=2.0.6    # Latest
-  - immutables=0.16    # Latest
+  - cython-blis=0.7.4 # Latest
+  - cymem=2.0.6 # Latest
+  - murmurhash=1.0.6 # Latest
+  - preshed=3.0.6 # Latest
+  - pydantic=1.8.2 # PINNED BY (?)
+  - wasabi=0.8.2 # Latest
+  - srsly=2.4.2 # Latest
+  - catalogue=2.0.6 # Latest
+  - immutables=0.16 # Latest
 
   # Main PyTorch pins
-  - pytorch=1.10                  # Latest
-  - jpeg                          # UNPINNED (but leave it here for eventual pins)
-  - torchvision=0.11.1            # Latest
-  - torchaudio=0.10               # Latest
-  - torchtext=0.11                # Latest
-#  - torchcsprng=0.2.1             # Latest
-  - torchserve=0.4.2              # Latest
-  - torch-model-archiver=0.4.2    # Latest
+  - pytorch=1.10 # Latest
+  - jpeg # UNPINNED (but leave it here for eventual pins)
+  - torchvision=0.11.1 # Latest
+  - torchaudio=0.10 # Latest
+  - torchtext=0.11 # Latest
+  #  - torchcsprng=0.2.1             # Latest
+  - torchserve=0.4.2 # Latest
+  - torch-model-archiver=0.4.2 # Latest
   - torch-workflow-archiver=0.1.2 # Latest
-  - gpytorch=1.5.1                # Latest
-  - botorch=0.5.1                 # Latest
-  - ignite>=0.4.7                 # Latest, with >=
-  - captum=0.4                    # Latest
-  - onnx=1.10.2                   # Latest
-  - tensorboard=2.6               # Latest
-  - tensorboardx=2.4              # Pinned by (?)
-  - tensorly>=0.5.1               # Latest, with >=
-#  - dgl-cuda11.1>=0.7.1           # Latest, with >= (yet to be published for CUDA 11.3)
-  - faiss-gpu                     # Leave unversioned
+  - gpytorch=1.5.1 # Latest
+  - botorch=0.5.1 # Latest
+  - ignite>=0.4.7 # Latest, with >=
+  - captum=0.4 # Latest
+  - onnx=1.10.2 # Latest
+  - tensorboard=2.6 # Latest
+  - tensorboardx=2.4 # Pinned by (?)
+  - tensorly>=0.5.1 # Latest, with >=
+  #  - dgl-cuda11.1>=0.7.1           # Latest, with >= (yet to be published for CUDA 11.3)
+  - faiss-gpu # Leave unversioned
 
   # Fast.ai and friends
-  - fastcore>=1.3.26    # Latest, with >=
-  - fastprogress>=1     # Latest, with >=
-  - nbdev>=1.1.22       # Latest, with >=
-  - fastgpu>=1.0.1      # Latest, with >=
-  - fastscript>=1       # Latest, with >=
+  - fastcore>=1.3.26 # Latest, with >=
+  - fastprogress>=1 # Latest, with >=
+  - nbdev>=1.1.22 # Latest, with >=
+  - fastgpu>=1.0.1 # Latest, with >=
+  - fastscript>=1 # Latest, with >=
   - fastdownload>=0.0.5 # Latest, with >=
 
   # Jupyter, JupyterLab, IPython
-  - jupyterlab>=3.2.1   # Latest, with >=
-  - notebook>=6.4.5     # Latest, with >=
+  - jupyterlab>=3.2.1 # Latest, with >=
+  - notebook>=6.4.5 # Latest, with >=
 
   # Vaex
-  - vaex>=4.5          # Latest, with >=
-  - vaex-core>=4.5     # Same as vaex, with >=
-  - vaex-astro>=0.8.3  # Pinned to >= 0.8.3 by vaex
-  - vaex-hdf5>=0.10    # Latest compatible with latest vaex, with >=
-  - vaex-viz>=0.5      # Latest, with >=
-  - vaex-jupyter>=0.6  # Latest, with >=
-  - vaex-server>=0.6   # Latest compatible with latest vaex, with >=
-  - vaex-ml>=0.9       # Pinned at 0.9, with >=
+  - vaex>=4.5 # Latest, with >=
+  - vaex-core>=4.5 # Same as vaex, with >=
+  - vaex-astro>=0.8.3 # Pinned to >= 0.8.3 by vaex
+  - vaex-hdf5>=0.10 # Latest compatible with latest vaex, with >=
+  - vaex-viz>=0.5 # Latest, with >=
+  - vaex-jupyter>=0.6 # Latest, with >=
+  - vaex-server>=0.6 # Latest compatible with latest vaex, with >=
+  - vaex-ml>=0.9 # Pinned at 0.9, with >=
 
   # DVC and NetworkX
-  - dvc>=2.8.2       # Latest, with >=
-  - networkx>=2.6.3  # Latest, with >= (check if DVC pins!)
+  - dvc>=2.8.2 # Latest, with >=
+  - networkx>=2.6.3 # Latest, with >= (check if DVC pins!)
 
   - comet_ml>=3.19.1 # Latest, with >=
 
   # Mathematical otimization
-  - gurobi>=9.1.2  # Latest, with >=
-  - MOSEK>=9.3.7   # Latest, with >=
+  - gurobi>=9.1.2 # Latest, with >=
+  - MOSEK>=9.3.7 # Latest, with >=
 
   # Catalyst & friends (versioned)
   - aio-pika>=6 # Pinned by (?)
 
   # TensorAnnotations
-  - pytype>=2020.10.8  # Latest, with >=
+  - pytype>=2020.10.8 # Latest, with >=
 
   # JAX Verify + CVXPY
-  - cvxpy>=1.1.15       # Latest, with >=
-  - cvxpy-base>=1.1.15  # Latest, with >=
-  - ecos>=2.0.7.post1   # Pinned by (?)
-  - osqp>=0.6.2         # Latest, with >=
-  - scs>=2.1.4          # Latest, with >=
+  - cvxpy>=1.1.15 # Latest, with >=
+  - cvxpy-base>=1.1.15 # Latest, with >=
+  - ecos>=2.0.7.post1 # Pinned by (?)
+  - osqp>=0.6.2 # Latest, with >=
+  - scs>=2.1.4 # Latest, with >=
 
   # Dependency fixups (1)
-  - idna=2.8         # PINNED BY (pip-installed)
-  - requests=2.22.0  # PINNED BY (pip-installed)
-  - yarl=1.4.2       # PINNED BY (pip-installed)
-  - virtualenv=16.7  # PINNED BY (pip-installed)
+  - idna=2.8 # PINNED BY (pip-installed)
+  - requests=2.22.0 # PINNED BY (pip-installed)
+  - yarl=1.4.2 # PINNED BY (pip-installed)
+  - virtualenv=16.7 # PINNED BY (pip-installed)
 
   # Carefree Toolkits & co.
-  - pathos>=0.2.8    # Latest, with >=
-  - black>=21.7b0    # Latest, with >= (pinned by dvc -> path...)
-  - nb_black>=1.0.7  # Latest, with >=
-  - mlflow>=1.20.2   # Latest, with >=
+  - pathos>=0.2.8 # Latest, with >=
+  - black>=21.7b0 # Latest, with >= (pinned by dvc -> path...)
+  - nb_black>=1.0.7 # Latest, with >=
+  - mlflow>=1.20.2 # Latest, with >=
 
   # ATHENA
-  - gpy=1.10.0    # Latest
-  - gpyopt=1.2.6  # Latest
+  - gpy=1.10.0 # Latest
+  - gpyopt=1.2.6 # Latest
 
   # MackeLab
-  - simpleeval>=0.9.10  # Latest, with >=
-  - blosc>=1.21         # Latest, with >=
-  - astunparse>=1.6.3   # Latest, with >= (NOTE: tensorflow pins ==1.6.3)
+  - simpleeval>=0.9.10 # Latest, with >=
+  - blosc>=1.21 # Latest, with >=
+  - astunparse>=1.6.3 # Latest, with >= (NOTE: tensorflow pins ==1.6.3)
 
   # BAAL
   #- structlog>=21.2  # Latest, with >=
 
   # TensorFlow & co. (pinned)
-  - grpcio>=1.37  # Pinned by TensorFlow (pip-installed)
+  - grpcio>=1.37 # Pinned by TensorFlow (pip-installed)
   - wrapt>=1.12.1 # Pinned by TensorFlow (pip-installed)
-  - h5py=3.1      # Pinned by TensorFlow (pip-installed)
-  - gast=0.4      # Pinned by TensorFlow (pip-installed)
-  - google-pasta>=0.2  # Latest, with >= (but TensorFlow-compatible)
-  - typeguard>=2.12.1  # Latest, with >= (but TensorFlow-compatible)
-  - gin-config>=0.4    # Latest, with >= (but TensorFlow-compatible)
+  - h5py=3.1 # Pinned by TensorFlow (pip-installed)
+  - gast=0.4 # Pinned by TensorFlow (pip-installed)
+  - google-pasta>=0.2 # Latest, with >= (but TensorFlow-compatible)
+  - typeguard>=2.12.1 # Latest, with >= (but TensorFlow-compatible)
+  - gin-config>=0.4 # Latest, with >= (but TensorFlow-compatible)
 
   # Some extras
   #- streamlit>=1.1        # Latest, with >=
-  - altair>=2.3           # Pinned by Aesara/PyMC3, with >=
-  - boltons>=21           # Latest, with >=
-  - trampoline>=0.1.2     # Latest, with >=
-  - python-libsbml>=5.19  # Latest, with >=
-  - fastrlock>=0.5        # PINNED BY (?, to 0.5), with >=
+  - altair>=2.3 # Pinned by Aesara/PyMC3, with >=
+  - boltons>=21 # Latest, with >=
+  - trampoline>=0.1.2 # Latest, with >=
+  - python-libsbml>=5.19 # Latest, with >=
+  - fastrlock>=0.5 # PINNED BY (?, to 0.5), with >=
 
   # Aesara and PyMC3
-  - aesara>=2.2.3       # Latest, with >=
-  - pymc3>=3.11.4       # Latest, with >=
-  - theano-pymc>=1.1.2  # Latest, with >=
+  - aesara>=2.2.3 # Latest, with >=
+  - pymc3>=3.11.4 # Latest, with >=
+  - theano-pymc>=1.1.2 # Latest, with >=
 
   # TensorWerk
-  - cloudpickle>=1.4   # Pinned by TensorWerk, with >=
-  - hdf5plugin>=2      # Pinned by TensorWerk, with >=
-  - python-lmdb>=0.94  # Pinned by TensorWerk, with >=
+  - cloudpickle>=1.4 # Pinned by TensorWerk, with >=
+  - hdf5plugin>=2 # Pinned by TensorWerk, with >=
+  - python-lmdb>=0.94 # Pinned by TensorWerk, with >=
 
   # Install easers
-  - pip>=20.3.4     # ((?))
-  - pip-tools>=5.5  # ((?))
+  - pip>=20.3.4 # ((?))
+  - pip-tools>=5.5 # ((?))
 
   # Brain / Neuro / SNNs
   #- norse>=0.0.7  # Latest, with >=
 
   # Numba
-  - numba>=0.54.1     # Latest, with >=
+  - numba>=0.54.1 # Latest, with >=
 
   # Kosio Krachev & Co. Deps
-  - dask>=2021.10     # Latest, with >=
-  - astor>=0.8.1      # Latest, with >=
-  - lxml>=4.6.3       # Latest, with >=
-  - numcodecs>=0.9.1  # Latest, with >=
-  - zarr>=2.10.1      # Latest, with >=
+  - dask>=2021.10 # Latest, with >=
+  - astor>=0.8.1 # Latest, with >=
+  - lxml>=4.6.3 # Latest, with >=
+  - numcodecs>=0.9.1 # Latest, with >=
+  - zarr>=2.10.1 # Latest, with >=
 
   # GradIO
-  - flask>=1.1.1       # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
-  - flask-cors>=3.0.8  # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
+  - flask>=1.1.1 # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
+  - flask-cors>=3.0.8 # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
 
   # Fixups (all pinned)
   - attrs # =20.3.0
@@ -399,7 +398,7 @@ dependencies:
   - path.py # <- end
 
   # Catalyst & friends (extras) <- start
-  - deprecation  # <- end
+  - deprecation # <- end
 
   # ObJAX
   - parameterized
@@ -469,7 +468,6 @@ dependencies:
   - bcrypt
   - pycparser
   - pynacl
-
 
   # PIP #
   - pip:
