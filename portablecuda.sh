@@ -2,7 +2,7 @@
 ####################################################################################################
 
 # The name of the Conda environment you want the script to operate on.
-export ANACONDA_ENV_NAME="RDDL"
+export ANACONDA_ENV_NAME="RDDLean"
 
 # A directory with CUDA / CUDNN / NCCL installed inside, and ./lib64/ folder removed
 # after having it merged with ./lib/

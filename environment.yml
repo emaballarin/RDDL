@@ -1,4 +1,4 @@
-name: RDDL
+name: RDDLean
 
 channels:
   # Keep sorted | Add at the bottom!
@@ -14,194 +14,63 @@ channels:
   - pyviz
   - plotly
   - bokeh
-  - gurobi
-  - mosek
-  - oxfordcontrol
-  - albumentations
-  - comet_ml
   - cvxgrp
+  - HuggingFace
+  - fastchan
   - intel
   - nlesc
-  - norse
 
 dependencies:
-  # General pins
-  - python=3.8.12 # Latest 3.8.x
-  - cudatoolkit=11.3 # Latest supported by PyTorch
-  - magma-cuda113=2.5.2 # Latest
-  - blas=*.*=mkl # No updates needed
-  - opt_einsum=3.3 # Latest
-  - pillow=7.0 # Same as Pillow-SIMD
-  - parso=0.8.2 # Latest
+  # PINNED
 
-  # Dependency pins
-  - numpy=1.19.5 # Pinned by tensorflow: Latest 1.19.x (https://github.com/tensorflow/tensorflow/issues/47691)
-  - scipy>=1.7.1 # Latest, with >=
-  - pyyaml=5.3.1 # PINNED BY (?)
-  - tqdm=4.54.1 # PINNED BY (?)
-  - pyglet=1.5.0 # Pinned by Atari Gym
-  - fastapi=0.58.1 # PINNED BY (?)
-  - mypy=0.790 # PINNED BY (?)
-  - fasteners=0.15 # PINNED BY (?)
+  # System
+  - python=3.9.7
+  - cudatoolkit=11.3
+  - magma-cuda113>=2.5.2
+  - blas=*.*=mkl
 
-  # Extra pins
-  - visdom=0.1.8.9 # Pinned by Anaconda quirks: max(Latest, 0.1.8.9)
-
-  # ThinC and friends
-  - cython-blis=0.7.4 # Latest
-  - cymem=2.0.6 # Latest
-  - murmurhash=1.0.6 # Latest
-  - preshed=3.0.6 # Latest
-  - pydantic=1.8.2 # PINNED BY (?)
-  - wasabi=0.8.2 # Latest
-  - srsly=2.4.2 # Latest
-  - catalogue=2.0.6 # Latest
-  - immutables=0.16 # Latest
-
-  # Main PyTorch pins
-  - pytorch=1.10 # Latest
-  - jpeg # UNPINNED (but leave it here for eventual pins)
-  - torchvision=0.11.1 # Latest
-  - torchaudio=0.10 # Latest
-  - torchtext=0.11 # Latest
-  #  - torchcsprng=0.2.1             # Latest
-  - torchserve=0.4.2 # Latest
-  - torch-model-archiver=0.4.2 # Latest
-  - torch-workflow-archiver=0.1.2 # Latest
-  - gpytorch=1.5.1 # Latest
-  - botorch=0.5.1 # Latest
-  - ignite>=0.4.7 # Latest, with >=
-  - captum=0.4 # Latest
-  - onnx=1.10.2 # Latest
-  - tensorboard=2.6 # Latest
-  - tensorboardx=2.4 # Pinned by (?)
-  - tensorly>=0.5.1 # Latest, with >=
-  #  - dgl-cuda11.1>=0.7.1           # Latest, with >= (yet to be published for CUDA 11.3)
-  - faiss-gpu # Leave unversioned
-
-  # Fast.ai and friends
-  - fastcore>=1.3.26 # Latest, with >=
-  - fastprogress>=1 # Latest, with >=
-  - nbdev>=1.1.22 # Latest, with >=
-  - fastgpu>=1.0.1 # Latest, with >=
-  - fastscript>=1 # Latest, with >=
-  - fastdownload>=0.0.5 # Latest, with >=
-
-  # Jupyter, JupyterLab, IPython
-  - jupyterlab>=3.2.1 # Latest, with >=
-  - notebook>=6.4.5 # Latest, with >=
+  # PyTorch stack
+  - pytorch>=1.10
+  - torchvision>=0.11.1
+  - torchaudio>=0.10
+  - torchtext>=0.11
+  - torchserve>=0.4.2
+  - torch-model-archiver>=0.4.2
+  - torch-workflow-archiver>=0.1.2
+  - gpytorch>=1.5.1
+  - botorch>=0.5.1
+  - ignite>=0.4.7
+  - captum>=0.4
 
   # Vaex
-  - vaex>=4.5 # Latest, with >=
-  - vaex-core>=4.5 # Same as vaex, with >=
+  - vaex>=4.5 # Latest
+  - vaex-core>=4.5 # Same as vaex
   - vaex-astro>=0.8.3 # Pinned to >= 0.8.3 by vaex
-  - vaex-hdf5>=0.10 # Latest compatible with latest vaex, with >=
-  - vaex-viz>=0.5 # Latest, with >=
-  - vaex-jupyter>=0.6 # Latest, with >=
-  - vaex-server>=0.6 # Latest compatible with latest vaex, with >=
-  - vaex-ml>=0.9 # Pinned at 0.9, with >=
+  - vaex-hdf5>=0.10 # Latest compatible with latest vaex
+  - vaex-viz>=0.5 # Latest
+  - vaex-jupyter>=0.6 # Latest
+  - vaex-server>=0.6 # Latest compatible with latest vaex
+  - vaex-ml>=0.9 # Pinned at >= 0.9
 
-  # DVC and NetworkX
-  - dvc>=2.8.2 # Latest, with >=
-  - networkx>=2.6.3 # Latest, with >= (check if DVC pins!)
+  # Misc
+  - opt_einsum>=3.3
+  - onnx>=1.10.2
+  - tensorboard>=2.6
+  - tensorboardx>=2.4 # Was pinned by (?) at =2.4
+  - dgl-cuda11.3>=0.7.2
+  - jupyterlab>=3.2.1
+  - notebook>=6.4.5
+  - black>=21.7b0
+  - nb_black>=1.0.7
+  - mlflow>=1.20.2
+  - pip>=20.3.4 # Do not change!
+  - pip-tools>=5.5 # Do not change!
+  - numba>=0.54.1
+  - fastprogress>=1
 
-  - comet_ml>=3.19.1 # Latest, with >=
+  # UNPINNED
 
-  # Mathematical otimization
-  - gurobi>=9.1.2 # Latest, with >=
-  - MOSEK>=9.3.7 # Latest, with >=
-
-  # Catalyst & friends (versioned)
-  - aio-pika>=6 # Pinned by (?)
-
-  # TensorAnnotations
-  - pytype>=2020.10.8 # Latest, with >=
-
-  # JAX Verify + CVXPY
-  - cvxpy>=1.1.15 # Latest, with >=
-  - cvxpy-base>=1.1.15 # Latest, with >=
-  - ecos>=2.0.7.post1 # Pinned by (?)
-  - osqp>=0.6.2 # Latest, with >=
-  - scs>=2.1.4 # Latest, with >=
-
-  # Dependency fixups (1)
-  - idna=2.8 # PINNED BY (pip-installed)
-  - requests=2.22.0 # PINNED BY (pip-installed)
-  - yarl=1.4.2 # PINNED BY (pip-installed)
-  - virtualenv=16.7 # PINNED BY (pip-installed)
-
-  # Carefree Toolkits & co.
-  - pathos>=0.2.8 # Latest, with >=
-  - black>=21.7b0 # Latest, with >= (pinned by dvc -> path...)
-  - nb_black>=1.0.7 # Latest, with >=
-  - mlflow>=1.20.2 # Latest, with >=
-
-  # ATHENA
-  - gpy=1.10.0 # Latest
-  - gpyopt=1.2.6 # Latest
-
-  # MackeLab
-  - simpleeval>=0.9.10 # Latest, with >=
-  - blosc>=1.21 # Latest, with >=
-  - astunparse>=1.6.3 # Latest, with >= (NOTE: tensorflow pins ==1.6.3)
-
-  # BAAL
-  #- structlog>=21.2  # Latest, with >=
-
-  # TensorFlow & co. (pinned)
-  - grpcio>=1.37 # Pinned by TensorFlow (pip-installed)
-  - wrapt>=1.12.1 # Pinned by TensorFlow (pip-installed)
-  - h5py=3.1 # Pinned by TensorFlow (pip-installed)
-  - gast=0.4 # Pinned by TensorFlow (pip-installed)
-  - google-pasta>=0.2 # Latest, with >= (but TensorFlow-compatible)
-  - typeguard>=2.12.1 # Latest, with >= (but TensorFlow-compatible)
-  - gin-config>=0.4 # Latest, with >= (but TensorFlow-compatible)
-
-  # Some extras
-  #- streamlit>=1.1        # Latest, with >=
-  - altair>=2.3 # Pinned by Aesara/PyMC3, with >=
-  - boltons>=21 # Latest, with >=
-  - trampoline>=0.1.2 # Latest, with >=
-  - python-libsbml>=5.19 # Latest, with >=
-  - fastrlock>=0.5 # PINNED BY (?, to 0.5), with >=
-
-  # Aesara and PyMC3
-  - aesara>=2.2.3 # Latest, with >=
-  - pymc3>=3.11.4 # Latest, with >=
-  - theano-pymc>=1.1.2 # Latest, with >=
-
-  # TensorWerk
-  - cloudpickle>=1.4 # Pinned by TensorWerk, with >=
-  - hdf5plugin>=2 # Pinned by TensorWerk, with >=
-  - python-lmdb>=0.94 # Pinned by TensorWerk, with >=
-
-  # Install easers
-  - pip>=20.3.4 # ((?))
-  - pip-tools>=5.5 # ((?))
-
-  # Brain / Neuro / SNNs
-  #- norse>=0.0.7  # Latest, with >=
-
-  # Numba
-  - numba>=0.54.1 # Latest, with >=
-
-  # Kosio Krachev & Co. Deps
-  - dask>=2021.10 # Latest, with >=
-  - astor>=0.8.1 # Latest, with >=
-  - lxml>=4.6.3 # Latest, with >=
-  - numcodecs>=0.9.1 # Latest, with >=
-  - zarr>=2.10.1 # Latest, with >=
-
-  # GradIO
-  - flask>=1.1.1 # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
-  - flask-cors>=3.0.8 # Track: https://github.com/gradio-app/gradio/blob/master/setup.py
-
-  # Fixups (all pinned)
-  - attrs # =20.3.0
-  - python-daemon # =2.2.4
-  - backoff # =1.10
-
-  # CONDA FLOATING #
+  # System
   - conda
   - mkl-service
   - mkl
@@ -209,38 +78,29 @@ dependencies:
   - mkl_random
   - intel-openmp
 
+  # Install easers
+  - importlib_metadata
+  - setuptools
+  - wheel
+  - pep517
+
+  # Scientific stack
+  - numpy
+  - scipy
   - matplotlib
   - pandas
   - scikit-learn
   - scikit-image
-  - scikit-learn
   - scikit-optimize
-  - skorch
   - seaborn
   - statsmodels
   - sympy
-  - hdf5
-  - sqlalchemy
-  - pandas-summary
-  - imbalanced-learn
   - scikit-plot
+  - scikit-geometry
+  - networkx
 
-  - importlib_metadata # Install easers <- start
-  - setuptools
-  - wheel
-  - pep517 # <- end
-
-  - regex
-  - future
-  - psutil
-  - sentencepiece
-  - libjpeg-turbo
-  - libpng
-  - imageio
-
-  - librosa
-
-  - ipykernel # Jupyter & friends <- start
+  # Jupyter
+  - ipykernel
   - ipython
   - ipython_genutils
   - ipywidgets
@@ -256,259 +116,191 @@ dependencies:
   - nbformat
   - widgetsnbextension
   - ipyparallel
-  - jupyter_nbextensions_configurator # <- end
+  - jupyter_nbextensions_configurator
+  - ipygany
+  - nbval
 
-  - ipdb # Development aids / typing <- start
-  - ptvsd
-  - pylint
-  - mypy_extensions
-  - typed-ast # <- end
-
+  # FFIs
   - cffi
   - pybind11
   - swig
 
-  - joblib
-  - multiprocess
+  # Typing / Development aids
+  - mypy
+  - ipdb
+  - ptvsd
+  - pylint
+  - mypy_extensions
+  - typed-ast
+  - typing_extensions
 
-  - prompt_toolkit
-  - wcwidth
-
-  - click
-  - gitpython
-  - gql
-  - nvidia-ml-py3
-  - python-dateutil
-  - shortuuid
-  - six
-  - watchdog
-  - configparser
-  - sentry-sdk
-  - docker-pycreds
-  - google-cloud-storage
-  - boto3
-  - azure-storage-blob
-
-  - funcsigs
-  - furl
-  - humanfriendly
-  - jsonschema
-  - pathlib2
-  - plotly
-  - jinja2
-  - pyparsing
-  - pyjwt
-  - requests-file
-  - urllib3
-
-  - shapely
-
-  - nbval
-  - multipledispatch
-
-  - threadpoolctl
-  - pluggy
-  - more-itertools
-  - iniconfig
-  - pyparsing
-  - packaging
-  - toml
+  # Misc
+  - async-timeout
+  - atomicwrites
+  - attrdict
   - attrs
-  - pytest
-  - patsy
-  - pytz
-  - category_encoders
-  - kiwisolver
-  - cycler
-  - pydot
-
-  - alembic
-  - cliff
-  - colorlog
-  - cmaes
+  - azure-storage-blob
   - bayesian-optimization
-
-  - redis
-  - redis-py
+  - boto3
+  - bravado
+  - bravado-core
+  - cachetools
+  - category_encoders
+  - certifi
+  - chardet
+  - click
+  - cmaes
+  - colorama
+  - colorlog
+  - configparser
+  - cython
+  - dataclasses
+  - decorator
+  - docker-pycreds
+  - faiss-gpu
   - filelock
-  - prometheus_client
-  - pytz
+  - frozendict
+  - funcsigs
+  - future
+  - gitpython
+  - google-api-core
+  - google-auth
+  - google-cloud-storage
   - googleapis-common-protos
+  - gpustat
+  - h5py
+  - hdf5
+  - hiplot
+  - imageio
+  - imbalanced-learn
+  - iniconfig
+  - jinja2
+  - joblib
+  - jpeg
+  - jsonschema
+  - libjpeg-turbo
+  - libpng
+  - more-itertools
+  - msgpack-numpy
+  - msgpack-python
+  - multidict
+  - multipledispatch
+  - multiprocess
+  - numexpr
+  - nvidia-ml-py3
+  - oauthlib
+  - olefile
+  - packaging
+  - pandas-summary
+  - parso
+  - path.py
+  - pathlib2
+  - pillow
+  - plotly
+  - prometheus_client
+  - prompt_toolkit
+  - psutil
+  - py3nvml
+  - pyarrow
   - pyasn1
   - pyasn1-modules
-  - rsa
-  - cachetools
-  - google-auth
-  - chardet
-  - certifi
-  - google-api-core
-  - opencensus-context
-  - opencensus
-  - async-timeout
-  - multidict
-  - attrs
-  - aiohttp
-  - blessings
-  - gpustat
-  - pyrsistent
-  - jsonschema
-  - colorama
-  - hiredis
-  - aioredis
-  - msgpack-python
-  - msgpack-numpy
-  - soupsieve
-  - beautifulsoup4
-
-  - oauthlib
-  - pyzmq
-
-  - frozendict
-
-  - networkx
-
-  - toolz
-  - pyarrow
-  - retrying
-  - attrdict
-  - pyhocon
-  - atomicwrites
-  - olefile
   - pycparser
-
-  - rdflib
-  - googledrivedownloader
-
-  - cxxfilt
-
-  - bottleneck
-  - numexpr
+  - pyjwt
+  - pyparsing
+  - pyrsistent
+  - pytest
   - pytest-runner
-
-  - cython
-
-  - scikit-geometry
-
-  - bravado-core # Neptune.ai & friends <- start
-  - bravado
-  - py3nvml
+  - python-dateutil
+  - pytz
+  - pyzmq
+  - regex
+  - requests-file
   - requests-oauthlib
+  - rsa
+  - six
+  - threadpoolctl
+  - toml
+  - toolz
+  - tqdm
+  - urllib3
+  - visdom
+  - watchdog
+  - wcwidth
   - websocket-client
-  - hiplot
-  - path.py # <- end
 
-  # Catalyst & friends (extras) <- start
-  - deprecation # <- end
-
-  # ObJAX
-  - parameterized
-
-  # Misc: <- start
-  - gputil
-  - llvmlite
-  - python-louvain # <- end
-
-  - ipygany
-
-  # Carefree Toolkits & co.
-  - dill
-  - tabulate
-
-  # TensorFlow & co (unpinned)
-  - termcolor
-  - terminaltables
-  - decorator
+  # Pip dependencies
+  - prettytable
+  - pyyaml
+  - autopage
+  - cerberus
+  - cliff
+  - cmd2
+  - deprecation
+  - distlib
+  - fastrlock
+  - flatbuffers
+  - furl
+  - humanfriendly
+  - idna
+  - jsonpointer
+  - makefun
+  - munch
+  - pathtools
+  - pbr
   - promise
-  - dataclasses
-  - portpicker
-  - python-annoy
-
-  # Some extras
-  - twine
-  - bottle
-  - pypeln
-  - gsutil
-  - anytree
-
-  # TensorFlow
-  - absl-py # tensorflow: ==0.10 (may break ORTools)
-
-  # TensorWerk
-  - lmdb
+  - py-cpuinfo
+  - pydot
+  - pyhocon
+  - pyperclip
+  - rfc3987
+  - ruamel.yaml
+  - ruamel.yaml.clib
+  - sentry-sdk
+  - shortuuid
+  - stevedore
+  - termcolor
+  - typeguard
+  - urwid
+  - virtualenv
+  - webcolors
   - xxhash
   - python-xxhash
+  - yaspin
+
+  # init.sh dependencies (not included in pip dependencies)
+  - googledrivedownloader
+  - rdflib
+  - yacs
+
+  # Migrated from pip (in init.sh)
+  - jedi>=0.18
+  - contextlib2
+  - pyrser
+  - tokenizers
+  - jsonargparse
   - rich
-
-  # Wessel Bruinsma's stuff
-  - python-slugify
-  - xarray
-
-  # Avalanche (ContinualAI)
-  - typing_extensions
-  - quadprog
-
-  # FSDL
-  - editdistance
-  - flask-login
-  - bandit
-  - nltk
-  - pycodestyle
-  - pydocstyle
-  - tornado
-  - safety
-
-  # GradIO
-  - markdown2
-  - pycryptodome
-  - cryptography
-  - markupsafe
-  - werkzeug
-  - monotonic
-  - itsdangerous
-  - bcrypt
-  - pycparser
-  - pynacl
 
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
       # PINS:
-      # - jaxlib:             Latest
-      # - jax:                Latest
-      # - ray:                Latest
-      # - adabelief-pytorch:  Latest
-      # - aiormq:             Pinned by (?)
-      # - pytorch-tabnet:     Pinned by the PyTorch Lightning stack
-      # - datasets:           Pinned by the PyTorch Lightning stack
+      # - JAX:               Latest
+      # - JaxLib:            Latest
+      # - adabelief-pytorch: Latest
       #
       - opencv-python
-      - py-spy
-      - colorful
       - git+https://github.com/pytorch/contrib.git
       - graphviz
-      - git+https://github.com/explosion/ml-datasets.git
-      - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.1.73+cuda11.cudnn82-cp38-none-manylinux2010_x86_64.whl
-      - jax==0.2.24
-      - git+https://github.com/explosion/thinc.git
-      - git+https://github.com/omry/omegaconf.git
-      - test_tube
+      - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.1.73+cuda11.cudnn82-cp39-none-manylinux2010_x86_64.whl
+      - jax==0.2.25
       - wandb
-      - protobuf
       - onnxruntime-gpu
       - onnxruntime-tools
-      - fsspec
-      - git+https://github.com/PyTorchLightning/metrics.git
-      - git+https://github.com/PyTorchLightning/pytorch-lightning.git
       - clearml
       - clearml-agent
       - clearml-session
-      - git+https://github.com/openai/atari-py.git
-      - git+https://github.com/openai/gym.git
-      - git+https://github.com/PyTorchLightning/lightning-bolts.git
-      - wget
       - git+https://github.com/pyro-ppl/pyro-api.git
       - git+https://github.com/pyro-ppl/pyro.git
-      - makefun
       - git+https://github.com/pyro-ppl/numpyro.git
       - git+https://github.com/pyro-ppl/funsor.git
       - git+https://github.com/emaballarin/pyro-models.git
@@ -517,36 +309,18 @@ dependencies:
       - sklearn2
       - git+https://github.com/optuna/optuna.git
       - cma
+      - cmaes
       - git+https://github.com/facebookresearch/nevergrad.git
-      - typeguard
       - git+https://github.com/facebook/Ax.git
-      - redis
-      - google
-      - https://s3-us-west-2.amazonaws.com/ray-wheels/latest/ray-2.0.0.dev0-cp38-cp38-manylinux2014_x86_64.whl
       - git+https://github.com/bamos/block.git
-      - wolframclient
       - git+https://github.com/sksq96/pytorch-summary.git
       - git+https://github.com/facebookresearch/higher.git
       - git+https://github.com/facebookresearch/FDR_scheduler.git
-      - git+https://github.com/google/neural-tangents.git
-      - pgmpy
-      - dm-tree
-      - dm-env
-      - chex
-      - git+https://github.com/deepmind/dm-haiku.git
-      - git+https://github.com/deepmind/rlax.git
-      - git+https://github.com/deepmind/optax.git
       - git+https://github.com/arogozhnikov/einops.git
-      - git+https://github.com/google/TensorNetwork.git
       - eagerpy
-      - torchlayers
-      - git+https://github.com/szymonmaszke/torchfunc.git
-      - torchdata
       - pytorch-zoo
-      - krbticket
       - git+https://github.com/pfnet/pfio.git
       - git+https://github.com/pfnet/pytorch-pfn-extras.git
-      - git+https://github.com/cybertronai/autograd-lib.git
       - watermark
       - mlxtend
       - onnxconverter-common
@@ -554,104 +328,34 @@ dependencies:
       - sklearn-pandas
       - git+https://github.com/williamFalcon/pytorch-complex-tensor.git
       - ase
-      - git+https://github.com/google/flax.git
-      - antlr4-python3-runtime
-      - async_exit_stack
-      - orjson
-      - uvicorn
-      - ujson
-      - aiormq==2.4.2
-      - dnspython
-      - git+https://github.com/python-hyper/h11.git
-      - websockets
-      - httptools
-      - uvloop
       - importlib-resources
       - neptune-client
       - neptune-contrib
       - neptune-notebooks
       - neptune-mlflow
-      - git+https://github.com/catalyst-team/alchemy.git
-      - git+https://github.com/catalyst-team/reaction.git
-      - git+https://github.com/catalyst-team/catalyst.git
-      - git+https://github.com/TezRomacH/safitty.git
       - git+https://github.com/getkeops/keops.git
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/fmfn/BayesianOptimization.git
-      - git+https://github.com/google/objax.git
-      - git+https://github.com/deepmind/jraph.git
-      - git+https://github.com/deepmind/jax_verify.git
-      - git+https://github.com/locuslab/qpth.git
-      - git+https://github.com/carefree0910/carefree-toolkit.git
-      - git+https://github.com/carefree0910/carefree-data.git
-      - git+https://github.com/carefree0910/carefree-ml.git
-      - git+https://github.com/carefree0910/carefree-learn.git
       - git+https://github.com/jettify/pytorch-optimizer.git
-      - git+https://github.com/jettify/ibreakdown.git
       - git+https://github.com/jettify/pytorch-inspect.git
-      - git+https://github.com/mathLab/PyDMD.git
-      - git+https://github.com/mathLab/ATHENA.git
-      - git+https://github.com/bayesiains/nflows.git
-      - git+https://github.com/mackelab/pyknos.git
-      - git+https://github.com/mackelab/sbi.git
-      - parameters
-      - git+https://github.com/mackelab/mackelab-toolbox.git
       - git+https://github.com/BorealisAI/advertorch.git
-      - git+https://github.com/pfnet/pfrl.git
-      - git+https://github.com/GRAAL-Research/poutyne.git
-      - record-keeper
       - git+https://github.com/KevinMusgrave/pytorch-metric-learning.git
       - git+https://github.com/rtqichen/torchdiffeq
-      - git+https://github.com/emaballarin/torchsde.git
-      - git+https://github.com/patrick-kidger/torchcde.git
-      - git+https://github.com/patrick-kidger/torchcubicspline.git
-      - git+https://github.com/patrick-kidger/signatory.git
       - git+https://github.com/SystemsBioinformatics/stochpy.git
-      - comet-for-mlflow
-      - flatbuffers
-      - fire
-      - keras2onnx
       - onnxmltools
       - onnxoptimizer
-      - click-didyoumean
-      - git+https://github.com/wesselb/plum.git
-      - git+https://github.com/wesselb/fdm.git
-      - git+https://github.com/wesselb/lab.git
-      - git+https://github.com/wesselb/algebra.git
-      - git+https://github.com/wesselb/neuralprocesses.git
-      - git+https://github.com/wesselb/oilmm.git
-      - git+https://github.com/chrsmrrs/k-gnn.git
       - cftime
-      - netCDF4
-      - git+https://github.com/gehring/fax.git
-      - lz4
-      - pygame
       - adabelief-pytorch==0.2.1
       - git+https://github.com/emaballarin/ebtorch.git
       - git+https://github.com/rwightman/pytorch-image-models.git
-      - git+https://github.com/cair/pyTsetlinMachine.git
       - git+https://github.com/facebookresearch/qhoptim.git
-      - git+https://github.com/learnables/cherry.git
-      - git+https://github.com/vballoli/nfnets-pytorch.git
       - git+https://github.com/ufoym/imbalanced-dataset-sampler.git
       - git+https://github.com/KieranWynn/pyquaternion.git
-      - git+https://github.com/giorgiozannini/hTorch.git
-      - git+https://github.com/TorchDrift/TorchDrift.git
+      - git+https://github.com/ispamm/hTorch.git
       - git+https://github.com/MKuranowski/aiocsv.git
       - git+https://github.com/szagoruyko/pytorchviz.git
       - git+https://github.com/TylerYep/torchinfo.git
-      - bidict
-      - git+https://github.com/nengo/nengo.git
-      - git+https://github.com/nengo/nengo-gui.git
-      - git+https://github.com/nengo/pytorch-spiking.git
-      - git+https://github.com/nengo/nengo-interfaces.git
-      - git+https://github.com/emaballarin/nengolib.git
-      - pyDeprecate
-      - pytorch-tabnet==3.1
       - git+https://github.com/huggingface/huggingface_hub.git
-      - datasets==1.2.1
-      - rouge-score
-      - pycocotools
       - git+https://github.com/digantamisra98/Echo.git
       - git+https://github.com/bashtage/randomgen.git
       - git+https://github.com/niklexical/brc_pytorch.git
@@ -661,49 +365,24 @@ dependencies:
       - git+https://github.com/ramonhagenaars/nptyping.git
       - git+https://github.com/scardine/image_size.git
       - git+https://github.com/huggingface/accelerate.git
-      - git+https://github.com/huggingface/huggingface_hub.git
-      - munch
       - git+https://github.com/Cadene/pretrained-models.pytorch.git
-      - git+https://github.com/fadel/pytorch_ema.git
-      - git+https://github.com/google-research/soft-dtw-divergences.git
-      - git+https://github.com/google-research/ott.git
-      - git+https://github.com/google-research/fast-soft-sort.git
       - git+https://github.com/emaballarin/pytorch-kfac.git
-      - git+https://github.com/bayesiains/nflows.git
-      - git+https://github.com/noegroup/bgflow.git
-      - git+https://github.com/zalandoresearch/JaxRK.git
-      - git+https://github.com/facebookresearch/aepsych.git
-      - frozenlist
-      - pygccxml
       - git+https://github.com/kosiokarchev/clipppy.git
-      - git+https://github.com/emaballarin/phytorch.git
-      - git+https://github.com/kosiokarchev/pyrofit-utils.git
-      - git+https://github.com/kosiokarchev/uplot.git
-      - git+https://github.com/kosiokarchev/headache.git
-      - git+https://github.com/undark-lab/swyft.git
-      - git+https://github.com/paris-saclay-cds/ramp-workflow.git
       - git+https://github.com/sissa-data-science/DULY.git
-      - base58
-      - git+https://github.com/SymJAX/SymJAX.git
-      - mpmath
-      - git+https://github.com/jeffalstott/powerlaw.git
-      - git+https://github.com/mortada/fredapi.git
-      - multitasking
-      - git+https://github.com/ranaroussi/yfinance.git
-      - git+https://github.com/RomelTorres/alpha_vantage.git
-      - git+https://github.com/TorchEnsemble-Community/Ensemble-Pytorch.git
-      - urwid
       - git+https://github.com/wandb/pyrasite.git
-      - ffmpy
-      - paramiko
-      - analytics-python
-      - flask-cachebuster
-      - gradio
-      - git+https://github.com/geoopt/geoopt.git
       - git+https://github.com/lessw2020/Ranger21.git
-      - git+https://github.com/jonasrauber/eagerpy.git
-      - git+https://github.com/jonasrauber/attax.git
-      - git+https://github.com/facebookresearch/rlstructures.git
-      - git+https://github.com/tfjgeorge/nngeometry.git
-      - jsonpatch
-      - yacs
+      #
+      - jupyter_http_over_ws
+      - ml_collections
+      - pynvml
+      - git+https://github.com/FrancescoSaverioZuppichini/glasses.git
+      - datasets
+      - sacremoses
+      - transformers
+      - git+https://github.com/huggingface/nn_pruning.git
+      - git+https://github.com/bethgelab/imagecorruptions.git
+      - git+https://github.com/bethgelab/foolbox.git
+      - git+https://github.com/pytorch/ort.git
+      - pytorchfi
+      - lckr-jupyterlab-variableinspector
+      - onnxruntime-training

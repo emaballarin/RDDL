@@ -1,24 +1,20 @@
 ssl_verify: true
 changeps1: true
 channels:
-- pytorch
-- pytorch-test
-- fastai
-- nvidia
-- defaults
-- conda-forge
-- numba
-- gpytorch
-- dglteam
-- pyviz
-- plotly
-- bokeh
-- gurobi
-- mosek
-- oxfordcontrol
-- albumentations
-- comet_ml
-- cvxgrp
-- intel
-- nlesc
-- norse
+  - pytorch
+  - pytorch-test
+  - fastai
+  - nvidia
+  - defaults
+  - conda-forge
+  - numba
+  - gpytorch
+  - dglteam
+  - pyviz
+  - plotly
+  - bokeh
+  - cvxgrp
+  - HuggingFace
+  - fastchan
+  - intel
+  - nlesc

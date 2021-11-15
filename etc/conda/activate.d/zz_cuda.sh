@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # The name of the Conda environment you want the script to operate on.
-export ANACONDA_ENV_NAME="RDDL"
+export ANACONDA_ENV_NAME="RDDLean"
 
 # The name of the (in-home, i.e. ~/) directory in which [Ana|Mini]conda is installed.
 export ANACONDA_BASEDIR_NAME="anaconda3"

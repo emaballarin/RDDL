@@ -1,4 +1,4 @@
-# `RDDL`: *`R`apid `D`eployment `D`eep `L`earning*
+# `RDDLeaner`: *`R`apid `D`eployment `D`eep `L`earning, made leaner!*
 
 A *Conda*-based, templatable, extendable, R&D-focused infrastructure scaffold aiming at fast iterability and *cross-unix* robustness.
 
