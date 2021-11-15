@@ -65,8 +65,10 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 ./portablecuda.sh
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
-# STUFF REQUIRING typing UNINSTALL (Python >=3.8)
+# FIXUPS
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+# Upgrade to latest pip version
+pip install --upgrade jupyter_http_over_ws
 # Fix typing deprecation
 pip uninstall -y typing
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
