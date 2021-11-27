@@ -296,7 +296,6 @@ dependencies:
       - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.1.74+cuda11.cudnn82-cp39-none-manylinux2010_x86_64.whl
       - jax==0.2.25
       - git+https://github.com/wandb/client.git
-      - git+https://github.com/wandb/sweeps.git
       - onnxruntime-gpu
       - onnxruntime-tools
       - clearml
@@ -334,7 +333,7 @@ dependencies:
       - importlib-resources
       - git+https://github.com/neptune-ai/neptune-client.git
       - git+https://github.com/neptune-ai/neptune-contrib.git
-      - git+https://github.com/neptune-ai/neptune-notebooks.git
+      - neptune-notebooks
       - git+https://github.com/neptune-ai/neptune-mlflow.git
       - git+https://github.com/neptune-ai/neptune-optuna.git
       - git+https://github.com/neptune-ai/neptune-sklearn.git
