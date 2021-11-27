@@ -16,5 +16,6 @@ channels:
   - cvxgrp
   - HuggingFace
   - fastchan
+  - comet_ml
   - intel
   - nlesc
