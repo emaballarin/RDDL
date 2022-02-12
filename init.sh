@@ -149,6 +149,11 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 # Post-fix Kerberos installation
 ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/"
 
+# Install deferred packages
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+pip install git+https://github.com/sissa-data-science/DADApy.git
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+
 # Rich stack-traces
 cd "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.9/site-packages/"
 mkdir sitecustomize
