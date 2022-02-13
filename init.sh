@@ -151,7 +151,7 @@ ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASE
 
 # Install deferred packages
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/python3.9/site-packages/numpy/core/include/numpy" "$HOME/$ANACONDA_BASEDIR_NAME/include/python3.9"
+ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/python3.9/site-packages/numpy/core/include/numpy" "$HOME/$ANACONDA_BASEDIR_NAME/include/python3.9/"
 pip install git+https://github.com/sissa-data-science/DADApy.git
 pip install --upgrade "nbclassic>=0.2.8"
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
