@@ -80,6 +80,8 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 pip install --upgrade --no-deps --force --force-reinstall --pre cupy-cuda113
 
 # Install / enable Jupyter(Lab) extensions
+pip install --upgrade "nbclassic>=0.2.8"
+
 jupyter nbextension enable varInspector/main
 jupyter nbextension enable --py neptune-notebooks
 jupyter nbextension enable --py ipygany
@@ -101,34 +103,32 @@ jupyter lab build
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 
-# Install Nvidia APEX (with cpp & cuda extensions) with a bold, unorthodox trick
+# Install Nvidia APEX (with cpp & cuda extensions) with a trick
 ################################################################################
-#source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-
-# APEX (from above)
-#pip install --upgrade --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git
-
-#source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+export PRE_APEX_CC="$CC"
+export PRE_APEX_CXX="$CXX"
+export PRE_APEX_FC="$FC"
+export CC=gcc-9
+export CXX=g++-9
+export FC=gfortran-9
+#
+pip install --upgrade --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git
+#
+export CC="$PRE_APEX_CC"
+export CXX="$PRE_APEX_CXX"
+export FC="$PRE_APEX_FC"
+unset PRE_APEX_CC
+unset PRE_APEX_CXX
+unset PRE_APEX_FC
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ################################################################################
 # Phew! Done! :)
 
 
-# Install the entire 'PyTorch Geometric' stack with a bold, unorthodox trick (again!)
+# Install the entire 'PyTorch Geometric' stack
 ######################################################################################
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-
-#export PTG_PREPATH="$PATH"
-#export PTG_FAKEPATHDIR="$(pwd)"
-#
-#mkdir -p ./faketop && cd ./faketop
-#
-#export PATH="$PTG_FAKEPATHDIR/faketop:$PATH"
-#
-#ln -s $(which gcc-5) ./gcc
-#ln -s $(which g++-5) ./g++
-#ln -s $(which gfortran-5) ./gfortran
-#
-#cd ..
 #
 pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.10.0+cu113.html --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
 pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.10.0+cu113.html --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
@@ -137,27 +137,20 @@ pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.10.0+
 pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
 pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
 #
-#export PATH="$PTG_PREPATH"
-#unset PTG_PREPATH
-#rm -R -f "$PTG_FAKEPATHDIR/faketop"
-#unset PTG_FAKEPATHDIR
-
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ######################################################################################
-# Phew! Done! :)
 
 # Post-fix Kerberos installation
 ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/"
 
 # Install deferred packages
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/python3.9/site-packages/numpy/core/include/numpy" "$HOME/$ANACONDA_BASEDIR_NAME/include/python3.9/"
-pip install git+https://github.com/sissa-data-science/DADApy.git
-pip install --upgrade "nbclassic>=0.2.8"
+ln -s "$PYPKG_DIR/numpy/core/include/numpy" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/include/python3.9/"
+pip install git+https://github.com/emaballarin/DADApy.git
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 # Rich stack-traces
-cd "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.9/site-packages/"
+cd "$PYPKG_DIR/"
 mkdir sitecustomize
 cd sitecustomize
 echo "from rich.traceback import install" >> __init__.py
@@ -169,11 +162,4 @@ echo ""
 cd "$SELF_STORED_CALLDIR"
 echo ' '
 echo 'DONE!'
-echo ' '
-echo ' '
-echo ' And now, issue by hand the following command(s):'
-echo ' '
-echo "     source $HOME/$ANACONDA_BASEDIR_NAME/bin/activate $ANACONDA_BASEDIR_NAME"
-echo '     pip install --upgrade --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git'
-echo "     source $HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 echo ' '

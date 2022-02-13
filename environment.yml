@@ -118,6 +118,7 @@ dependencies:
   - nbconvert
   - nbformat
   - widgetsnbextension
+  - jupyter_contrib_nbextensions
   - ipyparallel
   - jupyter_nbextensions_configurator
   - ipygany
