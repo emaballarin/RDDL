@@ -103,12 +103,12 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 # Install Nvidia APEX (with cpp & cuda extensions) with a bold, unorthodox trick
 ################################################################################
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+#source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 
 # APEX (from above)
-pip install --upgrade --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git
+#pip install --upgrade --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git
 
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+#source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ################################################################################
 # Phew! Done! :)
 
@@ -151,7 +151,9 @@ ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASE
 
 # Install deferred packages
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/python3.9/site-packages/numpy/core/include/numpy" "$HOME/$ANACONDA_BASEDIR_NAME/include/python3.9"
 pip install git+https://github.com/sissa-data-science/DADApy.git
+pip install --upgrade "nbclassic>=0.2.8"
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 # Rich stack-traces
@@ -167,4 +169,11 @@ echo ""
 cd "$SELF_STORED_CALLDIR"
 echo ' '
 echo 'DONE!'
+echo ' '
+echo ' '
+echo ' And now, issue by hand the following command(s):'
+echo ' '
+echo "     source $HOME/$ANACONDA_BASEDIR_NAME/bin/activate $ANACONDA_BASEDIR_NAME"
+echo '     pip install --upgrade --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git'
+echo "     source $HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 echo ' '
