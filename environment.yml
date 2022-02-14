@@ -394,3 +394,4 @@ dependencies:
       - onnxruntime-training
       - git+https://github.com/nengo/nengo.git
       - git+https://github.com/emaballarin/nengolib.git
+      - git+https://github.com/WolframResearch/WolframClientForPython.git
