@@ -130,12 +130,12 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ######################################################################################
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 #
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.10.0+cu113.html --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.10.0+cu113.html --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.10.0+cu113.html --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.10.0+cu113.html --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
-pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
-pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps # (not yet available for PyTorch 1.10; CUDA 11.3.1)
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.11.0+cu113.html --no-deps
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.11.0+cu113.html --no-deps
+pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.11.0+cu113.html --no-deps
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.11.0+cu113.html --no-deps
+pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
+pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps
 #
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 ######################################################################################

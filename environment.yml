@@ -25,27 +25,28 @@ dependencies:
   # PINNED
 
   # System
-  - python=3.9.10 # Anaconda 3.9.7 -> CondaForge 3.9.10
+  - python=3.9.10
   - cudatoolkit=11.3
   - magma-cuda113>=2.5.2
   - blas=*.*=mkl
 
   # PyTorch stack
-  - pytorch>=1.10.2
-  - torchvision>=0.11.3
-  - torchaudio>=0.10.2
-  - torchtext>=0.11.2
-  - torchserve>=0.5.2
-  - torch-model-archiver>=0.5.2
-  - torch-workflow-archiver>=0.2.2
+  - pytorch>=1.11
+  - torchvision>=0.12
+  - torchaudio>=0.11
+  - torchtext>=0.12
+  - torchserve>=0.5.3
+  - torch-model-archiver>=0.5.3
+  - torch-workflow-archiver>=0.2.3
   - gpytorch>=1.6
-  - botorch>=0.6
+  - botorch>=0.6.2
   - ignite>=0.4.8
-  - captum>=0.4.1
+  - captum>=0.5
+  - accimage>=0.2 # NEW!
 
   # Vaex
-  - vaex>=4.7 # Latest
-  - vaex-core>=4.7 # Same as vaex
+  - vaex>=4.8 # Latest
+  - vaex-core>=4.8 # Same as vaex
   - vaex-astro>=0.8.3 # Pinned to >= 0.8.3 by vaex
   - vaex-hdf5>=0.10 # Leave it as it is to avoid guesswork
   - vaex-viz>=0.5 # Leave it as it is to avoid guesswork
@@ -55,21 +56,21 @@ dependencies:
 
   # Misc
   - opt_einsum>=3.3
-  - onnx>=1.10.2
+  - onnx>=1.11
   - tensorboard>=2.8
-  - tensorboardx>=2.4
-  - dgl-cuda11.3>=0.7.2
-  - jupyterlab>=3.2.9
+  - tensorboardx>=2.5
+  - dgl-cuda11.3>=0.8
+  - jupyterlab>=3.3.1
   - notebook>=6.4.8
-  - black>=21.11b0
+  - black>=21.11b0 # Handle with care!
   - nb_black>=1.0.7
-  - mlflow>=1.23.1
+  - mlflow>=1.24
   - pip>=20.3.4 # Do not change!
   - pip-tools>=5.5 # Do not change!
   - numba>=0.55.1
-  - fastprogress>=1
+  - fastprogress>=1 # Handle with care!
   - jedi>=0.18.1
-  - comet_ml>=3.26
+  - comet_ml>=3.28
 
   # UNPINNED
 
@@ -226,7 +227,7 @@ dependencies:
   - toml
   - toolz
   - tqdm
-  - urllib3
+  - urllib3>=1.25 # PyTorch stack (do not edit!)
   - visdom
   - watchdog
   - wcwidth
@@ -291,11 +292,16 @@ dependencies:
       # - JaxLib:            Latest
       # - adabelief-pytorch: Latest
       #
+      # TORCH STACK:
+      - functorch
+      - torchdata
+      #
+      # ALL THE REST:
       - opencv-python
       - git+https://github.com/pytorch/contrib.git
       - graphviz
-      - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.0+cuda11.cudnn82-cp39-none-manylinux2010_x86_64.whl
-      - jax==0.3.0
+      - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.2+cuda11.cudnn82-cp39-none-manylinux2010_x86_64.whl
+      - jax==0.3.1
       - git+https://github.com/wandb/client.git
       - onnxruntime-gpu
       - onnxruntime-tools
@@ -320,7 +326,7 @@ dependencies:
       - git+https://github.com/facebookresearch/higher.git
       - git+https://github.com/facebookresearch/FDR_scheduler.git
       - git+https://github.com/arogozhnikov/einops.git
-      - eagerpy
+      - git+https://github.com/jonasrauber/eagerpy.git
       - pytorch-zoo
       - git+https://github.com/pfnet/pfio.git
       - git+https://github.com/pfnet/pytorch-pfn-extras.git
@@ -377,7 +383,6 @@ dependencies:
       # - git+https://github.com/sissa-data-science/DULY.git
       - git+https://github.com/wandb/pyrasite.git
       - git+https://github.com/lessw2020/Ranger21.git
-      #
       - jupyter_http_over_ws
       - ml_collections
       - pynvml
