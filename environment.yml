@@ -345,7 +345,7 @@ dependencies:
       - git+https://github.com/neptune-ai/neptune-optuna.git
       - git+https://github.com/DistrictDataLabs/yellowbrick.git
       - git+https://github.com/neptune-ai/neptune-sklearn.git
-      - git+https://github.com/getkeops/keops.git
+      - "git+https://github.com/getkeops/keops.git#subdirectory=pykeops"
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/fmfn/BayesianOptimization.git
       - git+https://github.com/jettify/pytorch-optimizer.git
