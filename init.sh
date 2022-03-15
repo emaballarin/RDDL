@@ -152,6 +152,11 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 # Post-install in-environment operations
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 pip install --upgrade --no-deps --force --force-reinstall pip setuptools wheel
+
+# FIXUP for: https://github.com/getkeops/keops/pull/222#issuecomment-1061589904
+pip install "git+https://github.com/getkeops/keops.git#subdirectory=keopscore" --force-reinstall --no-deps
+pip install "git+https://github.com/getkeops/keops.git#subdirectory=pykeops" --force-reinstall --no-deps
+
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 # Rich stack-traces
