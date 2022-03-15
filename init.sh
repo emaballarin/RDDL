@@ -149,6 +149,11 @@ ln -s "$PYPKG_DIR/numpy/core/include/numpy" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$
 pip install git+https://github.com/emaballarin/DADApy.git
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
+# Post-install in-environment operations
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+pip install --upgrade --no-deps --force --force-reinstall pip setuptools wheel
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+
 # Rich stack-traces
 cd "$PYPKG_DIR/"
 mkdir sitecustomize
