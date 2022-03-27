@@ -25,7 +25,7 @@ dependencies:
   # PINNED
 
   # System
-  - python=3.9.10
+  - python=3.9.12
   - cudatoolkit=11.3
   - magma-cuda113>=2.5.2
   - blas=*.*=mkl
@@ -42,7 +42,8 @@ dependencies:
   - botorch>=0.6.2
   - ignite>=0.4.8
   - captum>=0.5
-  - accimage>=0.2 # NEW!
+  - accimage>=0.2
+  - torchdata>=0.3
 
   # Vaex
   - vaex>=4.8 # Latest
@@ -60,8 +61,8 @@ dependencies:
   - tensorboard>=2.8
   - tensorboardx>=2.5
   - dgl-cuda11.3>=0.8
-  - jupyterlab>=3.3.1
-  - notebook>=6.4.8
+  - jupyterlab>=3.3.2
+  - notebook>=6.4.10
   - black>=21.11b0 # Handle with care!
   - nb_black>=1.0.7
   - mlflow>=1.24
@@ -70,7 +71,7 @@ dependencies:
   - numba>=0.55.1
   - fastprogress>=1 # Handle with care!
   - jedi>=0.18.1
-  - comet_ml>=3.28
+  - comet_ml>=3.28.2
 
   # UNPINNED
 
@@ -284,6 +285,15 @@ dependencies:
   - jsonargparse
   - rich
 
+  # PyTorch Lightning & co.
+  - requests
+  - aiohttp
+  - fsspec
+  - docstring_parser
+  - pydeprecate
+  - hydra-core
+  - gcsfs
+
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
@@ -301,7 +311,7 @@ dependencies:
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.2+cuda11.cudnn82-cp39-none-manylinux2010_x86_64.whl
-      - jax==0.3.1
+      - jax==0.3.4
       - git+https://github.com/wandb/client.git
       - onnxruntime-gpu
       - onnxruntime-tools
@@ -400,3 +410,16 @@ dependencies:
       - git+https://github.com/nengo/nengo.git
       - git+https://github.com/emaballarin/nengolib.git
       - git+https://github.com/WolframResearch/WolframClientForPython.git
+      - git+https://github.com/emaballarin/nupic.torch.git
+      - git+https://github.com/unifyai/ivy.git
+      - git+https://github.com/unifyai/mech.git
+      - git+https://github.com/unifyai/robot.git
+      - git+https://github.com/unifyai/builder.git
+      - git+https://github.com/unifyai/models.git
+      - git+https://github.com/unifyai/vision.git
+      - git+https://github.com/unifyai/memory.git
+      - git+https://github.com/omry/omegaconf.git
+      - git+https://github.com/PyTorchLightning/metrics.git
+      - git+https://github.com/PyTorchLightning/pytorch-lightning.git
+      - git+https://github.com/PyTorchLightning/lightning-bolts.git
+      - git+https://github.com/PyTorchLightning/lightning-flash.git
