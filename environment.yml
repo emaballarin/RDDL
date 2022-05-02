@@ -39,15 +39,17 @@ dependencies:
   - torch-model-archiver>=0.5.3
   - torch-workflow-archiver>=0.2.3
   - gpytorch>=1.6
-  - botorch>=0.6.2
+  - botorch>=0.6.4
   - ignite>=0.4.8
   - captum>=0.5
   - accimage>=0.2
   - torchdata>=0.3
+  - torchdistx>=0.1
+  - urllib3>=1.25 # PyTorch stack (do not edit!)
 
   # Vaex
-  - vaex>=4.8 # Latest
-  - vaex-core>=4.8 # Same as vaex
+  - vaex>=4.9 # Latest
+  - vaex-core>=4.9 # Same as vaex
   - vaex-astro>=0.8.3 # Pinned to >= 0.8.3 by vaex
   - vaex-hdf5>=0.10 # Leave it as it is to avoid guesswork
   - vaex-viz>=0.5 # Leave it as it is to avoid guesswork
@@ -60,18 +62,19 @@ dependencies:
   - onnx>=1.11
   - tensorboard>=2.8
   - tensorboardx>=2.5
-  - dgl-cuda11.3>=0.8
-  - jupyterlab>=3.3.2
-  - notebook>=6.4.10
+  - dgl-cuda11.3>=0.8.1
+  - jupyterlab>=3.3.4
+  - notebook>=6.4.11
   - black>=21.11b0 # Handle with care!
   - nb_black>=1.0.7
-  - mlflow>=1.24
+  - mlflow>=1.25.1
   - pip>=20.3.4 # Do not change!
   - pip-tools>=5.5 # Do not change!
   - numba>=0.55.1
   - fastprogress>=1 # Handle with care!
   - jedi>=0.18.1
-  - comet_ml>=3.28.2
+  - comet_ml>=3.30
+  - typeguard>=2.11.1 # PyTorch Typing
 
   # UNPINNED
 
@@ -228,7 +231,6 @@ dependencies:
   - toml
   - toolz
   - tqdm
-  - urllib3>=1.25 # PyTorch stack (do not edit!)
   - visdom
   - watchdog
   - wcwidth
@@ -265,7 +267,6 @@ dependencies:
   - shortuuid
   - stevedore
   - termcolor
-  - typeguard
   - urwid
   - virtualenv
   - webcolors
@@ -310,8 +311,8 @@ dependencies:
       - opencv-python
       - git+https://github.com/pytorch/contrib.git
       - graphviz
-      - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.2+cuda11.cudnn82-cp39-none-manylinux2010_x86_64.whl
-      - jax==0.3.4
+      - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.7+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
+      - jax==0.3.8
       - git+https://github.com/wandb/client.git
       - onnxruntime-gpu
       - onnxruntime-tools
@@ -423,3 +424,6 @@ dependencies:
       - git+https://github.com/PyTorchLightning/pytorch-lightning.git
       - git+https://github.com/PyTorchLightning/lightning-bolts.git
       - git+https://github.com/PyTorchLightning/lightning-flash.git
+      - git+https://github.com/patrick-kidger/equinox.git
+      - git+https://github.com/patrick-kidger/diffrax.git
+      - git+https://github.com/patrick-kidger/sympytorch.git

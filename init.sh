@@ -146,7 +146,7 @@ ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASE
 # Install deferred packages
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 ln -s "$PYPKG_DIR/numpy/core/include/numpy" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/include/python3.9/"
-pip install git+https://github.com/emaballarin/DADApy.git
+pip install git+https://github.com/sissa-data-science/DADApy.git
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
 # Post-install in-environment operations
