@@ -172,7 +172,7 @@ echo ""
 
 # End
 cd "$SELF_STORED_CALLDIR"
-export ALLOW_BOTORCH_LATEST = "$_PRE_ALLOW_BOTORCH_LATEST"
+export ALLOW_BOTORCH_LATEST="$_PRE_ALLOW_BOTORCH_LATEST"
 echo ' '
 echo 'DONE!'
 echo ' '
