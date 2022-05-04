@@ -37,6 +37,8 @@ cp -R -f ./etc "$PYTHONUSERBASE"
 sed -i 's@__SUB__THIS__@'"$PORTABLECUDA_ROOT"'@' "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/etc/conda/activate.d/zz_cuda.sh"
 cp -f ./dot_condarc "$PYTHONUSERBASE/.condarc"
 cp -f ./start.py "$PYTHONUSERBASE/start.py"
+export _PRE_ALLOW_BOTORCH_LATEST="$ALLOW_BOTORCH_LATEST"
+export ALLOW_BOTORCH_LATEST="1"
 "$WHICH_SNAKE" env create -f environment.yml
 export PYTHONUSERBASE="$PRE_PYTHONUSERBASE"
 unset PRE_PYTHONUSERBASE
@@ -170,6 +172,7 @@ echo ""
 
 # End
 cd "$SELF_STORED_CALLDIR"
+export ALLOW_BOTORCH_LATEST = "$_PRE_ALLOW_BOTORCH_LATEST"
 echo ' '
 echo 'DONE!'
 echo ' '

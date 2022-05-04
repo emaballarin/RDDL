@@ -39,7 +39,7 @@ dependencies:
   - torch-model-archiver>=0.5.3
   - torch-workflow-archiver>=0.2.3
   - gpytorch>=1.6
-  - botorch>=0.6.4
+  #  - botorch>=0.6.4
   - ignite>=0.4.8
   - captum>=0.5
   - accimage>=0.2
@@ -304,32 +304,33 @@ dependencies:
       # - adabelief-pytorch: Latest
       #
       # TORCH STACK:
-      - functorch
-      - torchdata
+      - functorch>=0.1
+      - torchdata>=0.3
       #
       # ALL THE REST:
-      - opencv-python
+      - opencv-python>=4.5.5.64
       - git+https://github.com/pytorch/contrib.git
       - graphviz
       - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.7+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
       - jax==0.3.8
       - git+https://github.com/wandb/client.git
-      - onnxruntime-gpu
-      - onnxruntime-tools
-      - clearml
-      - clearml-agent
-      - clearml-session
+      - onnxruntime-gpu>=1.11
+      - onnxruntime-tools>=1.7
+      - clearml>=1.3.1
+      - clearml-agent>=1.1.2
+      - clearml-session>=0.3.5
+      - git+https://github.com/emaballarin/botorch.git
       - git+https://github.com/pyro-ppl/pyro-api.git
       - git+https://github.com/pyro-ppl/pyro.git
       - git+https://github.com/pyro-ppl/numpyro.git
       - git+https://github.com/pyro-ppl/funsor.git
       - git+https://github.com/emaballarin/pyro-models.git
-      - py
-      - sklearn
-      - sklearn2
+      - py>=1.11
+      - sklearn>=0.0
+      - sklearn2>=0.0.13
       - git+https://github.com/optuna/optuna.git
-      - cma
-      - cmaes
+      - cma>=3.2.2
+      - cmaes>=0.8.2
       - git+https://github.com/facebookresearch/nevergrad.git
       - git+https://github.com/facebook/Ax.git
       - git+https://github.com/bamos/block.git
@@ -338,20 +339,20 @@ dependencies:
       - git+https://github.com/facebookresearch/FDR_scheduler.git
       - git+https://github.com/arogozhnikov/einops.git
       - git+https://github.com/jonasrauber/eagerpy.git
-      - pytorch-zoo
+      - pytorch-zoo>=1.2.2
       - git+https://github.com/pfnet/pfio.git
       - git+https://github.com/pfnet/pytorch-pfn-extras.git
-      - watermark
-      - mlxtend
-      - onnxconverter-common
-      - skl2onnx
-      - sklearn-pandas
+      - watermark>=2.3
+      - mlxtend>=0.19.0
+      - onnxconverter-common>=1.9
+      - skl2onnx>=1.11
+      - sklearn-pandas>=2.2
       - git+https://github.com/williamFalcon/pytorch-complex-tensor.git
-      - ase
-      - importlib-resources
+      - ase>=3.22.1
+      - importlib-resources>=5.6
       - git+https://github.com/neptune-ai/neptune-client.git
       - git+https://github.com/neptune-ai/neptune-contrib.git
-      - neptune-notebooks
+      - neptune-notebooks>=0.9
       - git+https://github.com/neptune-ai/neptune-mlflow.git
       - git+https://github.com/neptune-ai/neptune-optuna.git
       - git+https://github.com/DistrictDataLabs/yellowbrick.git
@@ -365,9 +366,9 @@ dependencies:
       - git+https://github.com/KevinMusgrave/pytorch-metric-learning.git
       - git+https://github.com/rtqichen/torchdiffeq
       - git+https://github.com/SystemsBioinformatics/stochpy.git
-      - onnxmltools
-      - onnxoptimizer
-      - cftime
+      - onnxmltools>=1.10
+      - onnxoptimizer>=0.2.6
+      - cftime>=1.6
       - adabelief-pytorch==0.2.1
       - git+https://github.com/emaballarin/ebtorch.git
       - git+https://github.com/rwightman/pytorch-image-models.git
@@ -384,7 +385,7 @@ dependencies:
       - git+https://github.com/niklexical/brc_pytorch.git
       - git+https://github.com/davidtvs/pytorch-lr-finder.git
       - git+https://github.com/facebookresearch/madgrad.git
-      - typish
+      - typish>=1.9.3
       - git+https://github.com/ramonhagenaars/nptyping.git
       - git+https://github.com/scardine/image_size.git
       - git+https://github.com/huggingface/accelerate.git
@@ -394,20 +395,20 @@ dependencies:
       # - git+https://github.com/sissa-data-science/DULY.git
       - git+https://github.com/wandb/pyrasite.git
       - git+https://github.com/lessw2020/Ranger21.git
-      - jupyter_http_over_ws
-      - ml_collections
-      - pynvml
+      - jupyter_http_over_ws>=0.0.8
+      - ml_collections>=0.1.1
+      - pynvml>=11.4.1
       - git+https://github.com/FrancescoSaverioZuppichini/glasses.git
-      - datasets
-      - sacremoses
-      - transformers
+      - datasets>=2
+      - sacremoses>=0.0.49
+      - transformers>=4.17
       - git+https://github.com/huggingface/nn_pruning.git
       - git+https://github.com/bethgelab/imagecorruptions.git
       - git+https://github.com/bethgelab/foolbox.git
       - git+https://github.com/pytorch/ort.git
-      - pytorchfi
+      - pytorchfi>=0.6
       - lckr-jupyterlab-variableinspector
-      - onnxruntime-training
+      - onnxruntime-training>=1.11
       - git+https://github.com/nengo/nengo.git
       - git+https://github.com/emaballarin/nengolib.git
       - git+https://github.com/WolframResearch/WolframClientForPython.git
@@ -427,3 +428,4 @@ dependencies:
       - git+https://github.com/patrick-kidger/equinox.git
       - git+https://github.com/patrick-kidger/diffrax.git
       - git+https://github.com/patrick-kidger/sympytorch.git
+      - git+https://github.com/ChristophReich1996/SmeLU.git
