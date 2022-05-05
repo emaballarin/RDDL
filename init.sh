@@ -79,7 +79,10 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 
 # Install deferred extra packages
+pip uninstall pillow
+CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
 pip install --upgrade --no-deps --force --force-reinstall --pre cupy-cuda113
+pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/libffcv/ffcv.git
 
 # Install / enable Jupyter(Lab) extensions
 pip install --upgrade "nbclassic>=0.2.8"
@@ -88,7 +91,7 @@ jupyter nbextension enable varInspector/main
 jupyter nbextension enable --py neptune-notebooks
 jupyter nbextension enable --py ipygany
 
-jupyter labextension install @jupyterlab/toc --no-build
+#jupyter labextension install @jupyterlab/toc --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
 jupyter labextension install jupyterlab-plotly --no-build
 jupyter labextension install plotlywidget --no-build

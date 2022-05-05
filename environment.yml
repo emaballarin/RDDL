@@ -295,13 +295,20 @@ dependencies:
   - hydra-core
   - gcsfs
 
+  # MosaicML | FFCV
+  - pkg-config
+  - compilers
+  - opencv
+  - terminaltables
+  - assertpy
+
   # PIP #
   - pip:
       # Sort by dependency (~ toposort)
       # PINS:
-      # - JAX:               Latest
-      # - JaxLib:            Latest
-      # - adabelief-pytorch: Latest
+      # - JAX:               Latest, ==
+      # - JaxLib:            Latest, exact link
+      # - adabelief-pytorch: Latest, >=
       #
       # TORCH STACK:
       - functorch>=0.1
@@ -311,8 +318,8 @@ dependencies:
       - opencv-python>=4.5.5.64
       - git+https://github.com/pytorch/contrib.git
       - graphviz
-      - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.7+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
-      - jax==0.3.8
+      - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.10+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
+      - jax==0.3.10
       - git+https://github.com/wandb/client.git
       - onnxruntime-gpu>=1.11
       - onnxruntime-tools>=1.7
@@ -369,7 +376,7 @@ dependencies:
       - onnxmltools>=1.10
       - onnxoptimizer>=0.2.6
       - cftime>=1.6
-      - adabelief-pytorch==0.2.1
+      - adabelief-pytorch>=0.2.1
       - git+https://github.com/emaballarin/ebtorch.git
       - git+https://github.com/rwightman/pytorch-image-models.git
       - git+https://github.com/facebookresearch/qhoptim.git
@@ -392,7 +399,6 @@ dependencies:
       - git+https://github.com/Cadene/pretrained-models.pytorch.git
       - git+https://github.com/emaballarin/pytorch-kfac.git
       - git+https://github.com/kosiokarchev/clipppy.git
-      # - git+https://github.com/sissa-data-science/DULY.git
       - git+https://github.com/wandb/pyrasite.git
       - git+https://github.com/lessw2020/Ranger21.git
       - jupyter_http_over_ws>=0.0.8
@@ -429,3 +435,8 @@ dependencies:
       - git+https://github.com/patrick-kidger/diffrax.git
       - git+https://github.com/patrick-kidger/sympytorch.git
       - git+https://github.com/ChristophReich1996/SmeLU.git
+      - braceexpand
+      - git+https://github.com/emaballarin/webdataset.git
+      - git+https://github.com/mosaicml/yahp.git
+      - fastargs
+      - imgcat
