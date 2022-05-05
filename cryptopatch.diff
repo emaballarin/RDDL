@@ -1,0 +1,13 @@
+diff --git a/packages/coreutils/package.json b/packages/coreutils/package.json
+index 3b340aeb..ad2e21e5 100644
+--- a/packages/coreutils/package.json
++++ b/packages/coreutils/package.json
+@@ -77,5 +77,8 @@
+   },
+   "publishConfig": {
+     "access": "public"
++  },
++  "browser": {
++    "crypto": false
+   }
+ }

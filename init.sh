@@ -79,7 +79,7 @@ source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 
 # Install deferred extra packages
-pip uninstall pillow
+pip uninstall -y pillow
 CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
 pip install --upgrade --no-deps --force --force-reinstall --pre cupy-cuda113
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/libffcv/ffcv.git
@@ -95,11 +95,13 @@ jupyter nbextension enable --py ipygany
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
 jupyter labextension install jupyterlab-plotly --no-build
 jupyter labextension install plotlywidget --no-build
-jupyter labextension install neptune-notebooks
+jupyter labextension install neptune-notebooks --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager ipygany --no-build
 
 jupyter serverextension enable --py jupyter_http_over_ws
 
+# Apply fix for https://github.com/jupyterlab/jupyterlab/issues/11854#issuecomment-1117986073
+patch -ruN -d "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/share/jupyter/lab/staging/node_modules/@lumino/coreutils/" < "$SELF_STORED_CALLDIR/cryptopatch.diff"
 
 # Jupyter Notebook/Lab upgrade and rebuild
 jupyter labextension update --all
@@ -161,6 +163,8 @@ pip install --upgrade --no-deps --force --force-reinstall pip setuptools wheel
 # FIXUP for: https://github.com/getkeops/keops/pull/222#issuecomment-1061589904
 pip install "git+https://github.com/getkeops/keops.git#subdirectory=keopscore" --force-reinstall --no-deps
 pip install "git+https://github.com/getkeops/keops.git#subdirectory=pykeops" --force-reinstall --no-deps
+
+pip uninstall -y pillow
 
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 

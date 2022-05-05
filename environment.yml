@@ -57,6 +57,9 @@ dependencies:
   - vaex-server>=0.6 # Leave it as it is to avoid guesswork
   - vaex-ml>=0.9 # Pinned at >= 0.9
 
+  # Pillow for Pillow-SIMD
+  - pillow=9.0.0
+
   # Misc
   - opt_einsum>=3.3
   - onnx>=1.11
@@ -204,7 +207,6 @@ dependencies:
   - parso
   - path.py
   - pathlib2
-  - pillow
   - plotly
   - prometheus_client
   - prompt_toolkit
@@ -301,6 +303,7 @@ dependencies:
   - opencv
   - terminaltables
   - assertpy
+  - jsonpatch
 
   # PIP #
   - pip:
