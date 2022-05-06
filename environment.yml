@@ -367,7 +367,6 @@ dependencies:
       - git+https://github.com/neptune-ai/neptune-optuna.git
       - git+https://github.com/DistrictDataLabs/yellowbrick.git
       - git+https://github.com/neptune-ai/neptune-sklearn.git
-      - "git+https://github.com/getkeops/keops.git#subdirectory=pykeops"
       - git+https://github.com/jeanfeydy/geomloss.git
       - git+https://github.com/fmfn/BayesianOptimization.git
       - git+https://github.com/jettify/pytorch-optimizer.git
@@ -416,7 +415,7 @@ dependencies:
       - git+https://github.com/bethgelab/foolbox.git
       - git+https://github.com/pytorch/ort.git
       - pytorchfi>=0.6
-      - lckr-jupyterlab-variableinspector
+      - lckr-jupyterlab-variableinspector>=3.0.9
       - onnxruntime-training>=1.11
       - git+https://github.com/nengo/nengo.git
       - git+https://github.com/emaballarin/nengolib.git
@@ -438,8 +437,9 @@ dependencies:
       - git+https://github.com/patrick-kidger/diffrax.git
       - git+https://github.com/patrick-kidger/sympytorch.git
       - git+https://github.com/ChristophReich1996/SmeLU.git
-      - braceexpand
+      - braceexpand>=0.1.7
       - git+https://github.com/emaballarin/webdataset.git
       - git+https://github.com/mosaicml/yahp.git
-      - fastargs
-      - imgcat
+      - fastargs>=1.2
+      - imgcat>=0.5
+      - git+https://github.com/brian-team/brian2.git
