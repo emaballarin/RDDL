@@ -26,69 +26,94 @@ dependencies:
   # PINNED
 
   # System
-  - python=3.9.12
-  - cudatoolkit=11.3
-  - magma-cuda113>=2.6.1 # FIXME: ?
+  - python=3.9.13
   - blas=*.*=mkl
 
+  # CUDA & co.
+  - cudatoolkit=11.6
+  - cuda-runtime=11.6
+  - cuda-libraries>=11.6
+  - cuda-libraries-dev>=11.6
+  - cuda-cudart>=11.6
+  - cuda-cudart-dev>=11.6
+  - libcusparse>=11.6
+  - libcusparse-dev>=11.6
+  - cuda-nvcc=11.6
+  - nccl>=2.12.12
+  - cudnn>=8.4.1
+  - magma-cuda116>=2.6.1
+
   # PyTorch stack
-  - pytorch>=1.11
-  - torchvision>=0.12
-  - torchaudio>=0.11
-  - torchtext>=0.12
+  - pytorch>=1.12
+  - torchvision>=0.13
+  - torchaudio>=0.12
+  - torchtext>=0.13
   - torchserve>=0.6
   - torch-model-archiver>=0.6
   - torch-workflow-archiver>=0.2.4
-  - gpytorch>=1.6
-  #  - botorch>=0.6.4
+  - gpytorch>=1.7
   - ignite>=0.4.9
   - captum>=0.5
   - accimage>=0.2
-  - torchdata>=0.3
-  - torchdistx>=0.1
-  - urllib3>=1.25 # PyTorch stack (do not edit!)
+  - torchdata>=0.4
+  - torchdistx>=0.2
+  - torchdistx-cc>=0.2
+  - urllib3>=1.25 # Do not edit!
 
   # Vaex
-  - vaex>=4.9 # Latest
-  - vaex-core>=4.9 # Same as vaex
-  - vaex-astro>=0.8.3 # Pinned to >= 0.8.3 by vaex
-  - vaex-hdf5>=0.10 # Leave it as it is to avoid guesswork
-  - vaex-viz>=0.5 # Leave it as it is to avoid guesswork
-  - vaex-jupyter>=0.6 # Leave it as it is to avoid guesswork
-  - vaex-server>=0.6 # Leave it as it is to avoid guesswork
-  - vaex-ml>=0.9 # Pinned at >= 0.9
+  - vaex>=4.9.2 # Latest
+  - vaex-core>=4.9.2 # Same as vaex
+  - vaex-astro>=0.8.3 # Do not edit!
+  - vaex-hdf5>=0.10 # Do not edit!
+  - vaex-viz>=0.5 # Do not edit!
+  - vaex-jupyter>=0.6 # Do not edit!
+  - vaex-server>=0.6 # Do not edit!
+  - vaex-ml>=0.9 # Do not edit!
 
   # Pillow for Pillow-SIMD
   - pillow=9.0.0
 
+  # FFIs
+  - cffi>=1.10.0 # Do not edit!
+
   # Misc
   - opt_einsum>=3.3
-  - onnx>=1.11
+  - onnx>=1.12
   - tensorboard>=2.9
   - tensorboardx>=2.5
-  - dgl-cuda11.3>=0.8.1
-  - jupyterlab>=3.3.4
-  - notebook>=6.4.11
-  - black>=21.11b0 # Handle with care!
+  - dgl-cuda11.6>=0.8.2
+  - jupyterlab>=3.4.3
+  - notebook>=6.4.12
+  - black>=21.11b0 # Do not edit!
   - nb_black>=1.0.7
-  - mlflow>=1.26
-  - pip>=20.3.4 # Do not change!
-  - pip-tools>=5.5 # Do not change!
-  - numba>=0.55.1
-  - fastprogress>=1 # Handle with care!
+  - mlflow>=1.27
+  - pip>=20.3.4 # Do not edit!
+  - pip-tools>=5.5 # Do not edit!
+  - numba=0.53.1 # Keep in sync with pip requirements!
+  - fastprogress>=1 # Do not edit!
   - jedi>=0.18.1
-  - comet_ml>=3.31.1
-  - typeguard>=2.11.1 # Leave as it is!
+  - typeguard>=2.11.1 # Do not edit!
+  - jupytext>=1.14
+  - nbformat>=5.0.4
+  - nbclient>=0.4
 
-  # DeepRobust (check only gensim)
-  - numpy>=1.17.1
-  - scipy>=1.3.1
-  - matplotlib>=3.1.1
-  - scikit-learn>=0.22.1
-  - scikit-image>=0.0
-  - networkx>=2.4
-  - texttable>=1.6.2
-  - gensim=3.8.*
+  # DeepRobust
+  - numpy=1.23.0 # UPDATE FREQUENTLY!
+  - scipy>=1.8.1 # Do not edit!
+  - matplotlib>=3.1.1 # Do not edit!
+  - scikit-learn>=0.22.1 # Do not edit!
+  - scikit-image>=0.0 # Do not edit!
+  - networkx>=2.4 # Do not edit!
+  - texttable>=1.6.2 # Do not edit!
+  - gensim=3.8.* # KEEP IN SYNC WITH DeepRobust requirements
+
+  # Install easers
+  - importlib_metadata>=4.8.2 # Sync with https://github.com/lf1-io/padl/blob/b261d51a0be9ff9989b76009913e226894b71a39/requirements.txt#L5
+
+  # Extras
+  - tqdm>=3.0 # Do not edit!
+  - protobuf>=3 # Do not edit!
+  - jsonschema=3.2 # Sync with pip requirements!
 
   # UNPINNED
 
@@ -101,7 +126,6 @@ dependencies:
   - intel-openmp
 
   # Install easers
-  - importlib_metadata
   - setuptools
   - wheel
   - pep517
@@ -127,9 +151,7 @@ dependencies:
   - jupyterlab_launcher
   - jupyterlab_server
   - nb_conda_kernels
-  - nbclient
   - nbconvert
-  - nbformat
   - widgetsnbextension
   - jupyter_contrib_nbextensions
   - ipyparallel
@@ -138,7 +160,6 @@ dependencies:
   - nbval
 
   # FFIs
-  - cffi
   - pybind11
   - swig
 
@@ -194,7 +215,6 @@ dependencies:
   - jinja2
   - joblib
   - jpeg
-  - jsonschema
   - libjpeg-turbo
   - libpng
   - more-itertools
@@ -237,7 +257,6 @@ dependencies:
   - threadpoolctl
   - toml
   - toolz
-  - tqdm>=3.0
   - visdom
   - watchdog
   - wcwidth
@@ -299,7 +318,6 @@ dependencies:
   - fsspec
   - docstring_parser
   - pydeprecate
-  - hydra-core
   - gcsfs
 
   # MosaicML | FFCV
@@ -310,141 +328,8 @@ dependencies:
   - assertpy
   - jsonpatch
 
-  # PIP #
-  - pip:
-      # Sort by dependency (~ toposort)
-      # PINS:
-      # - JAX:               Latest, ==
-      # - JaxLib:            Latest, exact link
-      # - adabelief-pytorch: Latest, >=
-      #
-      # TORCH STACK:
-      - functorch>=0.1.1
-      - torchdata>=0.3
-      #
-      # ALL THE REST:
-      - opencv-python>=4.5.5.64
-      - git+https://github.com/pytorch/contrib.git
-      - graphviz
-      - https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.10+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
-      - jax==0.3.13
-      - git+https://github.com/wandb/client.git
-      - onnxruntime-gpu>=1.11
-      - onnxruntime-tools>=1.7
-      - clearml>=1.3.1
-      - clearml-agent>=1.1.2
-      - clearml-session>=0.3.5
-      - git+https://github.com/emaballarin/botorch.git
-      - git+https://github.com/pyro-ppl/pyro-api.git
-      - git+https://github.com/pyro-ppl/pyro.git
-      - git+https://github.com/pyro-ppl/numpyro.git
-      - git+https://github.com/pyro-ppl/funsor.git
-      - git+https://github.com/emaballarin/pyro-models.git
-      - py>=1.11
-      - sklearn>=0.0
-      - sklearn2>=0.0.13
-      - git+https://github.com/optuna/optuna.git
-      - cma>=3.2.2
-      - cmaes>=0.8.2
-      - git+https://github.com/facebookresearch/nevergrad.git
-      - git+https://github.com/facebook/Ax.git
-      - git+https://github.com/bamos/block.git
-      - git+https://github.com/sksq96/pytorch-summary.git
-      - git+https://github.com/facebookresearch/higher.git
-      - git+https://github.com/facebookresearch/FDR_scheduler.git
-      - git+https://github.com/arogozhnikov/einops.git
-      - git+https://github.com/jonasrauber/eagerpy.git
-      - pytorch-zoo>=1.2.2
-      - git+https://github.com/pfnet/pfio.git
-      - git+https://github.com/pfnet/pytorch-pfn-extras.git
-      - watermark>=2.3
-      - mlxtend>=0.19.0
-      - onnxconverter-common>=1.9
-      - skl2onnx>=1.11
-      - sklearn-pandas>=2.2
-      - git+https://github.com/williamFalcon/pytorch-complex-tensor.git
-      - ase>=3.22.1
-      - importlib-resources>=5.6
-      - git+https://github.com/neptune-ai/neptune-client.git
-      - git+https://github.com/neptune-ai/neptune-contrib.git
-      - neptune-notebooks>=0.9
-      - git+https://github.com/neptune-ai/neptune-mlflow.git
-      - git+https://github.com/neptune-ai/neptune-optuna.git
-      - git+https://github.com/DistrictDataLabs/yellowbrick.git
-      - git+https://github.com/neptune-ai/neptune-sklearn.git
-      - git+https://github.com/jeanfeydy/geomloss.git
-      - git+https://github.com/fmfn/BayesianOptimization.git
-      - git+https://github.com/jettify/pytorch-optimizer.git
-      - git+https://github.com/jettify/pytorch-inspect.git
-      - git+https://github.com/BorealisAI/advertorch.git
-      - git+https://github.com/KevinMusgrave/pytorch-metric-learning.git
-      - git+https://github.com/rtqichen/torchdiffeq
-      - git+https://github.com/SystemsBioinformatics/stochpy.git
-      - onnxmltools>=1.10
-      - onnxoptimizer>=0.2.6
-      - cftime>=1.6
-      - adabelief-pytorch>=0.2.1
-      - git+https://github.com/emaballarin/ebtorch.git
-      - git+https://github.com/rwightman/pytorch-image-models.git
-      - git+https://github.com/facebookresearch/qhoptim.git
-      - git+https://github.com/ufoym/imbalanced-dataset-sampler.git
-      - git+https://github.com/KieranWynn/pyquaternion.git
-      - git+https://github.com/ispamm/hTorch.git
-      - git+https://github.com/MKuranowski/aiocsv.git
-      - git+https://github.com/szagoruyko/pytorchviz.git
-      - git+https://github.com/TylerYep/torchinfo.git
-      - git+https://github.com/huggingface/huggingface_hub.git
-      - git+https://github.com/digantamisra98/Echo.git
-      - git+https://github.com/bashtage/randomgen.git
-      - git+https://github.com/niklexical/brc_pytorch.git
-      - git+https://github.com/davidtvs/pytorch-lr-finder.git
-      - git+https://github.com/facebookresearch/madgrad.git
-      - typish>=1.9.3
-      - git+https://github.com/ramonhagenaars/nptyping.git
-      - git+https://github.com/scardine/image_size.git
-      - git+https://github.com/huggingface/accelerate.git
-      - git+https://github.com/Cadene/pretrained-models.pytorch.git
-      - git+https://github.com/emaballarin/pytorch-kfac.git
-      - git+https://github.com/kosiokarchev/clipppy.git
-      - git+https://github.com/wandb/pyrasite.git
-      - git+https://github.com/lessw2020/Ranger21.git
-      - jupyter_http_over_ws>=0.0.8
-      - ml_collections>=0.1.1
-      - pynvml>=11.4.1
-      - git+https://github.com/FrancescoSaverioZuppichini/glasses.git
-      - datasets>=2
-      - sacremoses>=0.0.49
-      - transformers>=4.17
-      - git+https://github.com/huggingface/nn_pruning.git
-      - git+https://github.com/bethgelab/imagecorruptions.git
-      - git+https://github.com/bethgelab/foolbox.git
-      - git+https://github.com/pytorch/ort.git
-      - pytorchfi>=0.6
-      - lckr-jupyterlab-variableinspector>=3.0.9
-      - onnxruntime-training>=1.11
-      - git+https://github.com/nengo/nengo.git
-      - git+https://github.com/emaballarin/nengolib.git
-      - git+https://github.com/WolframResearch/WolframClientForPython.git
-      - git+https://github.com/emaballarin/nupic.torch.git
-      - git+https://github.com/unifyai/ivy.git
-      - git+https://github.com/unifyai/mech.git
-      - git+https://github.com/unifyai/robot.git
-      - git+https://github.com/unifyai/builder.git
-      - git+https://github.com/unifyai/models.git
-      - git+https://github.com/unifyai/vision.git
-      - git+https://github.com/unifyai/memory.git
-      - git+https://github.com/omry/omegaconf.git
-      - git+https://github.com/PyTorchLightning/metrics.git
-      - git+https://github.com/PyTorchLightning/pytorch-lightning.git
-      - git+https://github.com/PyTorchLightning/lightning-bolts.git
-      - git+https://github.com/PyTorchLightning/lightning-flash.git
-      - git+https://github.com/patrick-kidger/equinox.git
-      - git+https://github.com/patrick-kidger/diffrax.git
-      - git+https://github.com/patrick-kidger/sympytorch.git
-      - git+https://github.com/ChristophReich1996/SmeLU.git
-      - braceexpand>=0.1.7
-      - git+https://github.com/emaballarin/webdataset.git
-      - git+https://github.com/mosaicml/yahp.git
-      - fastargs>=1.2
-      - imgcat>=0.5
-      - git+https://github.com/DSE-MSU/DeepRobust.git
+  # PADL
+  - astunparse
+
+  # Extras
+  - tzlocal

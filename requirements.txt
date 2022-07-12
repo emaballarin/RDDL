@@ -1,0 +1,140 @@
+# Sort by dependency (~ toposort)
+# PINS:
+# - functorch          Sync with version above, >=
+# - torchdata          Sync with version above, >=
+# - JAX:               Latest, ==
+# - JaxLib:            Latest, exact link
+# - adabelief-pytorch: Latest, >=
+#
+# TORCH STACK:
+functorch>=0.2
+torchdata>=0.4
+#
+# ALL THE REST:
+opencv-python>=4.5.5.64
+graphviz>=0.20
+https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.14+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
+jax==0.3.14
+git+https://github.com/wandb/client.git
+onnxruntime-gpu>=1.11.1
+onnxruntime-tools>=1.7
+git+https://github.com/emaballarin/botorch.git
+git+https://github.com/pyro-ppl/pyro-api.git
+git+https://github.com/pyro-ppl/pyro.git
+git+https://github.com/pyro-ppl/numpyro.git
+git+https://github.com/pyro-ppl/funsor.git
+git+https://github.com/emaballarin/pyro-models.git
+py>=1.11
+sklearn>=0.0
+sklearn2>=0.0.13
+git+https://github.com/optuna/optuna.git
+cma>=3.2.2
+cmaes>=0.8.2
+git+https://github.com/facebookresearch/nevergrad.git
+git+https://github.com/facebook/Ax.git
+git+https://github.com/bamos/block.git
+git+https://github.com/sksq96/pytorch-summary.git
+git+https://github.com/facebookresearch/higher.git
+git+https://github.com/facebookresearch/FDR_scheduler.git
+git+https://github.com/arogozhnikov/einops.git
+git+https://github.com/jonasrauber/eagerpy.git
+pytorch-zoo>=1.2.2
+git+https://github.com/pfnet/pfio.git
+git+https://github.com/pfnet/pytorch-pfn-extras.git
+watermark>=2.3
+mlxtend>=0.19.0
+onnxconverter-common>=1.9
+skl2onnx>=1.11
+sklearn-pandas>=2.2
+git+https://github.com/williamFalcon/pytorch-complex-tensor.git
+ase>=3.22.1
+importlib-resources>=5.6
+git+https://github.com/neptune-ai/neptune-client.git
+git+https://github.com/neptune-ai/neptune-contrib.git
+neptune-notebooks>=0.9
+git+https://github.com/neptune-ai/neptune-mlflow.git
+git+https://github.com/neptune-ai/neptune-optuna.git
+git+https://github.com/DistrictDataLabs/yellowbrick.git
+git+https://github.com/neptune-ai/neptune-sklearn.git
+git+https://github.com/jeanfeydy/geomloss.git
+git+https://github.com/fmfn/BayesianOptimization.git
+git+https://github.com/jettify/pytorch-optimizer.git
+git+https://github.com/jettify/pytorch-inspect.git
+git+https://github.com/BorealisAI/advertorch.git
+git+https://github.com/KevinMusgrave/pytorch-metric-learning.git
+git+https://github.com/rtqichen/torchdiffeq.git
+git+https://github.com/SystemsBioinformatics/stochpy.git
+onnxmltools>=1.11.1
+onnxoptimizer>=0.2.7
+cftime>=1.6
+adabelief-pytorch>=0.2.1
+git+https://github.com/emaballarin/ebtorch.git
+git+https://github.com/rwightman/pytorch-image-models.git
+git+https://github.com/facebookresearch/qhoptim.git
+git+https://github.com/ufoym/imbalanced-dataset-sampler.git
+git+https://github.com/KieranWynn/pyquaternion.git
+git+https://github.com/ispamm/hTorch.git
+git+https://github.com/MKuranowski/aiocsv.git
+git+https://github.com/szagoruyko/pytorchviz.git
+git+https://github.com/TylerYep/torchinfo.git
+git+https://github.com/huggingface/huggingface_hub.git
+git+https://github.com/digantamisra98/Echo.git
+git+https://github.com/bashtage/randomgen.git
+git+https://github.com/niklexical/brc_pytorch.git
+git+https://github.com/davidtvs/pytorch-lr-finder.git
+git+https://github.com/facebookresearch/madgrad.git
+typish>=1.9.3
+git+https://github.com/ramonhagenaars/nptyping.git
+git+https://github.com/scardine/image_size.git
+git+https://github.com/huggingface/accelerate.git
+git+https://github.com/Cadene/pretrained-models.pytorch.git
+git+https://github.com/emaballarin/pytorch-kfac.git
+git+https://github.com/kosiokarchev/clipppy.git
+git+https://github.com/wandb/pyrasite.git
+git+https://github.com/lessw2020/Ranger21.git
+jupyter_http_over_ws>=0.0.8
+ml_collections>=0.1.1
+pynvml>=11.4.1
+git+https://github.com/FrancescoSaverioZuppichini/glasses.git
+datasets>=2
+sacremoses>=0.0.49
+transformers>=4.17
+git+https://github.com/huggingface/nn_pruning.git
+git+https://github.com/bethgelab/imagecorruptions.git
+git+https://github.com/bethgelab/foolbox.git
+lckr-jupyterlab-variableinspector>=3.0.9
+onnxruntime-training>=1.11.1
+git+https://github.com/nengo/nengo.git
+git+https://github.com/emaballarin/nengolib.git
+wolframclient>=1.1.7
+git+https://github.com/emaballarin/nupic.torch.git
+hydra-core
+omegaconf
+git+https://github.com/unifyai/ivy.git
+git+https://github.com/unifyai/mech.git
+git+https://github.com/unifyai/robot.git
+git+https://github.com/unifyai/builder.git
+git+https://github.com/unifyai/models.git
+git+https://github.com/unifyai/vision.git
+git+https://github.com/unifyai/memory.git
+# ~ NOT YET COMPATIBLE WITH PyTorch>=1.12 ~
+#- git+https://github.com/PyTorchLightning/metrics.git
+#- git+https://github.com/PyTorchLightning/pytorch-lightning.git
+#- git+https://github.com/PyTorchLightning/lightning-bolts.git
+#- git+https://github.com/PyTorchLightning/lightning-flash.git
+git+https://github.com/patrick-kidger/equinox.git
+git+https://github.com/patrick-kidger/diffrax.git
+git+https://github.com/patrick-kidger/sympytorch.git
+git+https://github.com/ChristophReich1996/SmeLU.git
+braceexpand>=0.1.7
+git+https://github.com/emaballarin/webdataset.git
+git+https://github.com/mosaicml/yahp.git
+fastargs>=1.2
+imgcat>=0.5
+git+https://github.com/DSE-MSU/DeepRobust.git
+git+https://github.com/lf1-io/padl.git
+git+https://github.com/lf1-io/padl-extensions.git
+git+https://github.com/rpy2/rpy2.git
+torch-ort
+ninja
+jupytext

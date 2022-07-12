@@ -13,7 +13,8 @@ export ANACONDA_BASEDIR_NAME="anaconda3"
 
 # A directory with CUDA / CUDNN / NCCL installed inside, and ./lib64/ folder removed
 # after having it merged with ./lib/
-export PORTABLECUDA_ROOT="$RDDL_PORTABLECUDA_ROOT/portablecuda/11.3.1/"
+export DO_INJECT_PORTABLECUDA="0"
+export PORTABLECUDA_ROOT="$RDDL_PORTABLECUDA_ROOT/portablecuda/11.6.2/"
 
 # Package path (to manually install packages in, if needed)
 export PYPKG_DIR="$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/python3.9/site-packages/"
@@ -49,44 +50,85 @@ unset PRE_PYTHONUSERBASE
 # Install and overwrite (if any) libjpeg-turbo
 # MUST BE SYSTEM-INSTALLED: CMake, cURL, Kerberos 5 (if needed), MPI libraries & compilers.
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-conda remove -y cmake curl krb5 mpi cudatoolkit cudnn nccl nccl2 --force --force-remove    # Conda required here!
+
+conda remove -y cmake curl krb5 mpi llvmlite --force --force-remove    # Conda required here!
+if [[ "$DO_INJECT_PORTABLECUDA" == "1" ]]; then
+    conda remove -y cudatoolkit cudnn nccl nccl2 --force --force-remove    # Conda required here!
+fi
 
 "$WHICH_SNAKE" install -y libjpeg-turbo --force --force-reinstall --no-deps --clobber
 
+source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+
 mkdir -p "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/"
-rm -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/ld"
-rm -f "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/ld"
-ln -s "$(which ld)" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/"
-ln -s "$(which ld)" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/"
-
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+ln -s -f /usr/bin/ld "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/compiler_compat/"
+ln -s -f /usr/bin/addr2line "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/addr2line"
+ln -s -f /usr/bin/ar "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/ar"
+ln -s -f /usr/bin/as "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/as"
+ln -s -f /usr/bin/c++ "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/c++"
+ln -s -f /usr/bin/c++filt "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/c++filt"
+ln -s -f /usr/bin/cc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/cc"
+ln -s -f /usr/bin/cpp "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/cpp"
+ln -s -f /usr/bin/dwp "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/dwp"
+ln -s -f /usr/bin/elfedit "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/elfedit"
+ln -s -f /usr/bin/f95 "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/f95"
+ln -s -f /usr/bin/g++ "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/g++"
+ln -s -f /usr/bin/gcc "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gcc"
+ln -s -f /usr/bin/gcc-ar "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gcc-ar"
+ln -s -f /usr/bin/gcc-nm "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gcc-nm"
+ln -s -f /usr/bin/gcc-ranlib "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gcc-ranlib"
+ln -s -f /usr/bin/gcov "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gcov"
+ln -s -f /usr/bin/gcov-dump "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gcov-dump"
+ln -s -f /usr/bin/gcov-tool "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gcov-tool"
+ln -s -f /usr/bin/gfortran "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gfortran"
+ln -s -f /usr/bin/gold "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gold"
+ln -s -f /usr/bin/gprof "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/gprof"
+ln -s -f /usr/bin/ld "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/ld"
+ln -s -f /usr/bin/ld.bfd "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/ld.bfd"
+ln -s -f /usr/bin/ld.gold "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/ld.gold"
+ln -s -f /usr/bin/nm "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/nm"
+ln -s -f /usr/bin/objcopy "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/objcopy"
+ln -s -f /usr/bin/objdump "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/objdump"
+ln -s -f /usr/bin/ranlib "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/ranlib"
+ln -s -f /usr/bin/readelf "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/readelf"
+ln -s -f /usr/bin/size "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/size"
+ln -s -f /usr/bin/strings "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/strings"
+ln -s -f /usr/bin/strip "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/bin/strip"
 
 ####################################################################################################
 
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-./portablecuda.sh
+if [[ "$DO_INJECT_PORTABLECUDA" == "1" ]]; then
+    ./portablecuda.sh
+fi
+
+ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/"
+
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
-# FIXUPS
+####################################################################################################
+############################# PIP REQUIREMENTS #####################################################
+####################################################################################################
+
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-# Upgrade to latest pip version
+
+pip install --upgrade --no-deps --force --force-reinstall pip setuptools wheel
+
+pip install llvmlite==0.36 --ignore-installed
+pip install -r "$SELF_STORED_CALLDIR/requirements.txt"
+
 pip install --upgrade jupyter_http_over_ws
-# Fix typing deprecation
 pip uninstall -y typing
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 
-####################################################################################################
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-
-# Install deferred extra packages
 pip uninstall -y pillow
-CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
-pip install --upgrade --no-deps --force --force-reinstall --pre cupy-cuda113
-pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/libffcv/ffcv.git
 
-# Install / enable Jupyter(Lab) extensions
+CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
+pip install --upgrade --no-deps --force --force-reinstall --pre cupy-cuda116
+pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/emaballarin/ffcv.git
+
 pip install --upgrade "nbclassic>=0.2.8"
 
+jupyter nbextension enable --py jupytext
 jupyter nbextension enable varInspector/main
 jupyter nbextension enable --py neptune-notebooks
 jupyter nbextension enable --py ipygany
@@ -97,76 +139,59 @@ jupyter labextension install jupyterlab-plotly --no-build
 jupyter labextension install plotlywidget --no-build
 jupyter labextension install neptune-notebooks --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager ipygany --no-build
+jupyter labextension install jupyterlab-jupytext --no-build
 
 jupyter serverextension enable --py jupyter_http_over_ws
-
-# Apply fix for https://github.com/jupyterlab/jupyterlab/issues/11854#issuecomment-1117986073
-patch -ruN -d "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/share/jupyter/lab/staging/node_modules/@lumino/coreutils/" < "$SELF_STORED_CALLDIR/cryptopatch.diff"
 
 # Jupyter Notebook/Lab upgrade and rebuild
 jupyter labextension update --all
 jupyter lab build
 
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
-
-
-# Install Nvidia APEX (with cpp & cuda extensions) with a trick
-################################################################################
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-export PRE_APEX_CC="$CC"
-export PRE_APEX_CXX="$CXX"
-export PRE_APEX_FC="$FC"
-export CC=gcc-9
-export CXX=g++-9
-export FC=gfortran-9
-#
-pip install --upgrade --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git
-#
-export CC="$PRE_APEX_CC"
-export CXX="$PRE_APEX_CXX"
-export FC="$PRE_APEX_FC"
-unset PRE_APEX_CC
-unset PRE_APEX_CXX
-unset PRE_APEX_FC
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
-################################################################################
-# Phew! Done! :)
-
-
-# Install the entire 'PyTorch Geometric' stack
-######################################################################################
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-#
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.11.0+cu113.html --no-deps
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.11.0+cu113.html --no-deps
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.11.0+cu113.html --no-deps
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.11.0+cu113.html --no-deps
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.12.0+cu116.html --no-deps
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.12.0+cu116.html --no-deps
+pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.12.0+cu116.html --no-deps
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.12.0+cu116.html --no-deps
 pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
 pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps
-#
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
-######################################################################################
 
-# Post-fix Kerberos installation
-ln -s "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3.0" "$HOME/$ANACONDA_BASEDIR_NAME/lib/libcom_err.so.3" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/lib/"
-
-# Install deferred packages
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
 ln -s "$PYPKG_DIR/numpy/core/include/numpy" "$HOME/$ANACONDA_BASEDIR_NAME/envs/$ANACONDA_ENV_NAME/include/python3.9/"
-pip install git+https://github.com/sissa-data-science/DADApy.git
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
-
-# Post-install in-environment operations
-source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
-pip install --upgrade --no-deps --force --force-reinstall pip setuptools wheel
+#pip install git+https://github.com/sissa-data-science/DADApy.git
 
 # FIXUP for: https://github.com/getkeops/keops/pull/222#issuecomment-1061589904
 pip install "git+https://github.com/getkeops/keops.git#subdirectory=keopscore" --force-reinstall --no-deps
 pip install "git+https://github.com/getkeops/keops.git#subdirectory=pykeops" --force-reinstall --no-deps
 
+#pip install git+https://github.com/facebookresearch/torchdim
+
 pip uninstall -y pillow
 
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+
+####################################################################################################
+####################################################################################################
+
+
+# Install Nvidia APEX (with cpp & cuda extensions) with a trick
+################################################################################
+#source "$HOME/$ANACONDA_BASEDIR_NAME/bin/activate" $ANACONDA_ENV_NAME
+#export PRE_APEX_CC="$CC"
+#export PRE_APEX_CXX="$CXX"
+#export PRE_APEX_FC="$FC"
+#export CC=gcc-9
+#export CXX=g++-9
+#export FC=gfortran-9
+##
+#pip install --upgrade --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" git+https://github.com/NVIDIA/apex.git
+##
+#export CC="$PRE_APEX_CC"
+#export CXX="$PRE_APEX_CXX"
+#export FC="$PRE_APEX_FC"
+#unset PRE_APEX_CC
+#unset PRE_APEX_CXX
+#unset PRE_APEX_FC
+#source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
+################################################################################
+# Phew! Done! :)
 
 # Rich stack-traces
 cd "$PYPKG_DIR/"
@@ -174,7 +199,6 @@ mkdir sitecustomize
 cd sitecustomize
 echo "from rich.traceback import install" >> __init__.py
 echo "install()" >> __init__.py
-
 echo ""
 
 # End
