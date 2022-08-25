@@ -44,25 +44,25 @@ dependencies:
   - magma-cuda116>=2.6.1
 
   # PyTorch stack
-  - pytorch>=1.12
-  - torchvision>=0.13
-  - torchaudio>=0.12
-  - torchtext>=0.13
+  - pytorch>=1.12.1
+  - torchvision>=0.13.1
+  - torchaudio>=0.12.1
+  - torchtext>=0.13.1
   - torchserve>=0.6
   - torch-model-archiver>=0.6
   - torch-workflow-archiver>=0.2.4
-  - gpytorch>=1.7
+  - gpytorch>=1.8.1
   - ignite>=0.4.9
   - captum>=0.5
   - accimage>=0.2
-  - torchdata>=0.4
+  - torchdata>=0.4.1
   - torchdistx>=0.2
   - torchdistx-cc>=0.2
   - urllib3>=1.25 # Do not edit!
 
   # Vaex
-  - vaex>=4.9.2 # Latest
-  - vaex-core>=4.9.2 # Same as vaex
+  - vaex>=4.11.1 # Latest
+  - vaex-core>=4.11.1 # Same as vaex
   - vaex-astro>=0.8.3 # Do not edit!
   - vaex-hdf5>=0.10 # Do not edit!
   - vaex-viz>=0.5 # Do not edit!
@@ -78,15 +78,15 @@ dependencies:
 
   # Misc
   - opt_einsum>=3.3
-  - onnx>=1.12
-  - tensorboard>=2.9
+  - onnx>=12
+  - tensorboard>=2.10
   - tensorboardx>=2.5
-  - dgl-cuda11.6>=0.8.2
-  - jupyterlab>=3.4.3
+  - dgl-cuda11.6>=0.9
+  - jupyterlab>=3.4.5
   - notebook>=6.4.12
   - black>=21.11b0 # Do not edit!
   - nb_black>=1.0.7
-  - mlflow>=1.27
+  - mlflow>=1.28
   - pip>=20.3.4 # Do not edit!
   - pip-tools>=5.5 # Do not edit!
   - numba=0.53.1 # Keep in sync with pip requirements!
@@ -94,11 +94,12 @@ dependencies:
   - jedi>=0.18.1
   - typeguard>=2.11.1 # Do not edit!
   - jupytext>=1.14
-  - nbformat>=5.0.4
-  - nbclient>=0.4
+  - nbformat>=5.4
+  - nbclient>=0.6.7
+  - comet_ml>=3.31.11
 
   # DeepRobust
-  - numpy=1.23.0 # UPDATE FREQUENTLY!
+  - numpy=1.23.2 # UPDATE FREQUENTLY!
   - scipy>=1.8.1 # Do not edit!
   - matplotlib>=3.1.1 # Do not edit!
   - scikit-learn>=0.22.1 # Do not edit!

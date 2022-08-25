@@ -8,17 +8,17 @@
 #
 # TORCH STACK:
 functorch>=0.2
-torchdata>=0.4
+torchdata>=0.4.1
 #
 # ALL THE REST:
 opencv-python>=4.5.5.64
 graphviz>=0.20
-https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.14+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
-jax==0.3.14
+https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.15+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
+jax==0.3.16
 git+https://github.com/wandb/client.git
 onnxruntime-gpu>=1.11.1
 onnxruntime-tools>=1.7
-git+https://github.com/emaballarin/botorch.git
+git+https://github.com/pytorch/botorch.git
 git+https://github.com/pyro-ppl/pyro-api.git
 git+https://github.com/pyro-ppl/pyro.git
 git+https://github.com/pyro-ppl/numpyro.git
@@ -138,3 +138,5 @@ git+https://github.com/rpy2/rpy2.git
 torch-ort
 ninja
 jupytext
+git+https://github.com/DSSC-projects/veni.git
+git+https://github.com/ml-jku/hopfield-layers.git
