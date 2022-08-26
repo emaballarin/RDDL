@@ -140,3 +140,13 @@ ninja
 jupytext
 git+https://github.com/DSSC-projects/veni.git
 git+https://github.com/ml-jku/hopfield-layers.git
+git+https://github.com/cthoyt/more_click.git
+git+https://github.com/HIPS/autograd.git
+git+https://gitlab.com/causal/ananke.git
+git+https://github.com/y0-causal-inference/y0.git
+"git+https://github.com/y0-causal-inference/ProPPA.git@package-code"
+git+https://github.com/py-why/pywhy-graphs.git
+git+https://github.com/py-why/graphs.git
+git+https://github.com/py-why/dowhy.git
+git+https://github.com/py-why/dodiscover.git
+git+https://github.com/pgmpy/pgmpy.git

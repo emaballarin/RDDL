@@ -116,6 +116,9 @@ dependencies:
   - protobuf>=3 # Do not edit!
   - jsonschema=3.2 # Sync with pip requirements!
 
+  # Y0
+  - pygraphviz>=1.10
+
   # UNPINNED
 
   # System
@@ -334,3 +337,6 @@ dependencies:
 
   # Extras
   - tzlocal
+
+  # Y0
+  - tabulate
