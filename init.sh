@@ -147,10 +147,10 @@ jupyter serverextension enable --py jupyter_http_over_ws
 jupyter labextension update --all
 jupyter lab build
 
-pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.12.0+cu116.html --no-deps
-pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.12.0+cu116.html --no-deps
-pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.12.0+cu116.html --no-deps
-pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.12.0+cu116.html --no-deps
+pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.12.1+cu116.html --no-deps
+pip install torch-sparse -f https://pytorch-geometric.com/whl/torch-1.12.1+cu116.html --no-deps
+pip install torch-cluster -f https://pytorch-geometric.com/whl/torch-1.12.1+cu116.html --no-deps
+pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.12.1+cu116.html --no-deps
 pip install git+https://github.com/rusty1s/pytorch_geometric.git --no-deps
 pip install git+https://github.com/benedekrozemberczki/pytorch_geometric_temporal.git --no-deps
 
