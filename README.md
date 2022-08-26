@@ -1,5 +1,6 @@
-# `RDDLeaner`: *`R`apid `D`eployment `D`eep `L`earning, made leaner!* <a href="https://ballarin.cc/cdn/rddl_dalle2.png"><img src="https://ballarin.cc/cdn/rddl_dalle2.png" align="right" height="139" /></a>
+# `RDDLeaner` <a href="https://ballarin.cc/cdn/rddl_dalle2.png"><img src="https://ballarin.cc/cdn/rddl_dalle2.png" align="right" height="139" /></a>
 
+***`R`apid `D`eployment `D`eep `L`earning, made leaner!***  
 A *Conda*-based, templatable, extendable, R&D-focused infrastructure scaffold aiming at fast iterability and *cross-unix* robustness.
 
 ---
