@@ -99,7 +99,7 @@ dependencies:
   - comet_ml>=3.31.11
 
   # DeepRobust
-  - numpy=1.23.2 # UPDATE FREQUENTLY!
+  - numpy>=1.23 # UPDATE FREQUENTLY!
   - scipy>=1.8.1 # Do not edit!
   - matplotlib>=3.1.1 # Do not edit!
   - scikit-learn>=0.22.1 # Do not edit!
