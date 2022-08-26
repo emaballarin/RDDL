@@ -130,14 +130,14 @@ pip install --upgrade "nbclassic>=0.2.8"
 
 jupyter nbextension enable --py jupytext
 jupyter nbextension enable varInspector/main
-jupyter nbextension enable --py neptune-notebooks
+#jupyter nbextension enable --py neptune-notebooks
 jupyter nbextension enable --py ipygany
 
 #jupyter labextension install @jupyterlab/toc --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build
 jupyter labextension install jupyterlab-plotly --no-build
 jupyter labextension install plotlywidget --no-build
-jupyter labextension install neptune-notebooks --no-build
+#jupyter labextension install neptune-notebooks --no-build
 jupyter labextension install @jupyter-widgets/jupyterlab-manager ipygany --no-build
 jupyter labextension install jupyterlab-jupytext --no-build
 
