@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 ####################################################################################################
 
 # The name of the Conda environment you want the script to operate on.

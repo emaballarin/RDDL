@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 ####################################################################################################
 
 # The Conda-compatible package manager you want to use (currently: conda | mamba)
@@ -126,7 +126,7 @@ CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall
 pip install --upgrade --no-deps --force --force-reinstall --pre cupy-cuda116
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/emaballarin/ffcv.git
 
-pip install --upgrade "nbclassic>=0.2.8"
+pip install --upgrade "nbclassic>=0.4.3"
 
 jupyter nbextension enable --py jupytext
 jupyter nbextension enable varInspector/main

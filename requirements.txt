@@ -4,17 +4,16 @@
 # - torchdata          Sync with version above, >=
 # - JAX:               Latest, ==
 # - JaxLib:            Latest, exact link
-# - adabelief-pytorch: Latest, >=
 #
 # TORCH STACK:
-functorch>=0.2
+functorch>=0.2.1
 torchdata>=0.4.1
 #
 # ALL THE REST:
 opencv-python>=4.5.5.64
 graphviz>=0.20
 https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.15+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
-jax==0.3.16
+jax==0.3.17
 git+https://github.com/wandb/client.git
 onnxruntime-gpu>=1.11.1
 onnxruntime-tools>=1.7
@@ -67,7 +66,6 @@ git+https://github.com/SystemsBioinformatics/stochpy.git
 onnxmltools>=1.11.1
 onnxoptimizer>=0.2.7
 cftime>=1.6
-adabelief-pytorch>=0.2.1
 git+https://github.com/emaballarin/ebtorch.git
 git+https://github.com/rwightman/pytorch-image-models.git
 git+https://github.com/facebookresearch/qhoptim.git
@@ -117,11 +115,10 @@ git+https://github.com/unifyai/builder.git
 git+https://github.com/unifyai/models.git
 git+https://github.com/unifyai/vision.git
 git+https://github.com/unifyai/memory.git
-# ~ NOT YET COMPATIBLE WITH PyTorch>=1.12 ~
-#- git+https://github.com/PyTorchLightning/metrics.git
-#- git+https://github.com/PyTorchLightning/pytorch-lightning.git
-#- git+https://github.com/PyTorchLightning/lightning-bolts.git
-#- git+https://github.com/PyTorchLightning/lightning-flash.git
+# git+https://github.com/PyTorchLightning/metrics.git
+# git+https://github.com/PyTorchLightning/pytorch-lightning.git
+# git+https://github.com/PyTorchLightning/lightning-bolts.git
+# git+https://github.com/PyTorchLightning/lightning-flash.git
 git+https://github.com/patrick-kidger/equinox.git
 git+https://github.com/patrick-kidger/diffrax.git
 git+https://github.com/patrick-kidger/sympytorch.git
@@ -146,3 +143,7 @@ git+https://gitlab.com/causal/ananke.git
 git+https://github.com/y0-causal-inference/y0.git
 git+https://github.com/emaballarin/ProPPA.git
 git+https://github.com/pgmpy/pgmpy.git
+py4j
+hyperopt
+git+https://github.com/emaballarin/reservoirpy.git
+git+https://github.com/emaballarin/echoes.git

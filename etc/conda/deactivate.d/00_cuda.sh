@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 # Restore variables
 export CUDA_HOME="$PRE_CUDA_HOME"
