@@ -147,3 +147,10 @@ py4j
 hyperopt
 git+https://github.com/emaballarin/reservoirpy.git
 git+https://github.com/emaballarin/echoes.git
+git+https://github.com/leopard-ai/betty.git
+git+https://github.com/PythonOT/POT.git
+git+https://github.com/dragonfly/dragonfly.git
+git+https://github.com/petuum/tuun.git
+git+https://github.com/shapely/shapely.git
+git+https://github.com/uncertainty-toolbox/uncertainty-toolbox.git
+git+https://github.com/nebuly-ai/nebulgym.git

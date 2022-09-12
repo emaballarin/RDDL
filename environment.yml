@@ -51,7 +51,7 @@ dependencies:
   - torchserve>=0.6
   - torch-model-archiver>=0.6
   - torch-workflow-archiver>=0.2.4
-  - gpytorch>=1.8.1
+  - gpytorch>=1.9
   - ignite>=0.4.10
   - captum>=0.5
   - accimage>=0.2 # Do not edit!
@@ -332,6 +332,9 @@ dependencies:
 
   # Extras
   - tzlocal
+  - sqlite-fts4
+  - click-default-group-wheel
+  - sqlite-utils
 
   # ReservoirPy
   - dill
