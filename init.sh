@@ -162,6 +162,7 @@ pip install "git+https://github.com/getkeops/keops.git#subdirectory=keopscore" -
 pip install "git+https://github.com/getkeops/keops.git#subdirectory=pykeops" --force-reinstall --no-deps
 
 #pip install git+https://github.com/facebookresearch/torchdim
+#pip install git+https://github.com/IntelLabs/bayesian-torch.git --no-deps
 
 pip uninstall -y pillow
 

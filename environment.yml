@@ -79,12 +79,12 @@ dependencies:
   - onnx>=1.12 # Do not edit!
   - tensorboard>=2.9 # Do not edit!
   - tensorboardx>=2.5 # Do not edit!
-  - dgl-cuda11.6>=0.9
+  - dgl-cuda11.6>=0.9.1
   - jupyterlab>=3.4.4 # Do not edit!
   - notebook>=6.4.12 # Do not edit!
   - black>=21.11b0 # Do not edit!
-  - nb_black>=1.0.7
-  - mlflow>=1.28
+  - nb_black>=1.0.7 # Do not edit!
+  - mlflow>=1.29
   - pip>=20.3.4 # Do not edit!
   - pip-tools>=5.5 # Do not edit!
   - numba=0.53.1 # Keep in sync with pip requirements!
@@ -94,7 +94,7 @@ dependencies:
   - jupytext>=1.14
   - nbformat>=5.3
   - nbclient>=0.5.13
-  - comet_ml>=3.31.12
+  - comet_ml>=3.31.14
 
   # DeepRobust
   - numpy=1.23.0 # Determined by other dependencies!

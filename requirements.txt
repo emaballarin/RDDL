@@ -4,6 +4,7 @@
 # - torchdata          Sync with version above, >=
 # - JAX:               Latest, ==
 # - JaxLib:            Latest, exact link
+# - ArgParse           Latest, with >=
 #
 # TORCH STACK:
 functorch>=0.2.1
@@ -154,3 +155,7 @@ git+https://github.com/petuum/tuun.git
 git+https://github.com/shapely/shapely.git
 git+https://github.com/uncertainty-toolbox/uncertainty-toolbox.git
 git+https://github.com/nebuly-ai/nebulgym.git
+git+https://github.com/TimDettmers/bitsandbytes.git
+argparse>=1.4
+git+https://github.com/skops-dev/skops.git
+git+https://github.com/emaballarin/torchmore.git
