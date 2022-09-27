@@ -92,8 +92,8 @@ dependencies:
   - jedi>=0.18.1
   - typeguard>=2.11.1 # Do not edit!
   - jupytext>=1.14
-  - nbformat>=5.3
-  - nbclient>=0.5.13
+  - nbformat>=5.3 # Do not edit!
+  - nbclient>=0.5.13 # Do not edit!
   - comet_ml>=3.31.14
 
   # DeepRobust
@@ -137,6 +137,18 @@ dependencies:
   - sympy
   - scikit-plot
   - scikit-geometry
+
+  # ExplosionAI
+  - catalogue
+  - confection
+  - cymem
+  - cython-blis
+  - murmurhash
+  - preshed
+  - pydantic
+  - srsly
+  - thinc
+  - wasabi
 
   # Jupyter
   - ipykernel
