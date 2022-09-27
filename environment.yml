@@ -69,7 +69,7 @@ dependencies:
   - vaex-ml>=0.9 # Do not edit!
 
   # Pillow
-  - pillow
+  - pillow==9.0.0
 
   # FFIs
   - cffi>=1.10.0 # Do not edit!

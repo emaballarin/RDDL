@@ -50,7 +50,7 @@ git+https://github.com/williamFalcon/pytorch-complex-tensor.git
 ase>=3.22.1
 importlib-resources>=5.6
 swagger-spec-validator
-git+https://github.com/neptune-ai/neptune-client.git
+neptune-client>=0.16.9
 neptune-notebooks>=0.9
 git+https://github.com/neptune-ai/neptune-mlflow.git
 git+https://github.com/neptune-ai/neptune-optuna.git
