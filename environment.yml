@@ -68,8 +68,8 @@ dependencies:
   - vaex-server>=0.6 # Do not edit!
   - vaex-ml>=0.9 # Do not edit!
 
-  # Pillow for Pillow-SIMD
-  - pillow=9.0.0 # Keep in sync with latest Pillow-SIMD version
+  # Pillow
+  - pillow
 
   # FFIs
   - cffi>=1.10.0 # Do not edit!

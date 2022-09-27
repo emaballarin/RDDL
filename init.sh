@@ -120,9 +120,9 @@ pip install -r "$SELF_STORED_CALLDIR/requirements.txt"
 pip install --upgrade jupyter_http_over_ws
 pip uninstall -y typing
 
-pip uninstall -y pillow
+#pip uninstall -y pillow
 
-CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
+#CC="gcc -mavx2" pip install --no-cache-dir --upgrade --no-deps --force-reinstall --no-binary :all: --compile pillow-simd
 pip install --upgrade --no-deps --force --force-reinstall --pre cupy-cuda116
 pip install --upgrade --no-deps --force --force-reinstall git+https://github.com/emaballarin/ffcv.git
 
@@ -164,7 +164,7 @@ pip install "git+https://github.com/getkeops/keops.git#subdirectory=pykeops" --f
 #pip install git+https://github.com/facebookresearch/torchdim
 #pip install git+https://github.com/IntelLabs/bayesian-torch.git --no-deps
 
-pip uninstall -y pillow
+#pip uninstall -y pillow
 
 source "$HOME/$ANACONDA_BASEDIR_NAME/bin/deactivate"
 

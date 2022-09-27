@@ -15,7 +15,7 @@ opencv-python>=4.5.5.64
 graphviz>=0.20
 https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.15+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
 jax==0.3.18
-git+https://github.com/wandb/client.git
+wandb
 onnxruntime-gpu>=1.11.1
 onnxruntime-tools>=1.7
 git+https://github.com/pytorch/botorch.git
@@ -50,12 +50,12 @@ git+https://github.com/williamFalcon/pytorch-complex-tensor.git
 ase>=3.22.1
 importlib-resources>=5.6
 swagger-spec-validator
-git+https://github.com/emaballarin/neptune-client.git
-neptune-notebooks>=0.9
-git+https://github.com/neptune-ai/neptune-mlflow.git
-git+https://github.com/neptune-ai/neptune-optuna.git
+neptune-client
+neptune-notebooks
+neptune-mlflow
+neptune-optuna
 git+https://github.com/DistrictDataLabs/yellowbrick.git
-git+https://github.com/neptune-ai/neptune-sklearn.git
+neptune-sklearn
 git+https://github.com/jeanfeydy/geomloss.git
 git+https://github.com/fmfn/BayesianOptimization.git
 git+https://github.com/jettify/pytorch-optimizer.git
