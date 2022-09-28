@@ -14,7 +14,7 @@ torchdata>=0.4.1
 opencv-python>=4.5.5.64
 graphviz>=0.20
 https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.15+cuda11.cudnn82-cp39-none-manylinux2014_x86_64.whl
-jax==0.3.18
+jax==0.3.19
 git+https://github.com/wandb/client.git
 onnxruntime-gpu>=1.11.1
 onnxruntime-tools>=1.7
