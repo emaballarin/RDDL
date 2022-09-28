@@ -49,7 +49,7 @@ sklearn-pandas>=2.2
 git+https://github.com/williamFalcon/pytorch-complex-tensor.git
 ase>=3.22.1
 importlib-resources>=5.6
-swagger-spec-validator
+swagger-spec-validator>=2.7.4
 neptune-client>=0.16.9
 neptune-notebooks>=0.9
 git+https://github.com/neptune-ai/neptune-mlflow.git
@@ -126,7 +126,6 @@ git+https://github.com/patrick-kidger/sympytorch.git
 git+https://github.com/ChristophReich1996/SmeLU.git
 braceexpand>=0.1.7
 git+https://github.com/emaballarin/webdataset.git
-git+https://github.com/mosaicml/yahp.git
 fastargs>=1.2
 imgcat>=0.5
 git+https://github.com/DSE-MSU/DeepRobust.git

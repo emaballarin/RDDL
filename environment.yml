@@ -69,7 +69,7 @@ dependencies:
   - vaex-ml>=0.9 # Do not edit!
 
   # Pillow
-  - pillow==9.0.0
+  - pillow #=9.0.0
 
   # FFIs
   - cffi>=1.10.0 # Do not edit!
@@ -112,7 +112,7 @@ dependencies:
   # Extras
   - tqdm>=3.0 # Do not edit!
   - protobuf>=3 # Do not edit!
-  - jsonschema=4.7.2 # Sync with pip requirements!
+  - jsonschema # Sync with pip requirements!
 
   # UNPINNED
 
